@@ -1,1 +1,2 @@
-# MASS-Thesis
+## Master Thesis
+This Master thesis is submitted in partial fulfillment of the requirements for the degree Master in Astrophysics and Space Science, as part of a multiple degree awarded in the framework of the Erasmus Mundus Joint Master in Astrophysics and Space Science −− MASS, jointly delivered by a Consortium of four Universities: Tor Vergata University of Rome, University of Belgrade, University of Bremen, and Universit´e Cote d’Azur, regulated by the MASS Consortium Agreement and funded by the EU under the call ERASMUS-EDU-2021-PEX-EMJM-MOB.
