@@ -1,0 +1,40 @@
+\input{header}
+
+\begin{document}
+
+% cover pages
+\input{chapter/0_front}
+
+% table of contents
+\thispagestyle{empty}
+\vspace*{2.2cm}
+\tableofcontents
+\newpage 
+
+% list of figures
+\thispagestyle{empty}
+\vspace*{2.2cm}
+\listoffigures
+\newpage
+
+% list of tables
+\thispagestyle{empty}
+\vspace*{2.2cm}
+\listoftables
+\newpage
+
+
+% chapters
+\input{chapter/1_background}
+\newpage
+\input{chapter/2_variability}
+\newpage
+\input{chapter/3_simulation}
+\newpage
+\input{chapter/4_models}
+\newpage
+\printbibliography[heading=bibintoc] % adds it to the ToC
+
+\newpage
+
+\end{document}  
