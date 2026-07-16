@@ -8,15 +8,15 @@ import matplotlib.pyplot as plt
 # A&A/ApJ conventions: ticks inward on all four sides, minors on, no legend
 # frame, serif to match the LaTeX body text.
 
-AA_STYLE = {
-    "font.family": "serif", "mathtext.fontset": "dejavuserif",
-    "axes.linewidth": 0.8, "lines.linewidth": 1.0,
-    "xtick.direction": "in", "ytick.direction": "in",
-    "xtick.top": True, "ytick.right": True,
-    "xtick.minor.visible": True, "ytick.minor.visible": True,
-    "legend.frameon": False, "figure.dpi": 130,
-}
-
+#AA_STYLE = {
+#    "font.family": "serif", "mathtext.fontset": "dejavuserif",
+#    "axes.linewidth": 0.8, "lines.linewidth": 1.0,
+#    "xtick.direction": "in", "ytick.direction": "in",
+#    "xtick.top": True, "ytick.right": True,
+#    "xtick.minor.visible": True, "ytick.minor.visible": True,
+#    "legend.frameon": False, "figure.dpi": 130,
+#}
+from Style import AA_STYLE
 
 class MultibandLCGenerator:
     """
@@ -54,7 +54,7 @@ class MultibandLCGenerator:
     # make sure the observation baseline covers a significant fraction of the characteristic timescale
     def __init__(self, # initiation for any newly created instance of this class
                  bands: str = "ugriz", # don't use MultibandLCGenerator.variables since class is not created yet here
-                 t_max: float = 365,*3 # days
+                 t_max: float = 365*3, # days
                  dt: float = 1, # time step
                  driver_band: str | None = "g",
                  tau_driver: float | None = 100., # days, KEEP FIXED FOR NOW
@@ -181,7 +181,7 @@ class MultibandLCGenerator:
         """
         rng = rng if rng is not None else self.rng
         
-        y = np,asarray(y, dtype = float)
+        y = np.asarray(y, dtype = float)
 
         # also possible to give an array of sigmas instead of the LSST photometric error
 
@@ -210,7 +210,7 @@ class MultibandLCGenerator:
         # we do not store the EzTao error because we add it later AddNoise()
         t_out, y_out, _ = gpSimByTime(carmaTerm = DRW_kernel,
                                              SNR = self.snr_driver,
-                                             t = self.t,
+                                             t = t,
                                              log_flux = self.log_flux,
                                              lc_seed = lc_seed if lc_seed is not None else self.seed)
 
@@ -343,7 +343,7 @@ class MultibandLCGenerator:
         }  
             
 
-    def plotLC(lc, ax = None, recon = None, show_truth = True, magnitudes = True):
+def plotLC(lc, ax = None, recon = None, show_truth = True, magnitudes = True):
     """
     One light curve, Kozlowski-style.
 
@@ -352,38 +352,38 @@ class MultibandLCGenerator:
               {"t": (M,), "samples": (n, M), "label": str}      Monte Carlo (NSF)
               {"t": (M,), "med":, "lo":, "hi":, "label": str}   precomputed (GP)
     """
-        plt.rcParams.update(AA_STYLE)
-        if ax is None:
-            _, ax = plt.subplots(figsize=(9, 3.4))
+    plt.rcParams.update(AA_STYLE)
+    if ax is None:
+        _, ax = plt.subplots(figsize=(9, 3.4))
 
-        if show_truth:
-            ax.plot(lc["t_true"], lc["y_true"], color="0.75", lw=0.9, zorder=1,
-                    label="latent driver (truth)")
+    if show_truth:
+        ax.plot(lc["t_true"], lc["y_true"], color="0.75", lw=0.9, zorder=1,
+                label="latent driver (truth)")
 
-        if recon is not None:
-            t = np.asarray(recon["t"])
-            if "samples" in recon:
-                lo, med, hi = np.percentile(recon["samples"], [16, 50, 84], axis=0)
-            else:
-                lo, med, hi = recon["lo"], recon["med"], recon["hi"]
-            lab = recon.get("label", "reconstruction")
-            ax.fill_between(t, lo, hi, color="tab:blue", alpha=0.22, lw=0, zorder=2,
-                            label=rf"{lab} $\pm1\sigma$")
-            ax.plot(t, med, color="tab:red", lw=1.0, zorder=3, label=f"{lab} median")
+    if recon is not None:
+        t = np.asarray(recon["t"])
+        if "samples" in recon:
+            lo, med, hi = np.percentile(recon["samples"], [16, 50, 84], axis=0)
+        else:
+            lo, med, hi = recon["lo"], recon["med"], recon["hi"]
+        lab = recon.get("label", "reconstruction")
+        ax.fill_between(t, lo, hi, color="tab:blue", alpha=0.22, lw=0, zorder=2,
+                        label=rf"{lab} $\pm1\sigma$")
+        ax.plot(t, med, color="tab:red", lw=1.0, zorder=3, label=f"{lab} median")
 
-        ax.errorbar(lc["t_obs"], lc["y_obs"], yerr=lc["yerr"], fmt="o", ms=2.2,
-                    lw=0.7, color="k", capsize=0, zorder=4, label="observed")
+    ax.errorbar(lc["t_obs"], lc["y_obs"], yerr=lc["yerr"], fmt="o", ms=2.2,
+                lw=0.7, color="k", capsize=0, zorder=4, label="observed")
 
-        ax.set_xlabel("Time (day)")
-        ax.set_ylabel("Magnitude" if magnitudes else "Flux")
-        ax.set_xlim(lc["t_true"][0], lc["t_true"][-1])
-        if magnitudes:
-            ax.invert_yaxis()          # brighter is up
-        ax.legend(ncol=4, fontsize=7.5, loc="upper center", bbox_to_anchor=(0.5, 1.16))
-        return ax
+    ax.set_xlabel("Time (day)")
+    ax.set_ylabel("Magnitude" if magnitudes else "Flux")
+    ax.set_xlim(lc["t_true"][0], lc["t_true"][-1])
+    if magnitudes:
+        ax.invert_yaxis()          # brighter is up
+    ax.legend(ncol=4, fontsize=7.5, loc="upper center", bbox_to_anchor=(0.5, 1.16))
+    return ax
 
-    def makeDataset(n_curves: int = 500, val_frac: float = 0.2, seed0: int = 0,
-                gen_kwargs: dict | None = None, lc_kwargs: dict | None = None):
+def makeDataset(n_curves: int = 500, val_frac: float = 0.2, seed0: int = 0,
+            gen_kwargs: dict | None = None, lc_kwargs: dict | None = None):
     """
     Stage 1 dataset: N independent single-band curves, split train/val.
 
@@ -402,6 +402,40 @@ class MultibandLCGenerator:
     n_train = int((1.0 - val_frac) * n_curves)
     
     return curves[:n_train], curves[n_train:]
+
+def saveDataset(curves, path, T_max=None):
+    """
+    Pad and save a dataset to one .npz. This is the hand-off between the eztao
+    environment and the jax one: LightCurves.py must never import jax, and
+    Tensorize.py must never import eztao. The .npz is the whole interface.
+    """
+    if T_max is None:
+        T_max = max(c["t_obs"].size for c in curves)
+    t_true = curves[0]["t_true"]
+    if not all(c["t_true"].shape == t_true.shape for c in curves):
+        raise ValueError("curves have different dense grids; t_true must be shared")
+
+    N = len(curves)
+    t = np.zeros((N, T_max), np.float32)
+    y = np.zeros((N, T_max), np.float32)
+    e = np.ones((N, T_max), np.float32)      # 1.0, NOT 0.0: we divide by yerr later
+    m = np.zeros((N, T_max), bool)
+    for i, c in enumerate(curves):
+        T = c["t_obs"].size
+        if T > T_max:
+            raise ValueError(f"curve {i}: {T} epochs > T_max={T_max}")
+        t[i, :T], y[i, :T], e[i, :T], m[i, :T] = c["t_obs"], c["y_obs"], c["yerr"], True
+
+    np.savez_compressed(
+        path,
+        t_obs=t, y_obs=y, yerr=e, mask=m,
+        t_true=t_true,                                        # shared -> store once
+        y_true=np.stack([c["y_true"] for c in curves]),       # (N, T_true)
+        gap_windows=np.stack([c["gap_windows"] for c in curves]),
+        tau=np.array([c["tau"] for c in curves], np.float32),
+        sigma=np.array([c["sigma"] for c in curves], np.float32),
+        seed=np.array([c["seed"] for c in curves], np.int64),
+    )
 
 
 ##    def makeMultiband(self):
