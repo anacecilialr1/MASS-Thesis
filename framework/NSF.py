@@ -2,12 +2,7 @@
 
 Total loss, Kiyohara Eq. (11):      L = L_NLL + lambda * L_flow
 
-L_NLL IS NOT OPTIONAL. The internship's triplet_loss used only y[ii]; y[jj] and
-y[kk] were never touched, so the objective contained no data likelihood at all.
-The model was trained purely to be SELF-CONSISTENT -- a property any number of
-wrong dynamics satisfy. It produced plausible pictures only because the bridge is
-conditioned on real endpoints at inference, so the endpoints did the work rather
-than the learned dynamics.
+The internship's triplet_loss used only y[ii] and not L_NLL 
 """
 from __future__ import annotations
 import jax, jax.numpy as jnp, numpy as np, equinox as eqx, optax
@@ -104,10 +99,9 @@ def train(flow, bridge, D, key, steps=400, batch=16, lr=2e-3, lam=0.1, n_trip=32
 
 
 def checkTransition(flow, tau_n, sigma_n, x_s, dts, key, n=4000):
-    """STAGE 0 VALIDATION. You know the true DRW transition in closed form:
+    """STAGE 0 VALIDATION. The true DRW transition is known in closed form:
         X_t | X_s ~ N( e^{-dt/tau} X_s ,  sigma^2 (1 - e^{-2 dt/tau}) )
-    so the learned p_theta can be checked against it directly. Kiyohara could not
-    do this on Lorenz/mocap. All quantities in NORMALISED units."""
+    so the learned p_theta can be checked against it directly. All quantities in NORMALISED units."""
     a = np.exp(-dts / tau_n)
     true_m, true_v = a * x_s, sigma_n**2 * (1.0 - a**2)
     lm, lv = [], []
