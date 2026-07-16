@@ -34,7 +34,7 @@ def sampleTriplets(key, idx_full, K, n=64, min_gap=2):
     The internship sampler drew j-i and k-j from narrow fixed ranges (min_gap..+6,
     min_gap..+10), so k-i never exceeded ~20 of ~85 indices: the objective only ever
     constrained short transitions, which is exactly why the reconstructed median
-    flattened across wide gaps. This is the cheap half of that fix.
+    flattened across wide gaps.
     """
     k1, k2, k3 = random.split(key, 3)
     K = K.astype(jnp.int32)
@@ -54,9 +54,7 @@ def sampleTriplets(key, idx_full, K, n=64, min_gap=2):
 
 def loadDataset(path, t_scale=None, y_scale=None):
     """
-    Read an .npz written by LightCurves.saveDataset. Never imports eztao -- the
-    .npz is the entire interface between the two environments.
-
+    Read an .npz written by LightCurves.saveDataset. Never imports eztao.
     NORMALISES BY DEFAULT, and this is not optional. The flow conditions on
     (x, dt); feeding it dt ~ 1000 with x ~ 0.1 is badly conditioned and it will
     silently learn nonsense -- the transition mean grows instead of decaying, the
@@ -78,7 +76,7 @@ def loadDataset(path, t_scale=None, y_scale=None):
         sigma=jnp.asarray(d["sigma"] / y_scale),    # -> 1.0
         t_scale=t_scale, y_scale=y_scale,
     )
-    # guard rails: cheap, and they catch the one mistake that silently ruins a run
+    
     ymax = float(jnp.max(jnp.abs(out["y"][out["mask"]])))
     tmax = float(jnp.max(out["t"]))
     if not (0.5 < ymax < 20.0):
