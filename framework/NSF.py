@@ -1,4 +1,4 @@
-"""Stage 1: plain NSF (flow + bridge) trained on single-band observations.
+"""NSF (flow + bridge) trained on single-band observations.
 
 Total loss, Kiyohara Eq. (11):      L = L_NLL + lambda * L_flow
 

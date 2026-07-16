@@ -55,13 +55,12 @@ def sampleTriplets(key, idx_full, K, n=64, min_gap=2):
 def loadDataset(path, t_scale=None, y_scale=None):
     """
     Read an .npz written by LightCurves.saveDataset. Never imports eztao.
-    NORMALISES BY DEFAULT, and this is not optional. The flow conditions on
+    NORMALIZES BY DEFAULT, and this is not optional. The flow conditions on
     (x, dt); feeding it dt ~ 1000 with x ~ 0.1 is badly conditioned and it will
     silently learn nonsense -- the transition mean grows instead of decaying, the
     sd grows instead of saturating, and the training loss sits ~50 instead of ~2.
 
-    tau comes back already in normalised units, so the Stage 0 check against the
-    analytic DRW needs no bookkeeping.
+    tau comes back already in normalized units. 
     """
     d = np.load(path)
     t_scale = float(d["t_true"][-1]) if t_scale is None else float(t_scale)
@@ -80,7 +79,7 @@ def loadDataset(path, t_scale=None, y_scale=None):
     ymax = float(jnp.max(jnp.abs(out["y"][out["mask"]])))
     tmax = float(jnp.max(out["t"]))
     if not (0.5 < ymax < 20.0):
-        raise ValueError(f"y looks unnormalised (max|y| = {ymax:.3g}); expected O(1)")
+        raise ValueError(f"y looks unnormalized (max|y| = {ymax:.3g}); expected O(1)")
     if not (0.1 < tmax < 10.0):
-        raise ValueError(f"t looks unnormalised (max t = {tmax:.3g}); expected O(1)")
+        raise ValueError(f"t looks unnormalized (max t = {tmax:.3g}); expected O(1)")
     return out
