@@ -1,10 +1,5 @@
 """Shared plotting style. Imports nothing but matplotlib, so BOTH environments
-(eztao side and jax side) can use it -- which is the point: AA_STYLE lived in
-LightCurves.py and was copy-pasted into the Stage 1 notebook, and two copies of a
-style dict drift.
-
-A&A/ApJ conventions: ticks inward on all four sides, minor ticks on, no legend
-frame, serif to match the LaTeX body text.
+(eztao side and jax side) can use it 
 """
 AA_STYLE = {
     "font.family": "serif", "mathtext.fontset": "dejavuserif",
