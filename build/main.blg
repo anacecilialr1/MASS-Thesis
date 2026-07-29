@@ -1,20 +1,22 @@
 [0] Config.pm:328> INFO - This is Biber 2.21
 [0] Config.pm:331> INFO - Logfile is 'build/main.blg'
-[53] biber-darwin:342> INFO - === Thu Jul 16, 2026, 04:05:47
+[53] biber-darwin:342> INFO - === Wed Jul 29, 2026, 07:37:30
 [65] Biber.pm:421> INFO - Reading 'build/main.bcf'
-[137] Biber.pm:1002> INFO - Found 78 citekeys in bib section 0
-[148] Biber.pm:4487> INFO - Processing section 0
-[155] Biber.pm:4678> INFO - Looking for bibtex file 'references.bib' for section 0
-[159] bibtex.pm:1713> INFO - LaTeX decoding ...
-[252] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
-[1018] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[1019] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[1019] Biber.pm:4307> INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'en-US'
-[1019] Biber.pm:4313> INFO - No sort tailoring available for locale 'en-US'
-[1103] bbl.pm:676> INFO - Writing 'build/main.bbl' with encoding 'UTF-8'
-[1231] bbl.pm:779> INFO - Output to build/main.bbl
-[1231] Biber.pm:132> WARN - ISBN '1476-4687' in entry 'Fabian2009Corona' is invalid - run biber with '--validate_datamodel' for details.
-[1231] Biber.pm:132> WARN - BibTeX subsystem: /var/folders/m9/psq8q0n150v71kwq_ytvp1880000gn/T/biber_tmp__9Hh/33e59b5ca9ec342068223d604c3f8d55_12031.utf8, line 341, warning: undefined macro "sept"
-[1231] Biber.pm:132> WARN - I didn't find a database entry for 'YuEzTao2025' (section 0)
-[1231] Biber.pm:132> WARN - I didn't find a database entry for 'MacLeod2010DRW' (section 0)
-[1231] Biber.pm:134> INFO - WARNINGS: 4
+[140] Biber.pm:1002> INFO - Found 94 citekeys in bib section 0
+[152] Biber.pm:4487> INFO - Processing section 0
+[159] Biber.pm:4678> INFO - Looking for bibtex file 'references.bib' for section 0
+[164] bibtex.pm:1713> INFO - LaTeX decoding ...
+[287] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
+[1132] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1133] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1133] Biber.pm:4307> INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'en-US'
+[1133] Biber.pm:4313> INFO - No sort tailoring available for locale 'en-US'
+[1216] bbl.pm:676> INFO - Writing 'build/main.bbl' with encoding 'UTF-8'
+[1287] bbl.pm:779> INFO - Output to build/main.bbl
+[1287] Biber.pm:132> WARN - ISBN '1476-4687' in entry 'Fabian2009Corona' is invalid - run biber with '--validate_datamodel' for details.
+[1287] Biber.pm:132> WARN - BibTeX subsystem: /var/folders/m9/psq8q0n150v71kwq_ytvp1880000gn/T/biber_tmp_zn3Y/33e59b5ca9ec342068223d604c3f8d55_85999.utf8, line 474, warning: undefined macro "sept"
+[1288] Biber.pm:132> WARN - I didn't find a database entry for 'YuEzTao2025' (section 0)
+[1288] Biber.pm:132> WARN - I didn't find a database entry for 'Sun2023QuasarMassDistDist' (section 0)
+[1288] Biber.pm:132> WARN - I didn't find a database entry for 'Kiyohara2025NSF' (section 0)
+[1288] Biber.pm:132> WARN - I didn't find a database entry for 'RasmussenWilliams2006GP' (section 0)
+[1288] Biber.pm:134> INFO - WARNINGS: 6

@@ -103,7 +103,9 @@
     backend = biber,
     style = authoryear,       % (Author, Year) style
     citestyle = authoryear,
-    sorting = nyt             % sort by name, year, title
+    sorting = nyt,             % sort by name, year, title
+    uniquename = false,
+    uniquelist = false,
 ]{biblatex}
 
 \addbibresource{references.bib}  
@@ -122,6 +124,7 @@
 \newcommand{\memras}{Memoirs of the Royal Astronomical Society}
 \newcommand{\nat}{Nature}
 \newcommand{\aj}{Astronomical Journal}
+\newcommand{\sovast}{Soviet Astronomy}
 
 % easier quoting
 \newcommand{\quotes}[1]{``#1''}

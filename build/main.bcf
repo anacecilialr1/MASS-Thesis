@@ -180,11 +180,11 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>uniquelist</bcf:key>
-      <bcf:value>true</bcf:value>
+      <bcf:value>false</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>uniquename</bcf:key>
-      <bcf:value>full</bcf:value>
+      <bcf:value>false</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>uniqueprimaryauthor</bcf:key>
@@ -395,11 +395,11 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>uniquelist</bcf:key>
-      <bcf:value>true</bcf:value>
+      <bcf:value>false</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>uniquename</bcf:key>
-      <bcf:value>full</bcf:value>
+      <bcf:value>false</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>uniqueprimaryauthor</bcf:key>
@@ -2375,136 +2375,158 @@
   </bcf:bibdata>
   <bcf:section number="0">
     <bcf:citekey order="1" intorder="1">Lusso2012AGNLuminosity</bcf:citekey>
-    <bcf:citekey order="2" intorder="1">Peterson2004AstNach</bcf:citekey>
-    <bcf:citekey order="3" intorder="1">Netzer2015AnnRev</bcf:citekey>
-    <bcf:citekey order="4" intorder="1">Elvis1994QuasarSED</bcf:citekey>
-    <bcf:citekey order="5" intorder="1">Richards2006SEDCatalogues</bcf:citekey>
-    <bcf:citekey order="6" intorder="1">Harrison2014PhDThesis</bcf:citekey>
-    <bcf:citekey order="7" intorder="1">Elvis1994QuasarSED</bcf:citekey>
-    <bcf:citekey order="8" intorder="1">Richards2006SEDCatalogues</bcf:citekey>
-    <bcf:citekey order="9" intorder="1">Harrison2014PhDThesis</bcf:citekey>
-    <bcf:citekey order="10" intorder="1">Peterson1993RM</bcf:citekey>
-    <bcf:citekey order="11" intorder="1">Harrison2014PhDThesis</bcf:citekey>
-    <bcf:citekey order="12" intorder="1">Ballantyne2022SoftExcess</bcf:citekey>
+    <bcf:citekey order="2" intorder="1">Salpeter1964AccretionTheory</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">Zeldovich1964AccretionTheory</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">Peterson2004AstNach</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">Netzer2015AnnRev</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">Antonucci1993UnifiedAGN</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">UrryPadovani1995UnifiedAGN</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">Elvis1994QuasarSED</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">Richards2006SEDCatalogues</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">Harrison2014PhDThesis</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">Elvis1994QuasarSED</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">Richards2006SEDCatalogues</bcf:citekey>
     <bcf:citekey order="13" intorder="1">Harrison2014PhDThesis</bcf:citekey>
-    <bcf:citekey order="14" intorder="1">Lutz2014SFRDust</bcf:citekey>
-    <bcf:citekey order="15" intorder="1">Padovani2011Non-JettedAGNPop</bcf:citekey>
-    <bcf:citekey order="16" intorder="1">Laor2008RQEmission</bcf:citekey>
-    <bcf:citekey order="17" intorder="1">Ishibashi2011RadioQuietAGN</bcf:citekey>
-    <bcf:citekey order="18" intorder="1">Padovani2017whatisaname</bcf:citekey>
-    <bcf:citekey order="19" intorder="1">SewardCharles1995ExploringtheXrayUniverse</bcf:citekey>
-    <bcf:citekey order="20" intorder="1">SewardCharles1995ExploringtheXrayUniverse</bcf:citekey>
-    <bcf:citekey order="21" intorder="1">Blandford1978BlLacConference</bcf:citekey>
-    <bcf:citekey order="22" intorder="1">Shields2004NED</bcf:citekey>
-    <bcf:citekey order="23" intorder="1">AntonucciMiller1985SpecPolarimNGC1068</bcf:citekey>
-    <bcf:citekey order="24" intorder="1">Miller1991NGC1068</bcf:citekey>
-    <bcf:citekey order="25" intorder="1">Miller1991NGC1068</bcf:citekey>
-    <bcf:citekey order="26" intorder="1">RamosAlmeida2017AGNNuclearObscuration</bcf:citekey>
-    <bcf:citekey order="27" intorder="1">RamosAlmeida2017AGNNuclearObscuration</bcf:citekey>
-    <bcf:citekey order="28" intorder="1">Antonucci1984SpecPolarimOtherGalax</bcf:citekey>
-    <bcf:citekey order="29" intorder="1">OrrBrowne1982AGNBeaming</bcf:citekey>
-    <bcf:citekey order="30" intorder="1">Antonucci1993UnifiedAGN</bcf:citekey>
-    <bcf:citekey order="31" intorder="1">UrryPadovani1995UnifiedAGN</bcf:citekey>
-    <bcf:citekey order="32" intorder="1">Netzer2015AnnRev</bcf:citekey>
-    <bcf:citekey order="33" intorder="1">Padovani2017whatisaname</bcf:citekey>
-    <bcf:citekey order="34" intorder="1">ShakuraSunyaev1973BHAppearance</bcf:citekey>
-    <bcf:citekey order="35" intorder="1">Ricci2026unificationmodelsactivegalactic</bcf:citekey>
-    <bcf:citekey order="36" intorder="1">Balbus1998TurbulenceAccretionD</bcf:citekey>
-    <bcf:citekey order="37" intorder="1">Netzer2013PhyEvolofAGNBook</bcf:citekey>
-    <bcf:citekey order="38" intorder="1">Narayan1994ADAF</bcf:citekey>
-    <bcf:citekey order="39" intorder="1">Kubota2018AGNSEDHighEddR</bcf:citekey>
-    <bcf:citekey order="40" intorder="1">Giustini2019AGNOutflowsHighEddR</bcf:citekey>
-    <bcf:citekey order="41" intorder="1">Suh2015EddRatioDist</bcf:citekey>
-    <bcf:citekey order="42" intorder="1">Suh2015EddRatioDist</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">Peterson1993RM</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">Harrison2014PhDThesis</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">Singh1985SE</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">Arnaud1985SE</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">Crummy2006BlurredReflectionSE</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">Ballantyne2022WarmComptSE</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">Harrison2014PhDThesis</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">Lutz2014SFRDust</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">Padovani2017Onthe2mainclasses</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">Padovani2011Non-JettedAGNPop</bcf:citekey>
+    <bcf:citekey order="24" intorder="1">Laor2008RQEmission</bcf:citekey>
+    <bcf:citekey order="25" intorder="1">Ishibashi2011RadioQuietAGN</bcf:citekey>
+    <bcf:citekey order="26" intorder="1">Padovani2017whatisaname</bcf:citekey>
+    <bcf:citekey order="27" intorder="1">SewardCharles1995ExploringtheXrayUniverse</bcf:citekey>
+    <bcf:citekey order="28" intorder="1">SewardCharles1995ExploringtheXrayUniverse</bcf:citekey>
+    <bcf:citekey order="29" intorder="1">Blandford1978BlLacConference</bcf:citekey>
+    <bcf:citekey order="30" intorder="1">Shields2004NED</bcf:citekey>
+    <bcf:citekey order="31" intorder="1">Seyfert1943Emission</bcf:citekey>
+    <bcf:citekey order="32" intorder="1">Miller1991NGC1068</bcf:citekey>
+    <bcf:citekey order="33" intorder="1">Miller1991NGC1068</bcf:citekey>
+    <bcf:citekey order="34" intorder="1">AntonucciMiller1985SpecPolarimNGC1068</bcf:citekey>
+    <bcf:citekey order="35" intorder="1">Netzer2015AnnRev</bcf:citekey>
+    <bcf:citekey order="36" intorder="1">RamosAlmeida2017AGNNuclearObscuration</bcf:citekey>
+    <bcf:citekey order="37" intorder="1">RamosAlmeida2017AGNNuclearObscuration</bcf:citekey>
+    <bcf:citekey order="38" intorder="1">Antonucci1984SpecPolarimOtherGalax</bcf:citekey>
+    <bcf:citekey order="39" intorder="1">OrrBrowne1982AGNBeaming</bcf:citekey>
+    <bcf:citekey order="40" intorder="1">Bianchi2012UMAGNcons</bcf:citekey>
+    <bcf:citekey order="41" intorder="1">ShakuraSunyaev1973BHAppearance</bcf:citekey>
+    <bcf:citekey order="42" intorder="1">Ricci2026unificationmodelsactivegalactic</bcf:citekey>
     <bcf:citekey order="43" intorder="1">Balbus1998TurbulenceAccretionD</bcf:citekey>
-    <bcf:citekey order="44" intorder="1">Miller2000MagnetoCorona</bcf:citekey>
-    <bcf:citekey order="45" intorder="1">Fabian2009Corona</bcf:citekey>
-    <bcf:citekey order="46" intorder="1">Kara2025SMBHXRayReview</bcf:citekey>
-    <bcf:citekey order="47" intorder="1">Ricci2026unificationmodelsactivegalactic</bcf:citekey>
-    <bcf:citekey order="48" intorder="1">Padovani2017whatisaname</bcf:citekey>
-    <bcf:citekey order="49" intorder="1">Netzer2015AnnRev</bcf:citekey>
-    <bcf:citekey order="50" intorder="1">Ricci2026unificationmodelsactivegalactic</bcf:citekey>
-    <bcf:citekey order="51" intorder="1">Netzer2013PhyEvolofAGNBook</bcf:citekey>
-    <bcf:citekey order="52" intorder="1">Murray1995DiskWindBLR</bcf:citekey>
-    <bcf:citekey order="53" intorder="1">Czerny2011WindOriginBLR</bcf:citekey>
-    <bcf:citekey order="54" intorder="1">Kaspi2000BLRSScalingL</bcf:citekey>
-    <bcf:citekey order="55" intorder="1">Czerny2011WindOriginBLR</bcf:citekey>
-    <bcf:citekey order="56" intorder="1">Czerny2011WindOriginBLR</bcf:citekey>
-    <bcf:citekey order="57" intorder="1">Nenkova2008ClumpyTorus</bcf:citekey>
-    <bcf:citekey order="58" intorder="1">Stalevski2012TwoMediumTorus</bcf:citekey>
-    <bcf:citekey order="59" intorder="1">Netzer2015AnnRev</bcf:citekey>
-    <bcf:citekey order="60" intorder="1">Barvainis1987DustSublimation</bcf:citekey>
-    <bcf:citekey order="61" intorder="1">Netzer2015AnnRev</bcf:citekey>
-    <bcf:citekey order="62" intorder="1">Pogge1988IonizationCones</bcf:citekey>
-    <bcf:citekey order="63" intorder="1">Ricci2026unificationmodelsactivegalactic</bcf:citekey>
-    <bcf:citekey order="64" intorder="1">Blandford1977JetMechanism</bcf:citekey>
-    <bcf:citekey order="65" intorder="1">Clarke2017GiantJettedGalaxy</bcf:citekey>
-    <bcf:citekey order="66" intorder="1">Clarke2017GiantJettedGalaxy</bcf:citekey>
-    <bcf:citekey order="67" intorder="1">Clarke2017GiantJettedGalaxy</bcf:citekey>
-    <bcf:citekey order="68" intorder="1">Netzer2013PhyEvolofAGNBook</bcf:citekey>
-    <bcf:citekey order="69" intorder="1">UrryPadovani1995UnifiedAGN</bcf:citekey>
-    <bcf:citekey order="70" intorder="1">Fabian2012AGNFeedback</bcf:citekey>
-    <bcf:citekey order="71" intorder="1">Bennert2005</bcf:citekey>
-    <bcf:citekey order="72" intorder="1">Ricci2026unificationmodelsactivegalactic</bcf:citekey>
-    <bcf:citekey order="73" intorder="1">Kewley2001StarburstModel</bcf:citekey>
-    <bcf:citekey order="74" intorder="1">Kauffmann2003AGNBPT</bcf:citekey>
-    <bcf:citekey order="75" intorder="1">Schawinski2007BPT</bcf:citekey>
-    <bcf:citekey order="76" intorder="1">Kewley2001StarburstModel</bcf:citekey>
-    <bcf:citekey order="77" intorder="1">Kauffmann2003AGNBPT</bcf:citekey>
-    <bcf:citekey order="78" intorder="1">Schawinski2007BPT</bcf:citekey>
-    <bcf:citekey order="79" intorder="1">Baldwin1981BPT</bcf:citekey>
-    <bcf:citekey order="80" intorder="1">Edge19593C273Catalogue</bcf:citekey>
-    <bcf:citekey order="81" intorder="1">Slavchevamihova20133c273half</bcf:citekey>
-    <bcf:citekey order="82" intorder="1">SmithH19633C273Var2</bcf:citekey>
-    <bcf:citekey order="83" intorder="1">Dent19653C273Var</bcf:citekey>
-    <bcf:citekey order="84" intorder="1">Schmidt19633C273z</bcf:citekey>
-    <bcf:citekey order="85" intorder="1">Salpeter1964AccretionTheory</bcf:citekey>
-    <bcf:citekey order="86" intorder="1">EventHorizonTelescope2019</bcf:citekey>
-    <bcf:citekey order="87" intorder="1">Gravity20183C273BLR</bcf:citekey>
-    <bcf:citekey order="88" intorder="1">Ulrich1997VARIABILITY</bcf:citekey>
-    <bcf:citekey order="89" intorder="1">Cackett2021RMFiguresGOOD</bcf:citekey>
-    <bcf:citekey order="90" intorder="1">Cackett2021RMFiguresGOOD</bcf:citekey>
-    <bcf:citekey order="91" intorder="1">WinklerWhite1975XRayVariab</bcf:citekey>
-    <bcf:citekey order="92" intorder="1">McHardy1981minuteVar</bcf:citekey>
-    <bcf:citekey order="93" intorder="1">Ulrich1997VARIABILITY</bcf:citekey>
-    <bcf:citekey order="94" intorder="1">Lyubarskii1997PropFluct</bcf:citekey>
-    <bcf:citekey order="95" intorder="1">Uttley2023AccretionLags</bcf:citekey>
-    <bcf:citekey order="96" intorder="1">Padovani2017whatisaname</bcf:citekey>
-    <bcf:citekey order="97" intorder="1">Blandford1982RM</bcf:citekey>
-    <bcf:citekey order="98" intorder="1">Peterson2006BLR</bcf:citekey>
-    <bcf:citekey order="99" intorder="1">Cackett2021RMFiguresGOOD</bcf:citekey>
-    <bcf:citekey order="100" intorder="1">Cackett2021RMFiguresGOOD</bcf:citekey>
-    <bcf:citekey order="101" intorder="1">Peterson2006BLR</bcf:citekey>
-    <bcf:citekey order="102" intorder="1">Kaspi2000BLRSScalingL</bcf:citekey>
-    <bcf:citekey order="103" intorder="1">Peterson2006BLR</bcf:citekey>
-    <bcf:citekey order="104" intorder="1">Cackett2021RMFiguresGOOD</bcf:citekey>
-    <bcf:citekey order="105" intorder="1">Kara2025SMBHXRayReview</bcf:citekey>
+    <bcf:citekey order="44" intorder="1">Netzer2013PhyEvolofAGNBook</bcf:citekey>
+    <bcf:citekey order="45" intorder="1">Narayan1994ADAF</bcf:citekey>
+    <bcf:citekey order="46" intorder="1">Kubota2018AGNSEDHighEddR</bcf:citekey>
+    <bcf:citekey order="47" intorder="1">Giustini2019AGNOutflowsHighEddR</bcf:citekey>
+    <bcf:citekey order="48" intorder="1">Suh2015EddRatioDist</bcf:citekey>
+    <bcf:citekey order="49" intorder="1">Suh2015EddRatioDist</bcf:citekey>
+    <bcf:citekey order="50" intorder="1">Balbus1998TurbulenceAccretionD</bcf:citekey>
+    <bcf:citekey order="51" intorder="1">Miller2000MagnetoCorona</bcf:citekey>
+    <bcf:citekey order="52" intorder="1">Fabian2009Corona</bcf:citekey>
+    <bcf:citekey order="53" intorder="1">Kara2025SMBHXRayReview</bcf:citekey>
+    <bcf:citekey order="54" intorder="1">Ricci2026unificationmodelsactivegalactic</bcf:citekey>
+    <bcf:citekey order="55" intorder="1">Padovani2017whatisaname</bcf:citekey>
+    <bcf:citekey order="56" intorder="1">Netzer2015AnnRev</bcf:citekey>
+    <bcf:citekey order="57" intorder="1">Ricci2026unificationmodelsactivegalactic</bcf:citekey>
+    <bcf:citekey order="58" intorder="1">Netzer2013PhyEvolofAGNBook</bcf:citekey>
+    <bcf:citekey order="59" intorder="1">Murray1995DiskWindBLR</bcf:citekey>
+    <bcf:citekey order="60" intorder="1">Czerny2011WindOriginBLR</bcf:citekey>
+    <bcf:citekey order="61" intorder="1">Kaspi2000BLRSScalingL</bcf:citekey>
+    <bcf:citekey order="62" intorder="1">Czerny2011WindOriginBLR</bcf:citekey>
+    <bcf:citekey order="63" intorder="1">Czerny2011WindOriginBLR</bcf:citekey>
+    <bcf:citekey order="64" intorder="1">Nenkova2008ClumpyTorus</bcf:citekey>
+    <bcf:citekey order="65" intorder="1">Stalevski2012TwoMediumTorus</bcf:citekey>
+    <bcf:citekey order="66" intorder="1">Netzer2015AnnRev</bcf:citekey>
+    <bcf:citekey order="67" intorder="1">Barvainis1987DustSublimation</bcf:citekey>
+    <bcf:citekey order="68" intorder="1">Netzer2015AnnRev</bcf:citekey>
+    <bcf:citekey order="69" intorder="1">Pogge1988IonizationCones</bcf:citekey>
+    <bcf:citekey order="70" intorder="1">Ricci2026unificationmodelsactivegalactic</bcf:citekey>
+    <bcf:citekey order="71" intorder="1">Blandford1977JetMechanism</bcf:citekey>
+    <bcf:citekey order="72" intorder="1">Clarke2017GiantJettedGalaxy</bcf:citekey>
+    <bcf:citekey order="73" intorder="1">Clarke2017GiantJettedGalaxy</bcf:citekey>
+    <bcf:citekey order="74" intorder="1">Clarke2017GiantJettedGalaxy</bcf:citekey>
+    <bcf:citekey order="75" intorder="1">Netzer2013PhyEvolofAGNBook</bcf:citekey>
+    <bcf:citekey order="76" intorder="1">UrryPadovani1995UnifiedAGN</bcf:citekey>
+    <bcf:citekey order="77" intorder="1">Fabian2012AGNFeedback</bcf:citekey>
+    <bcf:citekey order="78" intorder="1">Fischer2013NLRobs</bcf:citekey>
+    <bcf:citekey order="79" intorder="1">Polack2024NLRobsHST</bcf:citekey>
+    <bcf:citekey order="80" intorder="1">Bennert2005</bcf:citekey>
+    <bcf:citekey order="81" intorder="1">Ricci2026unificationmodelsactivegalactic</bcf:citekey>
+    <bcf:citekey order="82" intorder="1">Kewley2001StarburstModel</bcf:citekey>
+    <bcf:citekey order="83" intorder="1">Kauffmann2003AGNBPT</bcf:citekey>
+    <bcf:citekey order="84" intorder="1">Schawinski2007BPT</bcf:citekey>
+    <bcf:citekey order="85" intorder="1">Kewley2001StarburstModel</bcf:citekey>
+    <bcf:citekey order="86" intorder="1">Kauffmann2003AGNBPT</bcf:citekey>
+    <bcf:citekey order="87" intorder="1">Schawinski2007BPT</bcf:citekey>
+    <bcf:citekey order="88" intorder="1">Baldwin1981BPT</bcf:citekey>
+    <bcf:citekey order="89" intorder="1">Edge19593C273Catalogue</bcf:citekey>
+    <bcf:citekey order="90" intorder="1">Slavchevamihova20133c273half</bcf:citekey>
+    <bcf:citekey order="91" intorder="1">SmithH19633C273Var2</bcf:citekey>
+    <bcf:citekey order="92" intorder="1">Dent19653C273Var</bcf:citekey>
+    <bcf:citekey order="93" intorder="1">Schmidt19633C273z</bcf:citekey>
+    <bcf:citekey order="94" intorder="1">Salpeter1964AccretionTheory</bcf:citekey>
+    <bcf:citekey order="95" intorder="1">Zeldovich1964AccretionTheory</bcf:citekey>
+    <bcf:citekey order="96" intorder="1">EventHorizonTelescope2019</bcf:citekey>
+    <bcf:citekey order="97" intorder="1">Gravity20183C273BLR</bcf:citekey>
+    <bcf:citekey order="98" intorder="1">Ulrich1997VARIABILITY</bcf:citekey>
+    <bcf:citekey order="99" intorder="1">WinklerWhite1975XRayVariab</bcf:citekey>
+    <bcf:citekey order="100" intorder="1">McHardy1981minuteVar</bcf:citekey>
+    <bcf:citekey order="101" intorder="1">Ulrich1997VARIABILITY</bcf:citekey>
+    <bcf:citekey order="102" intorder="1">Lyubarskii1997PropFluct</bcf:citekey>
+    <bcf:citekey order="103" intorder="1">Uttley2023AccretionLags</bcf:citekey>
+    <bcf:citekey order="104" intorder="1">Padovani2017whatisaname</bcf:citekey>
+    <bcf:citekey order="105" intorder="1">LaMassa2015ChangingLook</bcf:citekey>
     <bcf:citekey order="106" intorder="1">Kara2025SMBHXRayReview</bcf:citekey>
     <bcf:citekey order="107" intorder="1">Kara2025SMBHXRayReview</bcf:citekey>
-    <bcf:citekey order="108" intorder="1">Paolillo2025Variability</bcf:citekey>
-    <bcf:citekey order="109" intorder="1">Ulrich1997VARIABILITY</bcf:citekey>
-    <bcf:citekey order="110" intorder="1">deCicco2025Variability</bcf:citekey>
-    <bcf:citekey order="111" intorder="1">Uttley2002PSD</bcf:citekey>
-    <bcf:citekey order="112" intorder="1">McHardy2006Variab</bcf:citekey>
-    <bcf:citekey order="113" intorder="1">Paolillo2025Variability</bcf:citekey>
-    <bcf:citekey order="114" intorder="1">Kara2025SMBHXRayReview</bcf:citekey>
-    <bcf:citekey order="115" intorder="1">Kara2025SMBHXRayReview</bcf:citekey>
-    <bcf:citekey order="116" intorder="1">Kara2025SMBHXRayReview</bcf:citekey>
-    <bcf:citekey order="117" intorder="1">Kozlowski2016SF</bcf:citekey>
-    <bcf:citekey order="118" intorder="1">LaMassa2015ChangingLook</bcf:citekey>
-    <bcf:citekey order="119" intorder="1">Yu2022Extao</bcf:citekey>
-    <bcf:citekey order="120" intorder="1">Kelly2009ThermalFluc</bcf:citekey>
-    <bcf:citekey order="121" intorder="1">Kozlowski2016SF</bcf:citekey>
-    <bcf:citekey order="122" intorder="1">Kelly2009ThermalFluc</bcf:citekey>
-    <bcf:citekey order="123" intorder="1">Kozlowski2010DRW</bcf:citekey>
-    <bcf:citekey order="124" intorder="1">MacLeod2010ScalRel</bcf:citekey>
-    <bcf:citekey order="125" intorder="1">Kozlowski2016SF</bcf:citekey>
-    <bcf:citekey order="126" intorder="1">Kozlowski2016SF</bcf:citekey>
-    <bcf:citekey order="127" intorder="1">Kelly2014CARMA</bcf:citekey>
-    <bcf:citekey order="128" intorder="1">YuEzTao2025</bcf:citekey>
-    <bcf:citekey order="129" intorder="1">MacLeod2010DRW</bcf:citekey>
-    <bcf:citekey order="130" intorder="1">YuEzTao2025</bcf:citekey>
-    <bcf:citekey order="131" intorder="1">YuEzTao2025</bcf:citekey>
+    <bcf:citekey order="108" intorder="1">Kara2025SMBHXRayReview</bcf:citekey>
+    <bcf:citekey order="109" intorder="1">Blandford1982RM</bcf:citekey>
+    <bcf:citekey order="110" intorder="1">Peterson2006BLR</bcf:citekey>
+    <bcf:citekey order="111" intorder="1">Netzer2013PhyEvolofAGNBook</bcf:citekey>
+    <bcf:citekey order="112" intorder="1">Cackett2021RMFiguresGOOD</bcf:citekey>
+    <bcf:citekey order="113" intorder="1">Cackett2021RMFiguresGOOD</bcf:citekey>
+    <bcf:citekey order="114" intorder="1">Cackett2021RMFiguresGOOD</bcf:citekey>
+    <bcf:citekey order="115" intorder="1">Cackett2021RMFiguresGOOD</bcf:citekey>
+    <bcf:citekey order="116" intorder="1">Peterson2006BLR</bcf:citekey>
+    <bcf:citekey order="117" intorder="1">Kaspi2000BLRSScalingL</bcf:citekey>
+    <bcf:citekey order="118" intorder="1">Peterson2006BLR</bcf:citekey>
+    <bcf:citekey order="119" intorder="1">Netzer2022RM</bcf:citekey>
+    <bcf:citekey order="120" intorder="1">Cackett2021RMFiguresGOOD</bcf:citekey>
+    <bcf:citekey order="121" intorder="1">Korista2001DiffusionContBLR</bcf:citekey>
+    <bcf:citekey order="122" intorder="1">Netzer2022RM</bcf:citekey>
+    <bcf:citekey order="123" intorder="1">Cackett2021RMFiguresGOOD</bcf:citekey>
+    <bcf:citekey order="124" intorder="1">Paolillo2025Variability</bcf:citekey>
+    <bcf:citekey order="125" intorder="1">Ulrich1997VARIABILITY</bcf:citekey>
+    <bcf:citekey order="126" intorder="1">deCicco2025Variability</bcf:citekey>
+    <bcf:citekey order="127" intorder="1">Uttley2002PSD</bcf:citekey>
+    <bcf:citekey order="128" intorder="1">McHardy2006Variab</bcf:citekey>
+    <bcf:citekey order="129" intorder="1">Paolillo2025Variability</bcf:citekey>
+    <bcf:citekey order="130" intorder="1">Kara2025SMBHXRayReview</bcf:citekey>
+    <bcf:citekey order="131" intorder="1">Kara2025SMBHXRayReview</bcf:citekey>
+    <bcf:citekey order="132" intorder="1">Kara2025SMBHXRayReview</bcf:citekey>
+    <bcf:citekey order="133" intorder="1">Kozlowski2016SF</bcf:citekey>
+    <bcf:citekey order="134" intorder="1">YuEzTao2025</bcf:citekey>
+    <bcf:citekey order="135" intorder="1">Kelly2014CARMA</bcf:citekey>
+    <bcf:citekey order="136" intorder="1">Yu2022Extao</bcf:citekey>
+    <bcf:citekey order="137" intorder="1">Kelly2009ThermalFluc</bcf:citekey>
+    <bcf:citekey order="138" intorder="1">Kozlowski2016SF</bcf:citekey>
+    <bcf:citekey order="139" intorder="1">Kelly2009ThermalFluc</bcf:citekey>
+    <bcf:citekey order="140" intorder="1">Kozlowski2010DRW</bcf:citekey>
+    <bcf:citekey order="141" intorder="1">MacLeod2010ScalRel</bcf:citekey>
+    <bcf:citekey order="142" intorder="1">Kozlowski2016SF</bcf:citekey>
+    <bcf:citekey order="143" intorder="1">Kozlowski2016SF</bcf:citekey>
+    <bcf:citekey order="144" intorder="1">Kelly2014CARMA</bcf:citekey>
+    <bcf:citekey order="145" intorder="1">Yu2025ScalableEztao</bcf:citekey>
+    <bcf:citekey order="146" intorder="1">Burke2021TimescaleBHMass</bcf:citekey>
+    <bcf:citekey order="147" intorder="1">Sun2023QuasarMassDist</bcf:citekey>
+    <bcf:citekey order="148" intorder="1">Sun2023QuasarMassDistDist</bcf:citekey>
+    <bcf:citekey order="149" intorder="1">Kiyohara2025NSF</bcf:citekey>
+    <bcf:citekey order="150" intorder="1">Kiyohara2025NSF</bcf:citekey>
+    <bcf:citekey order="151" intorder="1">Kiyohara2025NSF</bcf:citekey>
+    <bcf:citekey order="152" intorder="1">Kiyohara2025NSF</bcf:citekey>
+    <bcf:citekey order="153" intorder="1">RasmussenWilliams2006GP</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

@@ -1,5 +1,77 @@
 \chapter{Models}
+\label{chap:models}
+
+This chapter describes the model used to reconstruct the gaps in the simulated light curves of Chapter \ref{chap:simulation}. The intrinsic variability is a solution of a stochastic differential equation, and the natural object for gap filling is therefore the transition density $p(x_t \mid x_s)$ of that equation. For the damped random walk this density is known in closed form (Equation \ref{eq:drw_transition}), but for more general processes it is not, and evaluating it requires a numerical solver run between every pair of observation times. Neural Stochastic Flows \parencite{Kiyohara2025NSF} circumvent this by learning the transition density directly as a conditional normalising flow, evaluable in a single network pass for an arbitrary time separation.
+
+\section{Neural Stochastic Flows}
+\label{sec:NSF}
 
 
+%  normalising flow as an invertible map, change-of-variables density.
+% conditioning on (x_s, dt) so the flow represents p(x_t | x_s, dt).
+% identity constraint F(x, 0) = x (verified in code: 0.09997 for input 0.1).
+% autonomous SDE, conditioning on dt only, not absolute time.
 
-% The payoff is that single-band stops being a separate model and becomes the empty-support case of one model. "does multiband help?" result then becomes an ablation on a single trained network, varying the available bands at test time on the same curves, rather than a comparison between two differently-trained models, where any gap could be a training artifact.
+\section{Training Objective}
+\label{sec:Objective}
+
+The flow and an auxiliary bridge model are trained jointly with the objective of \textcite{Kiyohara2025NSF},
+\begin{equation}
+    \mathcal{L}(\theta, \xi) = \underbrace{-\,\mathbb{E}_{\mathcal{D}}\left[\log p_\theta\!\left(x_{t_j} \mid x_{t_i}\right)\right]}_{\mathcal{L}_{\mathrm{NLL}}} \;+\; \lambda\, \underbrace{\mathcal{L}_{\mathrm{flow}}(\theta, \xi)}_{\text{consistency}},
+    \label{eq:total_loss}
+\end{equation}
+comprising two terms with complementary roles. The first is a negative log-likelihood evaluated on \emph{observed} transition pairs $(x_{t_i}, x_{t_j})$; it anchors the learned density to the data. The second enforces the Chapman--Kolmogorov consistency that a direct transition and a two-step transition through an intermediate time must agree,
+\begin{equation}
+    p(x_k \mid x_i) = \int p(x_k \mid x_j)\, p(x_j \mid x_i)\, dx_j,
+    \label{eq:chapman}
+\end{equation}
+whose intractable intermediate marginal is handled by introducing a bridge model $q_\xi(x_j \mid x_i, x_k)$ as an auxiliary variational distribution, yielding a tractable bidirectional bound \parencite{Kiyohara2025NSF}.
+
+Both terms are required. The consistency term alone admits any self-consistent dynamics, of which the true process is only one; without the likelihood term nothing selects the correct transition, and a model so trained reproduces observed light curves only because the bridge is supplied with real endpoints at evaluation time. The likelihood term is evaluated over triplets $(t_i, t_j, t_k)$ whose spans are drawn to cover the full baseline, so that transitions across long time separations---including the direct $t_i \to t_k$ pair---are constrained directly by the data.
+
+% Weighting: lambda=0.1 (Kiyohara report ~0.4 on Lorenz, ~0.03 on mocap, weak
+% sensitivity around the right order of magnitude). State once.
+
+\section{Data Normalisation}
+\label{sec:Normalisation}
+
+The flow conditions on the pair $(x, \Delta t)$, and is poorly conditioned if presented with $\Delta t \sim 1000$ and $x \sim 0.1$. The light curves are therefore normalised so that time is measured in units of the baseline, $t \to t/t_{\max}$, and flux in units of the driver amplitude, $y \to y/\sigma$, giving a normalised timescale $\tau_{\mathrm{n}} = \tau/t_{\max}$ and unit variance. The normalization is applied consistently to the validation set using the scales computed from the training set.
+
+\section{Gap Filling}
+\label{sec:GapFilling}
+
+Reconstruction of a gap is performed with the bridge model, conditioned on the states at both bracketing observations. A distribution conditioned on both endpoints is, by construction, a stochastic bridge; the transition density alone, conditioned only on the earlier endpoint, would instead constitute a forecast, whose spread grows without bound rather than closing on the later endpoint. For a given gap the bridge is sampled on a dense interior grid, and the reconstruction is summarised by the pointwise median and central credible intervals of the resulting Monte Carlo ensemble.
+
+\section{Latent}
+\label{sec:latent}
+
+% Stage 2 -- describe once implemented. Key structure to write up:
+% - VSSM: NSF as latent transition, GRU encoder q_phi, decoder p_psi(o|x).
+% - decoder consumes the KNOWN per-epoch yerr (scale_factor = sigma_phot/sigma).
+% - beta-NELBO: reconstruction term = -log p_psi(o|x) IS the data likelihood here
+%   (contrast with plain NSF, where L_NLL is separate).
+% - skip-ahead KL (Kiyohara Eq. 17) for long-gap consistency.
+% - band tokens enter encoder + emission only; transition stays band-agnostic.
+
+\section{Validation and Baseline}
+\label{sec:Validation}
+
+\subsection{The Learned Transition}
+\label{ssec:TransitionCheck}
+
+Because the driver is a damped random walk, its transition density is known analytically (Equation~\ref{eq:drw_transition}), and the learned density $p_\theta(x_t \mid x_s, \Delta t)$ can be compared against it directly. Sampling the learned transition at a range of separations and comparing the sample mean and standard deviation against the analytic $e^{-\Delta t/\tau}x_s$ and $\sigma\sqrt{1 - e^{-2\Delta t/\tau}}$ provides a direct test that the model has learned the underlying dynamics, and not merely a density consistent with the observed pairs (Figure~\ref{fig:transition_check}). This validation is specific to the present setting: the benchmark systems of \textcite{Kiyohara2025NSF} possess no closed-form transition against which such a comparison could be made.
+
+\subsection{The Bayes-Optimal Baseline}
+\label{ssec:GPBaseline}
+
+As a reference we compare against a Gaussian process regression employing the true damped-random-walk kernel, $k(\Delta t) = \sigma^2 e^{-|\Delta t|/\tau}$, supplied with each curve's own $\tau$ and $\sigma$. Since the simulated data are generated from exactly this process, the Gaussian process conditional distribution is the exact posterior over the unobserved flux, and its mean is the minimum-mean-square-error reconstruction. Given the true parameters, no method can produce a more accurate mean or a narrower calibrated interval; the baseline therefore represents a ceiling rather than a competitor. The predictive mean and variance at prediction times $t_*$ are
+\begin{align}
+    \mu_* &= K_{*}\left(K + \sigma_{\mathrm{phot}}^2 I\right)^{-1} y, \label{eq:gp_mean}\\
+    \Sigma_* &= K_{**} - K_{*}\left(K + \sigma_{\mathrm{phot}}^2 I\right)^{-1} K_{*}^{\top}, \label{eq:gp_var}
+\end{align}
+where $K$, $K_*$ and $K_{**}$ are the kernel evaluated among the observations, between prediction and observation times, and among the prediction times respectively \parencite{RasmussenWilliams2006GP}. The additive measurement term on the diagonal ensures that the reconstructed interval contracts to $\sim\!\sigma_{\mathrm{phot}}$ at an observation rather than to zero, reflecting that an observation constrains the latent flux only up to the measurement error.
+
+\subsection{Evaluation Metrics}
+\label{ssec:Metrics}
+
+Reconstruction quality is quantified over the gap interiors only, excluding the pinned observation epochs at which both the reconstruction and the baseline are near-exact and the interval collapses to the noise level; their inclusion would inflate the apparent performance of both. For each validation curve we report the root-mean-square error of the median reconstruction and the empirical coverage of the credible intervals, the latter measuring calibration---the fraction of true values falling within a stated interval, which for a well-calibrated $68\%$ interval should equal $0.68$. Errors are additionally binned by gap width in units of $\tau$, the variable that controls the information available from the bracketing observations, and pooled across the validation set so that the scaling of reconstruction error with gap size is characterised over the full population rather than for any single curve.

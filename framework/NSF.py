@@ -10,6 +10,7 @@ from jax import random
 from jax_nsf.models.stochastic_flows import AffineCouplingStochasticFlow
 from jax_nsf.models.bridge_models import AffineCouplingBridgeModel
 from Tensorize import validIndices, sampleTriplets
+from jax_nsf import losses
 
 
 def makeModels(key, d=1, width=64, depth=2, layers=4):
@@ -20,6 +21,7 @@ def makeModels(key, d=1, width=64, depth=2, layers=4):
               affine_coupling_scale_fn="tanh_exp", autonomous_sde=True)
     return (AffineCouplingStochasticFlow(input_dim=d, key=k1, **kw),
             AffineCouplingBridgeModel(state_dim=d, key=k2, **kw))
+
 
 
 def nllTriplet(flow, y, t, ii, jj, kk):
@@ -33,7 +35,8 @@ def nllTriplet(flow, y, t, ii, jj, kk):
 
 
 def flowLoss(flow, bridge, y, t, ii, jj, kk, key):
-    """Bidirectional Chapman-Kolmogorov consistency, Kiyohara Eqs. (8)-(10)."""
+    """Bidirectional Chapman-Kolmogorov consistency, Kiyohara Eqs. (8)-(10).
+    Might instead import this directly from jax_nsf.losses.flow_loss"""
     x_i = y[ii][None]
     ti, tj, tk = t[ii], t[jj], t[kk]
     k1, k2, k3, k4 = random.split(key, 4)

@@ -5,28 +5,29 @@ from eztao.carma import DRW_term
 from eztao.ts import gpSimByTime
 import matplotlib.pyplot as plt
 
-# A&A/ApJ conventions: ticks inward on all four sides, minors on, no legend
-# frame, serif to match the LaTeX body text.
 
-#AA_STYLE = {
-#    "font.family": "serif", "mathtext.fontset": "dejavuserif",
-#    "axes.linewidth": 0.8, "lines.linewidth": 1.0,
-#    "xtick.direction": "in", "ytick.direction": "in",
-#    "xtick.top": True, "ytick.right": True,
-#    "xtick.minor.visible": True, "ytick.minor.visible": True,
-#    "legend.frameon": False, "figure.dpi": 130,
-#}
-from Style import AA_STYLE
+from Style import useAA
 
 class MultibandLCGenerator:
     """
     Multiband light curve generator using EzTao
     """
     # Limits for the parameter spaces from Yu et al. (2025)
-    # tau: damping (characteristic) time-scale [days], it goes up to decades but
-    # should lower the limits to around (30, 300)?
-    low_tau = 0.01
-    high_tau = 500
+    # tau: damping (characteristic) time-scale [days], it goes up to decades (0.01, 500)
+    # but both of the the extremely low and high regimes are either impossible or trivial
+    # low_tau = 30
+    # high_tau = 300
+
+    # Burke+2021, Eq. 1 
+    #   tau_damping = 107 (+11/-12) d * (M_BH / 10^8 Msun)^0.38 ; rest-frame optical
+    TAU0, LOGM_PIV, SLOPE = 107.0, 8.0, 0.38
+
+    # Sun+2023 bias-corrected logM_BH distribution, model [10s=500, sig_int=0.3 dex]
+    # of quasars 1.4 < z < 1.8, with a 1.6 median
+    MASS_CSV = "/Users/anacecilialr/GitHub/MASS/MASS-Thesis/data/sun_fig4.csv"
+    _mass_cdf = None        # class-level cache
+
+
 
     # sigma: DRW stationary standard deviation (EzTao amplitude) [mag]
     low_sigma = 0.02
@@ -83,8 +84,9 @@ class MultibandLCGenerator:
         self.driver_band = driver_band
 
         if tau_driver is None:
-            self.tau_driver = np.exp(self.rng.uniform(np.log(self.low_tau),
-                                                      np.log(self.high_tau)))            
+            #self.tau_driver = np.exp(self.rng.uniform(np.log(self.low_tau),
+                                                      #np.log(self.high_tau)))
+            self.sampleTau()
         else:
             self.tau_driver = tau_driver
 
@@ -110,6 +112,35 @@ class MultibandLCGenerator:
         print(f"Driver tau = {self.tau_driver}")
         print(f"Driver snr = {self.snr_driver}")
         print(f"Baseline = {self.t_max} d = {self.t_max/self.tau_driver:.1f} tau")
+
+    @classmethod
+    def _loadMassCDF(cls):
+        """Digitised Sun+2023 logM_BH distribution in (cdf, logM) table."""
+        if cls._mass_cdf is None:
+            d = np.loadtxt(cls.MASS_CSV, delimiter=",") # cols: logM, density
+            xM, pM = d[:, 0], d[:, 1]
+            order = np.argsort(xM); xM, pM = xM[order], pM[order]
+            xM, k = np.unique(xM, return_index=True); pM = pM[k]
+            pM = np.clip(pM, 0, None)
+            pM = pM / np.trapezoid(pM, xM)
+            cdf = np.concatenate([[0.0],
+                                  np.cumsum(0.5 * (pM[1:] + pM[:-1]) * np.diff(xM))])
+            cls._mass_cdf = (cdf / cdf[-1], xM)
+        return cls._mass_cdf
+
+    def sampleTau(self, within: float = 0.68):
+        """
+        Draw ONE tau for this curve, restricted to the central `within` fraction
+        of the population (default 1 sigma = 68%).
+        """
+        cdf, xM = self._loadMassCDF()
+        # q = (1.0 - within) / 2.0         
+        u = self.rng.uniform(0, 1.0)          
+        self.logM_driver = float(np.interp(u, cdf, xM))
+        self.tau_driver = float(self.TAU0 * 10.0 ** (self.SLOPE *
+                                (self.logM_driver - self.LOGM_PIV)))
+        return self.tau_driver
+        
 
     def checkRegime(self, n_obs: int = 130, gap_frac: float = 0.35, n_gaps: int = 3):
         """
@@ -201,7 +232,7 @@ class MultibandLCGenerator:
         Primitive that creates one realization of the kernel at requested times. It is also
         the only caller where the kernel is used to it can be changed later (e.g., to CARMA(2,1))
 
-        Also, the error here is neglible (~1e-7 mag) so it v
+        Also, the error here is neglible (~1e-7 mag) 
         """
         t = np.asarray(t, dtype=float)
             
@@ -330,12 +361,12 @@ class MultibandLCGenerator:
             y_obs, yerr = y_obs_clean, np.full_like(y_obs_clean, sigma_phot)
 
         return {
-            "t_true": self.t_true.astype(np.float32),   # dense truth: EVAL ONLY
+            "t_true": self.t_true.astype(np.float32),   # dense truth, EVAL ONLY
             "y_true": y_true.astype(np.float32),
             "t_obs": t_obs.astype(np.float32),          # what the model sees
             "y_obs": y_obs.astype(np.float32),
             "yerr": yerr.astype(np.float32),
-            "gap_windows": windows.astype(np.float32),  # RNG-drawn -> must be stored
+            "gap_windows": windows.astype(np.float32),  # RNG drawn, must be stored
             "tau": float(self.tau_driver),
             "sigma": float(self.sigma_driver),
             "band": self.driver_band,
@@ -345,20 +376,18 @@ class MultibandLCGenerator:
 
 def plotLC(lc, ax = None, recon = None, show_truth = True, magnitudes = True):
     """
-    One light curve, Kozlowski-style.
-
     lc    : dict from makeSingleBand()
     recon : None, or a dict describing a reconstruction --
               {"t": (M,), "samples": (n, M), "label": str}      Monte Carlo (NSF)
               {"t": (M,), "med":, "lo":, "hi":, "label": str}   precomputed (GP)
     """
-    plt.rcParams.update(AA_STYLE)
+    #useAA()
     if ax is None:
         _, ax = plt.subplots(figsize=(9, 3.4))
 
     if show_truth:
         ax.plot(lc["t_true"], lc["y_true"], color="0.75", lw=0.9, zorder=1,
-                label="latent driver (truth)")
+                label=rf"dense lightcurve: $\sigma =$ {lc['sigma']}, $\tau =$ {lc['tau']:.2}")
 
     if recon is not None:
         t = np.asarray(recon["t"])
@@ -367,19 +396,19 @@ def plotLC(lc, ax = None, recon = None, show_truth = True, magnitudes = True):
         else:
             lo, med, hi = recon["lo"], recon["med"], recon["hi"]
         lab = recon.get("label", "reconstruction")
-        ax.fill_between(t, lo, hi, color="tab:blue", alpha=0.22, lw=0, zorder=2,
+        ax.fill_between(t, lo, hi, color="cornflowerblue", alpha=0.22, lw=0, zorder=2,
                         label=rf"{lab} $\pm1\sigma$")
         ax.plot(t, med, color="tab:red", lw=1.0, zorder=3, label=f"{lab} median")
 
     ax.errorbar(lc["t_obs"], lc["y_obs"], yerr=lc["yerr"], fmt="o", ms=2.2,
                 lw=0.7, color="k", capsize=0, zorder=4, label="observed")
 
-    ax.set_xlabel("Time (day)")
-    ax.set_ylabel("Magnitude" if magnitudes else "Flux")
+    ax.set_xlabel("time (day)", fontsize=13)
+    ax.set_ylabel("magnitude" if magnitudes else "Flux", fontsize=13)
     ax.set_xlim(lc["t_true"][0], lc["t_true"][-1])
     if magnitudes:
         ax.invert_yaxis()          # brighter is up
-    ax.legend(ncol=4, fontsize=7.5, loc="upper center", bbox_to_anchor=(0.5, 1.16))
+    ax.legend(ncol=4, fontsize=10, loc="upper center", bbox_to_anchor=(0.5, 1.16))
     return ax
 
 def makeDataset(n_curves: int = 500, val_frac: float = 0.2, seed0: int = 0,
@@ -418,7 +447,7 @@ def saveDataset(curves, path, T_max=None):
     N = len(curves)
     t = np.zeros((N, T_max), np.float32)
     y = np.zeros((N, T_max), np.float32)
-    e = np.ones((N, T_max), np.float32)      # 1.0, NOT 0.0: we divide by yerr later
+    e = np.ones((N, T_max), np.float32)      # 1.0, NOT 0.0, we divide by yerr later
     m = np.zeros((N, T_max), bool)
     for i, c in enumerate(curves):
         T = c["t_obs"].size
@@ -429,7 +458,7 @@ def saveDataset(curves, path, T_max=None):
     np.savez_compressed(
         path,
         t_obs=t, y_obs=y, yerr=e, mask=m,
-        t_true=t_true,                                        # shared -> store once
+        t_true=t_true,                                        # shared, just stored once
         y_true=np.stack([c["y_true"] for c in curves]),       # (N, T_true)
         gap_windows=np.stack([c["gap_windows"] for c in curves]),
         tau=np.array([c["tau"] for c in curves], np.float32),
