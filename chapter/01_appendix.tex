@@ -1,0 +1,40 @@
+\chapter{Neural Stochastic Flow in Depth}
+\label{app:loss}
+
+\section*{Architecture}
+
+Let $c := (x_{t_i}, \Delta t, t_i)$ denote the conditioning variables, with $t_i$ retained only for non-autonomous systems and omitted for the autonomous damped random walk considered here, and let $\Delta t := t_j - t_i$. A sample of the transition density is drawn by first initialising a state-dependent Gaussian that mirrors the Euler-Maruyama discretisation, with drift scaled by $\Delta t$ and diffusion by $\sqrt{\Delta t}$,
+\begin{equation}
+    \label{eq:base}
+    z = \underbrace{x_{t_i} + \Delta t\,\mathrm{MLP}_\mu(c; \theta_\mu)}_{\mu(c)} + \underbrace{\sqrt{\Delta t}\,\mathrm{MLP}_\sigma(c; \theta_\sigma)}_{\sigma(c)} \odot\, \epsilon, \qquad \epsilon \sim \mathcal{N}(0, I),
+\end{equation}
+and then passing it through a sequence of $L$ conditioned bijective layers,
+\begin{equation}
+    \label{eq:coupling}
+    x_{t_j} = f_\theta(z, c) = f_L(\,\cdot\,; c, \theta_L) \circ \cdots \circ f_1(z; c, \theta_1).
+\end{equation}
+Each layer splits its input into two partitions $(z_\mathrm{A}, z_\mathrm{B})$ and applies an affine update to one conditioned on the other and on $c$,
+\begin{equation}
+    \label{eq:affine}
+    f_i(z; c, \theta_i) = \mathrm{Concat}\Big(z_\mathrm{A},\; z_\mathrm{B} \odot \exp\big(\Delta t\,\mathrm{MLP}^{(i)}_\mathrm{scale}(z_\mathrm{A}, c)\big) + \Delta t\,\mathrm{MLP}^{(i)}_\mathrm{shift}(z_\mathrm{A}, c)\Big),
+\end{equation}
+with the partitions alternating between layers. The explicit factor of $\Delta t$ in Equations \ref{eq:base} and \ref{eq:affine} ensures that the whole map reduces to the identity as $\Delta t \to 0$, enforcing the identity property, while the coupling structure keeps the Jacobian log-determinant tractable for the likelihood in Equation \ref{eq:changeofvars}.
+
+\section*{Flow-consistency loss}
+
+The flow-consistency term enforces the Chapman-Kolmogorov relation of Equation \ref{eq:chapmankolmogorov} by minimising the Kullback-Leibler divergence between the one-step and two-step transitions. Because this divergence is intractable directly, the bridge $q_\xi(x_{t_j} \mid x_{t_i}, x_{t_k})$ is introduced as an auxiliary variational distribution, and tractable variational upper bounds are minimised in both directions \parencite{Kiyohara2025SNF}. The forward bound, from the one-step to the two-step transition, is
+\begin{equation}
+    \label{eq:flow12}
+    \mathcal{L}_\mathrm{flow, 1\text{-}to\text{-}2} = \mathbb{E}\left[\log \frac{p_\theta(x_{t_k} \mid x_{t_i})\, q_\xi(x_{t_j} \mid x_{t_i}, x_{t_k})}{p_\theta(x_{t_k} \mid x_{t_j})\, p_\theta(x_{t_j} \mid x_{t_i})}\right],
+\end{equation}
+with the expectation taken over $p_\theta(x_{t_k} \mid x_{t_i})\,q_\xi(x_{t_j} \mid x_{t_i}, x_{t_k})$, and the reverse bound is
+\begin{equation}
+    \label{eq:flow21}
+    \mathcal{L}_\mathrm{flow, 2\text{-}to\text{-}1} = \mathbb{E}\left[\log \frac{p_\theta(x_{t_j} \mid x_{t_i})\, p_\theta(x_{t_k} \mid x_{t_j})}{q_\xi(x_{t_j} \mid x_{t_i}, x_{t_k})\, p_\theta(x_{t_k} \mid x_{t_i})}\right],
+\end{equation}
+with the expectation over $p_\theta(x_{t_j} \mid x_{t_i})\,p_\theta(x_{t_k} \mid x_{t_j})$. The total flow-consistency loss is the sum of the two,
+\begin{equation}
+    \label{eq:flowtotal}
+    \mathcal{L}_\mathrm{flow} = \mathcal{L}_\mathrm{flow, 1\text{-}to\text{-}2} + \mathcal{L}_\mathrm{flow, 2\text{-}to\text{-}1},
+\end{equation}
+and enters the training objective of Equation \ref{eq:loss} weighted by $\lambda$.

@@ -1,115 +1,101 @@
 \chapter{Simulation Framework}
 \label{chap:simulation}
 
-This chapter describes the framework used to generate realistic AGN light curves with which the reconstruction method of Chapter \ref{chap:models} is trained and evaluated. The intrinsic variability is modeled using the \textsc{EzTao} Gaussian process library \parencite{Yu2022Extao}, which is then observed through an irregular, gappy cadence with added photometric noise, mimicking the sampling of a ground-based monitoring campaign.
+The reconstruction method developed in this thesis is trained and tested on simulated light curves, for which the underlying signal is known exactly. This chapter sets out the framework used to generate them. It begins with the stochastic process and damped random walk, derives the transition probability that the reconstruction method will later learn, and then describes the simulation itself, including the way physically motivated timescales are assigned and the sampling regime.
 
-%Gaussian processes with an exponential autocorrelation fall into this class of stochastic models that have fast algorithms for computing their likelihood function (Rybicki & Press 1995; Koz lowski et al. 2010). This particular process is known as both a first order continuous-time autoregressive process (CAR(1)) or an Ornstein-Uhlenbeck process , and was introduced by Kelly et al. (2009) as a model for quasar optical light curves.
+\section{Stochastic Processes}
+\label{sec:stochastic}
 
-\section{The Vera C. Rubin Observatory LSST}
-\label{sec:LSST}
-% we chose the lsst-like simulations because ...
+The variability introduced in Chapter \ref{chap:variability} is aperiodic and aleatory, so it is not well described by a deterministic model with a fixed set of parameters. It is instead naturally treated as a realization of a \textit{stochastic process}: a family of random variables indexed by time, whose statistical properties, rather than whose exact values, are the object of study. Rather than predicting the flux at a given epoch, one models the distribution from which that flux is drawn, conditioned on the values already observed.
 
-\section{Damped Random Walk}
-\label{sec:DRW}
-
-% CHECK MACLEOD 2010
-The simplest stochastic model consistent with the observed AGN PSD properties is the \textit{damped random walk} (DRW), also known as a first-order continuous autoregressive process, CAR(1), or Ornstein-Uhlenbeck process \parencite{Kelly2009ThermalFluc}. It is described by the stochastic differential equation:
-
+The simplest stochastic model consistent with the observed variability of AGN is the \textit{damped random walk} (DRW), also known as an Ornstein-Uhlenbeck process \parencite{Kelly2009ThermalFluc}. It is described by the stochastic differential equation
 \begin{equation}
-    \label{eq:DRW}
-    df(t) = -\frac{f(t)}{\tau_\mathrm{DRW}}\,dt + \sigma_\mathrm{DRW}\sqrt{dt}\,\epsilon(t),
+    df(t) = -\frac{1}{\tau} f(t) dt + \sigma_{\mathrm{d}} \sqrt{dt} \epsilon(t)
+    \label{eq:drw_sde}
 \end{equation}
+where $\tau$ is the damping timescale, $\sigma_{\mathrm{d}}$ sets the amplitude of the driving noise, and $\epsilon(t)$ is a white noise process\footnote{A white noise process is one with a mean zero and no correlation between its values at different times.}. The two terms admit a direct physical reading. The first is a restoring term that pulls the flux back towards its mean on the timescale $\tau$, so that excursions do not grow without bound, while the second perturbs it with stochastic kicks. The competition between damping and driving produces the characteristic behaviour of AGN light curves, which vary coherently on timescales shorter than $\tau$ and decorrelate into noise on timescales much longer than $\tau$.
 
-where $\tau_\mathrm{DRW}$ is the damping (or characteristic) timescale, $\sigma_\mathrm{DRW}$ is the asymptotic variability amplitude, and $\epsilon(t)$ is a white noise process.
-
+The DRW provides a good statistical description of optical AGN light curves \parencites{Kelly2009ThermalFluc}{Kozlowski2010DRW}{MacLeod2010ScalRel} and, importantly, it is a \textit{Gaussian process}, a distribution over functions such that the values at any finite set of times follow a multivariate normal distribution, specified by a mean function and a covariance function \parencite{Rasmussen2006GP}. Conditioning on observed values yields a Gaussian predictive distribution in closed form, which is what makes such processes analytically tractable for interpolation. Its exponential autocorrelation function
 \begin{equation}
-    X_{t+\Delta t} \mid X_t \;\sim\; \mathcal{N}\!\left(\mu + e^{-\Delta t/\tau}\left(X_t - \mu\right),\; \sigma^2\left(1 - e^{-2\Delta t/\tau}\right)\right),
+    \mathrm{ACF}(\Delta t) = \exp\!\left(-\frac{|\Delta t|}{\tau}\right),
+    \label{eq:drw_acf}
+\end{equation}
+corresponding to a power spectrum of the form $P(\nu) \propto \nu^{-2}$ at high frequencies that flattens to white noise below the break frequency $\nu_b = 1/(2\pi\tau)$. 
+
+The damped random walk is also the simplest member of the broader family of \textit{continuous-time autoregressive moving average} (CARMA) processes \parencite{Kelly2014CARMA}, corresponding to the case CARMA$(1,0)$. A general CARMA$(p,q)$ process is the solution of a linear stochastic differential equation of order $p$, driven by white noise through an order-$q$ moving-average term, and can reproduce a wider range of power-spectrum shapes than the damped random walk alone. In particular the CARMA$(2,1)$ process, also known as the damped harmonic oscillator, has been found to describe some observed AGN light curves more faithfully \parencite{Yu2025ScalableEztao}. The damped random walk is nonetheless retained throughout this work as the generative model, both because it remains an adequate approximation on the timescales probed by the surveys considered here and because its analytic tractability provides a controlled setting in which to develop and test the reconstruction method. The consequences of this choice, in particular the effect of model misspecification when the method is applied to real data, are returned to in Chapter \ref{chap:reconstruction}.
+
+\subsection{The Transition Probability}
+\label{ssec:transition}
+
+The exponential autocorrelation of Equation \ref{eq:drw_acf} has a consequence that is central to this work. Because the damped random walk is a Gaussian process, and because Eq. \ref{eq:drw_sde} is first-order and Markovian\footnote{A process is Markovian if its future depends only on its present state and not on the path by which it was reached, so that the state at one time contains all the information relevant to predicting later times.}, the distribution of the state at a time $t + \Delta t$ given its value at time $t$ is itself Gaussian and depends only on the elapsed time $\Delta t$. This \textit{transition probability} is
+\begin{equation}
+    X_{t+\Delta t} \mid X_t \;\sim\; \mathcal{N}\!\left(\mu + e^{-\Delta t/\tau}\big(X_t - \mu\big),\; \sigma^{2}\big(1 - e^{-2\Delta t/\tau}\big)\right),
     \label{eq:drw_transition}
 \end{equation}
+where $\mu$ is the long-term mean and $\sigma$ the stationary standard deviation of the light curve. The mean relaxes exponentially from the current value towards $\mu$ on the timescale $\tau$, while the variance grows from zero at $\Delta t = 0$ to the stationary value $\sigma^{2}$ as $\Delta t$ becomes large compared with $\tau$. Both limits are the expected ones. At short separations the process retains a strong memory of its previous state and the distribution is narrow and centred near $X_t$, whereas at separations much longer than $\tau$ the memory is lost and the distribution approaches the stationary marginal $\mathcal{N}(\mu, \sigma^{2})$.
 
-The DRW has an exponential autocorrelation function:
+Equation \ref{eq:drw_transition} is the object that the reconstruction method of Chapter \ref{chap:nsf} learns from data. It provides both a target against which the learned transition can be validated and, through the same expression, the exact Gaussian process baseline against which the method is compared. After the light curves are centred, $\mu = 0$, the mean reduces to $X_t\,e^{-\Delta t/\tau}$ and the variance to $\sigma^{2}(1 - e^{-2\Delta t/\tau})$.
 
+\section{The Damping Timescale}
+\label{sec:tauconventions}
+
+The damping timescale is the quantity that most directly characterizes the variability, and it requires some care because its definition and its measured value depend on convention. In the structure-function representation, the damped random walk is one member of a family parametrized by the exponent of the autocorrelation decay,
 \begin{equation}
-    \label{eq:DRW_ACF}
-    \mathrm{ACF}(\Delta t) = \exp\left(-\frac{|\Delta t|}{\tau_\mathrm{DRW}}\right),
+    \label{eq:acf_family}
+    \mathrm{ACF}(\Delta t) = \exp\!\left(-\left(\frac{|\Delta t|}{\tau}\right)^{\!\beta}\right),
 \end{equation}
-
-corresponding to a PSD of the form $P(\nu) \propto \nu^{-2}$ at high frequencies, flattening to white noise below the break frequency $\nu_b = 1/(2\pi\tau_\mathrm{DRW})$. In the structure function representation, the DRW produces a power-law rise with slope $\gamma = 0.5$ on short timescales ($\Delta t \ll \tau_\mathrm{DRW}$), flattening to a constant value set by $\sigma_\mathrm{DRW}$ above the characteristic timescale (Figure~\ref{fig:KozlowskiDRW}; \cite{Kozlowski2016SF}). The DRW has been shown to provide a good statistical description of optical AGN light curves \parencites{Kelly2009ThermalFluc}{Kozlowski2010DRW}{MacLeod2010ScalRel}, with $\tau_\mathrm{DRW}$ found to correlate with black hole mass and luminosity, consistent with the physical picture developed in Chapter~\ref{chap:variability}.
+where $\beta = 1$ recovers the damped random walk and $\beta = 2$ a Gaussian correlation. The corresponding structure function rises as a power law on short timescales, $\mathrm{SF}(\Delta t) \propto (\Delta t / \tau)^{\gamma}$ for $\Delta t \ll \tau$, before flattening above the damping timescale; the damped random walk corresponds to a short-timescale slope $\gamma = 0.5$ (Figure \ref{fig:kozlowski}). Real light curves are consistent with exponents scattered around these values, which is one of the empirical justifications for adopting the damped random walk as a baseline while remaining aware of its limitations.
 
 \begin{figure}[t]
     \centering
     \includegraphics[width=\textwidth]{assets/3_figures/Kozlowski2016.pdf}
-    \caption[Connection between exponential ACFs and structure functions for different stochastic models]{\label{fig:KozlowskiDRW} Left: Exponential autocorrelation functions $\mathrm{ACF}(\Delta t) = \exp(-(|\Delta t|/\tau)^\beta)$ for different values of $\beta$. Right: The corresponding structure functions. The DRW model ($\beta = 1$, red) produces a SF with slope $\gamma = 0.5$ on timescales $\Delta t \ll \tau$, flattening above the characteristic damping timescale. Adapted from \cite{Kozlowski2016SF}.}
+    \caption[The structure-function family and the place of the damped random walk]{\label{fig:kozlowski} Left: autocorrelation functions of the family of Equation \ref{eq:acf_family} for a range of the decay exponent $\beta$. Right: the corresponding structure functions, with short-timescale slope $\gamma$. The damped random walk ($\beta = 1$, red) produces a structure function of slope $\gamma = 0.5$ below the damping timescale, flattening above it, and sits between a slowly declining correlation and a Gaussian one ($\beta = 2$, blue). All curves cross at $\Delta t = \tau$, illustrating the role of the damping timescale as the characteristic decorrelation lag. Adapted from \cite{Kozlowski2016SF}.}
 \end{figure}
 
-The DRW is the simplest member of the broader family of continuous autoregressive moving average (CARMA) models \parencite{Kelly2014CARMA}, corresponding to the special case CARMA$(1,0)$. More flexible CARMA$(p,q)$ processes can reproduce a wider range of PSD shapes; in particular, the CARMA$(2,1)$ process, also known as the damped harmonic oscillator (DHO), has been shown to provide superior fits to observed AGN light curves compared to the DRW \parencite{Yu2025ScalableEztao}. The simulation framework described here assumes a DRW process for the underlying variability, though the implementation supports more general CARMA kernels.
+A second source of ambiguity is the reference frame. The damping timescale measured from an observed light curve is stretched relative to its rest-frame value by a factor of $(1 + z)$, so that comparisons between sources at different redshifts, or between measurements and physical models, must specify whether $\tau$ is quoted in the observed or the rest frame. Throughout this work $\tau$ refers to the rest-frame timescale unless stated otherwise.
 
+\section{Physically Motivated Timescales}
+\label{sec:tausampling}
 
-
-%\subsection{DRW Parameters and MacLeod Scaling Relations}
-%\label{ssec:MacLeod}
-
-%The DRW parameters $\tau_\mathrm{DRW}$ and $\sigma_\mathrm{DRW}$ depend on the observing wavelength, black hole mass, and luminosity. Following \textcite{MacLeod2010ScalRel}, the wavelength dependence can be expressed as power-law scaling relations:
-
-%\begin{equation}
-%    \label{eq:MacLeod}
-%    \tau_\mathrm{DRW} \propto \lambda^{0.17}, \qquad \sigma_\mathrm{DRW} \propto \lambda^{-0.479},
-%\end{equation}
-
-w%here $\lambda$ is the effective wavelength of the observing filter. These relations imply that redder bands have slightly longer damping timescales and lower variability amplitudes than bluer bands, consistent with the wavelength dependence of AGN variability discussed in Chapter~\ref{chap:variability}.
-
-%In the simulation framework, a \textit{driver band} is defined as the reference band from which the DRW parameters of all other bands are derived via Equation~\ref{eq:MacLeod}. The driver band parameters ($\tau_\mathrm{DRW}^g = 100$ days, $\sigma_\mathrm{DRW}^g = 0.112$ mag) are taken as fiducial values representative of typical quasar optical variability \parencite{Yu2025ScalableEztao}, with the $g$ band chosen as the reference. The parameter space explored in this work follows \textcite{Yu2025ScalableEztao}:
-
-%\begin{equation}
-%    \tau_\mathrm{DRW} \in [0.01, 500] \text{ days} \quad \text{(log-uniform)}, \qquad \sigma_\mathrm{DRW} \in [0.02, 0.2] \text{ mag} \quad \text{(log-uniform)}.
-%\end{equation}
-
-\subsection{EzTao Implementation}
-\label{ssec:EzTao}
-
-
-%"EzTaoX models AGN UV/optical stochastic variability as a Gaussian processes (GP), a method commonly adopted in AGN variability analysis (e.g. Press et al. 1992; Kelly et al. 2009; Kozłowski et al. 2010; Wilkins 2019; Griffiths et al. 2021; Yu et al. 2022; Stone et al. 2022; Zhang et al. 2023; McLaughlin et al. 2024). Since the flux light curves of accreting compact objects typically follow a lognormal distribution (e.g., Uttley & McHardy 2001; Gaskell 2004; Giebels & Degrange 2009; MacLeod et al. 2012; De Cicco et al. 2022), we emphasize that GP modeling is best applied to magnitude light curves, which follow a Gaussian distribution" 
-
-\subsection{Noise Model}
-\label{ssec:Noise}
-
-Observational noise is simulated by adding Gaussian random values drawn from $\mathcal{N}(0, \sigma_\mathrm{LSST}^2)$ to each flux measurement, where $\sigma_\mathrm{LSST} = 0.01$ mag is the expected LSST single-visit photometric uncertainty\footnote{\url{https://rubinobservatory.org/for-scientists/rubin-101/key-numbers}}.
-
-\subsection{Damping Timescale}
-\label{ssec:TauPrior}
-
-Rather than sampling $\tau$ from an arbitrary range, we draw it from the distribution implied by the population of AGN black-hole masses. \textcite{Burke2021TimescaleBHMass} established a correlation between the optical damping timescale and the black-hole mass,
+For the simulated light curves to resemble a real population, the damping timescale is not fixed at a single value but drawn from a distribution representative of observed AGN. As introduced in Chapter \ref{chap:variability}, $\tau$ increases with black hole mass, therefore timescale is assigned in two steps: first, a black hole mass is first drawn from the bias-corrected mass distribution of quasars of \textcite{Sun2023QuasarMassDist}, and the corresponding damping timescale is then obtained from the mass-timescale relation of \textcite{Burke2021TimescaleBHMass},
 \begin{equation}
-    \tau_{\mathrm{damping}} = 107^{+11}_{-12}\ \mathrm{days}\,\left(\frac{M_{\mathrm{BH}}}{10^{8}\,M_\odot}\right)^{0.38^{+0.05}_{-0.04}},
+    \tau = 107^{+11}_{-12}\ \mathrm{days}\,\left(\frac{M_{\mathrm{BH}}}{10^{8}\,M_\odot}\right)^{0.38^{+0.05}_{-0.04}}.
     \label{eq:burke}
 \end{equation}
-which we combine with the bias-corrected black-hole mass distribution of \textcite{Sun2023QuasarMassDist} for their preferred model. Each simulated curve draws a value of $\log M_{\mathrm{BH}}$ from the \textcite{Sun2023QuasarMassDistDist} distribution by inverse-transform sampling, which is then mapped to a damping timescale through Equation~\ref{eq:burke}. Sampling the full distribution, including its high-mass tail, yields a training set whose $\tau$ distribution reflects the physical quasar population rather than a uniform prior; 
-%the induced distribution has a median of $\tau \approx \SI{XXX}{\day}$ with a central $68\%$ interval of $[\SI{XXX}{}, \SI{XXX}{}]\ \si{\day}$ (Figure~\ref{fig:tau_prior}). 
+The mass distribution is digitized from the observed sample and sampled in full by inverse-transform sampling, so the resulting timescales inherit its shape through Equation \ref{eq:burke}, including its high-mass tail. The induced distribution has a median of $\tau \approx 166$ d, with the central $68\%$ of curves falling between $119$ and $227$ d (Figure \ref{fig:taudist}).
 
 \begin{figure}[t]
     \centering
-    \includegraphics[width=\textwidth]{assets/5_figures/FixedTauExp/TauDist.pdf}
-    \caption[Characteristic Timescale]{\label{fig:tau_prior} .}
+    \includegraphics[width=\textwidth]{assets/3_figures/tau_dist.pdf}
+    \caption[The black hole mass distribution and the induced damping timescale distribution]{\label{fig:taudist} Left: the black hole mass distribution used to assign timescales, digitized from \cite{Sun2023QuasarMassDist}, with samples drawn from it by inverse-transform sampling. Right: the damping-timescale distribution induced by passing these masses through the mass-timescale relation of Equation \ref{eq:burke}, with median $166$ d and the marked $1\sigma$ range $[119, 227]$ d. The fixed value $\tau = 100$ d used in the controlled experiment is shown for reference.}
 \end{figure}
 
-\subsection{Sampling Strategy}
-\label{ssec:Sampling}
+This procedure defines the varying-timescale configuration used for most of the experiments, in which each light curve is assigned its own $\tau$ and the reconstruction method must generalize across the range shown in Figure \ref{fig:taudist}. A simpler configuration was also used, in which the timescale was held fixed at $\tau = 100$ d for all curves and served as a controlled setting in which the sampling and noise can be studied in isolation from any variation in $\tau$. The varying-timescale case is the more realistic and more demanding test, and is the one against which the main results are reported.
 
-The simulation supports two modes: a single-band driver light curve (\texttt{makeDriver}), which generates a single DRW realisation at the reference band parameters on a uniform time grid with step $\Delta t$ up to a maximum baseline $t_\mathrm{max}$; and a multiband mode (\texttt{makeMultiband}), which generates correlated light curves in all requested bands simultaneously using the wavelength-scaled parameters. A sparse sampling mode (\texttt{makeSparse}) is also implemented to mimic realistic LSST observing cadences by subsampling the uniform grid with gaps and irregular spacing.
+\section{Light Curve Generation}
+\label{sec:framework}
 
+Light curves are generated with the \textsc{EzTao} package \parencite{Yu2022Extao}, which represents the damped random walk as a Gaussian process and evaluates it through the \textit{celerite} method \parencite{ForemanMackey2017Celerite}. A direct evaluation of the Gaussian process likelihood requires inverting the covariance matrix at a cost that scales as $\mathcal{O}(N^{3})$ in the number of epochs, which is prohibitive for long light curves; celerite reduces this to $\mathcal{O}(N)$ for the damped random walk kernel, making the simulation of large samples tractable.. Modeling is carried out on magnitudes rather than fluxes, since the flux light curves of accreting sources are approximately lognormal and so are close to Gaussian in magnitude, matching better the assumption of the Gaussian process. For each simulated object a damping timescale is assigned as described above, the stationary amplitude is set to $\sigma = 0.112$ mag, a value representative of quasar optical variability taken from \textcite{Yu2025ScalableEztao}, and a densely sampled realization is produced to represent the true, underlying signal.
 
-% before we interpolated the original light curve into the new observed times, now we resimulate the process
+The observed light curve is then formed from this dense realization rather than interpolated from it. An irregular cadence is drawn, the dense realization is evaluated on the union of the true grid and the observed epochs in a single simulation, and the observed magnitudes are read off at the sampled times and perturbed with photometric noise. This construction ensures that the observations and the underlying signal are two views of one realization, and gives access to the true signal at every epoch, which is what allows the reconstruction to be evaluated exactly. The photometric noise is added as a Gaussian perturbation at each epoch; for the simulations a single-visit uncertainty of $0.01$ mag is adopted, matching the expected photometric precision of the Legacy Survey of Space and Time (LSST) at the Vera C. Rubin Observatory\footnote{\url{https://rubinobservatory.org/for-scientists/rubin-101/key-numbers}}. An example of each of the two configurations is shown in Figure \ref{fig:examplecurve}.
 
-% For each realisation we draw the number of attempted observations N_obs uniformly in [70, 200] and the gap fraction uniformly in [0.1, 0.5]. Gaps are laid out as disjoint windows wholly inside the baseline, so the removed fraction is exact; individual gap widths are drawn from a uniform simplex and therefore span roughly 0.1–4 τ_DRW.
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=\textwidth]{assets/3_figures/example_lightcurve.pdf}
+    \caption[Example simulated light curves]{\label{fig:examplecurve} Two simulated light curves (one from the training set and one from the validation set), each showing the dense underlying realization (grey) and the sparse, noisy observations drawn from it (black).}
+\end{figure}
 
-
-%t_obs  = self.makeSparse(...)                      # cadence first
-%t_all  = np.union1d(self.t_true, t_obs)            # union grid
-%t_all, y_all = self.makeDriver(t_all, lc_seed)     # ONE simulation
-%y_true      = y_all[searchsorted(t_all, self.t_true)]   # slice truth
-%y_obs_clean = y_all[searchsorted(t_all, t_obs)]         # slice obs
-%y_obs, yerr = self.addGNoise(y_obs_clean, ...)     # noise last
-
-\section{Simulation Regime}
+\section{Sampling Regime}
 \label{sec:regime}
-%Simulation regime. Gap-filling difficulty is controlled by a single dimensionless quantity, Δt/τ_DRW, because a DRW forgets as exp(−Δt/τ). We therefore quote our simulation parameters in units of τ rather than in days. With a three-year baseline (t_max = 1095 d), N_obs = 130 attempted epochs, a gap fraction of 0.35 distributed over three windows, and the Yu et al. (2025) fiducial g-band driver (τ_DRW = 100 d, σ_DRW = 0.112 mag), the mean cadence is 8.4 d = 0.084 τ, the mean gap is 128 d = 1.28 τ, and the baseline is 10.9 τ. Consecutive epochs are therefore strongly correlated while the gaps straddle the decorrelation scale — the regime in which reconstruction is neither trivial nor impossible. (The mean cadence is independent of the gap fraction, since gaps remove observing time and epochs in the same proportion; note also that because the epochs are drawn uniformly the spacings are exponentially distributed, so the median cadence is ln2 ≈ 0.69 times the mean.) Two thresholds bracket this range. Both appear in the literature as biases on τ_DRW recovery — τ is underestimated when the baseline is shorter than ~10 τ (Kozłowski 2017), and overestimated when τ is less than ~5 times the mean cadence (Hu et al. 2024) — but they matter here for a different reason: they delimit where a gap carries information at all. Below the cadence threshold, consecutive epochs are uncorrelated and no interpolation is possible, so the model can only return the prior; above the baseline threshold, the driver barely decorrelates over the observing window and every gap is trivially interpolable. This is also why we fix τ_DRW = 100 d rather than adopting the LogUniform(0.01, 500) d range of Yu et al. (2025): that range was chosen to probe τ-recovery across its failure regimes, whereas here roughly 80\% of it would produce degenerate light curves. Should τ diversity be introduced later, LogUniform(30, 300) d spans the informative range at this baseline and cadence.
+
+The difficulty of gap filling is controlled by a single dimensionless quantity, the gap length in units of the damping timescale, $\Delta t / \tau$, because a damped random walk loses memory as $e^{-\Delta t/\tau}$. The sampling parameters are therefore quoted in units of $\tau$ rather than in days. With a three-year baseline ($t_{\max} = 1095$ d), $130$ attempted epochs, and a gap fraction of $0.35$ distributed over three windows, at the fiducial timescale $\tau = 100$ d the baseline spans $10.9\,\tau$, the mean spacing between consecutive epochs is $8.4$ d $= 0.084\,\tau$, and the mean gap is $128$ d $= 1.28\,\tau$. Consecutive epochs are therefore strongly correlated, while the gaps straddle the decorrelation scale, the regime in which reconstruction is neither trivial nor impossible. Figure \ref{fig:regime} shows the resulting distributions of the consecutive spacing and of the largest gap in each curve, both in units of $\tau$.
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=\textwidth]{assets/3_figures/regime.pdf}
+    \caption[Sampling regime of the simulated light curves]{\label{fig:regime} Left: the distribution of the spacing between consecutive epochs, in units of the damping timescale. Right: the distribution of the single largest gap in each light curve, in the same units. Most consecutive spacings lie well below $\tau$, while the largest gaps straddle $\tau$, the regime in which reconstruction is most demanding. The line marks $\Delta t = \tau$.}
+\end{figure}
+
+This regime is bounded by two thresholds, both of which appear in the literature as biases on the recovery of $\tau$. The timescale is underestimated when the baseline is shorter than roughly $10\,\tau$ \parencite{Kozlowski2016LimitationsOT}, and overestimated when it is shorter than about five times the mean cadence \parencite{Hu2024TauBias}. Here they matter for a different reason: they delimit the range over which a gap carries information at all. Below the cadence threshold consecutive epochs are effectively uncorrelated and no interpolation is possible, so a model can only return the prior; above the baseline threshold the signal barely decorrelates over the observing window and every gap is trivially interpolable. This is also why the fiducial experiments fix $\tau = 100$ d rather than adopting a broad range, since most of a wide range would produce degenerate light curves at this baseline and cadence. Where a spread of timescales is introduced, the physically motivated distribution of Section \ref{sec:tausampling}, with its bulk between roughly $100$ and $230$ d, lies within the informative range.
+
+A single photometric band is used throughout. Although surveys such as ZTF and LSST observe in several bands, and although the coordinated multi-band variability discussed in Chapter \ref{chap:variability} is in principle a rich source of additional information, the treatment here is confined to single-band light curves, and the extension to multiple bands is left as a direction for future work.

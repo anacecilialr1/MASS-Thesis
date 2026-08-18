@@ -11,21 +11,19 @@
 \contentsline {subsection}{\numberline {2.1.1}Reverberation Mapping}{18}{subsection.2.1.1}%
 \contentsline {section}{\numberline {2.2}Variability Characterization}{19}{section.2.2}%
 \contentsline {chapter}{\numberline {3}Simulation Framework}{21}{chapter.3}%
-\contentsline {section}{\numberline {3.1}The Vera C. Rubin Observatory LSST}{21}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Damped Random Walk}{21}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}EzTao Implementation}{22}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Noise Model}{22}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Damping Timescale}{22}{subsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.2.4}Sampling Strategy}{23}{subsection.3.2.4}%
-\contentsline {section}{\numberline {3.3}Simulation Regime}{23}{section.3.3}%
-\contentsline {chapter}{\numberline {4}Models}{24}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Neural Stochastic Flows}{24}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Training Objective}{24}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Data Normalisation}{25}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Gap Filling}{25}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Latent}{25}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Validation and Baseline}{25}{section.4.6}%
-\contentsline {subsection}{\numberline {4.6.1}The Learned Transition}{25}{subsection.4.6.1}%
-\contentsline {subsection}{\numberline {4.6.2}The Bayes-Optimal Baseline}{25}{subsection.4.6.2}%
-\contentsline {subsection}{\numberline {4.6.3}Evaluation Metrics}{26}{subsection.4.6.3}%
-\contentsline {chapter}{Bibliography}{27}{chapter*.16}%
+\contentsline {section}{\numberline {3.1}Stochastic Processes}{21}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}The Transition Probability}{22}{subsection.3.1.1}%
+\contentsline {section}{\numberline {3.2}The Damping Timescale}{23}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Physically Motivated Timescales}{24}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Light Curve Generation}{24}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Sampling Regime}{26}{section.3.5}%
+\contentsline {chapter}{\numberline {4}Neural Stochastic Flows}{27}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Normalizing Flows}{27}{section.4.1}%
+\contentsline {section}{\numberline {4.2}From Static Densities to Transition Laws}{28}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Triplets and Stochastic Bridges}{30}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Training Objective}{31}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Implementation}{31}{section.4.5}%
+\contentsline {chapter}{\numberline {5}Results and Discussion}{33}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Fixed Characteristic Timescale $\tau $}{33}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Sampling timescales}{33}{section.5.2}%
+\contentsline {chapter}{Bibliography}{34}{chapter*.20}%

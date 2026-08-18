@@ -5,7 +5,7 @@ from jax import random
 
 
 def padDataset(curves, T_max=None):
-    """List of makeSingleBand dicts -> (N, T_max) arrays + validity mask."""
+    """List of makeSingleBand dicts: (N, T_max) arrays w/ validity mask."""
     if T_max is None:
         T_max = max(c["t_obs"].size for c in curves)
     N = len(curves)
@@ -22,7 +22,7 @@ def padDataset(curves, T_max=None):
 
 
 def validIndices(mask, T_max):
-    """Valid indices first, then filler. JAX-safe (static shape)."""
+    """Valid indices first, then filler, JAX-safe (static shape)"""
     return jnp.nonzero(mask, size=T_max, fill_value=0)[0], jnp.sum(mask).astype(jnp.int32)
 
 
@@ -32,8 +32,8 @@ def sampleTriplets(key, idx_full, K, n=64, min_gap=2):
 
     The SPAN k-i is drawn LOG-uniformly, so triplets cover short and long dt alike.
     The internship sampler drew j-i and k-j from narrow fixed ranges (min_gap..+6,
-    min_gap..+10), so k-i never exceeded ~20 of ~85 indices: the objective only ever
-    constrained short transitions, which is exactly why the reconstructed median
+    min_gap..+10), so k-i never exceeded ~20 of ~85 indices and the objective only ever
+    constrained short transitions, which might be why the reconstructed median
     flattened across wide gaps.
     """
     k1, k2, k3 = random.split(key, 3)
@@ -56,8 +56,8 @@ def loadDataset(path, t_scale=None, y_scale=None):
     """
     Read an .npz written by LightCurves.saveDataset. Never imports eztao.
     NORMALIZES BY DEFAULT, and this is not optional. The flow conditions on
-    (x, dt); feeding it dt ~ 1000 with x ~ 0.1 is badly conditioned and it will
-    silently learn nonsense -- the transition mean grows instead of decaying, the
+    (x, dt), feeding it dt ~ 1000 with x ~ 0.1 is bad and it will learn nonsense
+    the transition mean grows instead of decaying, the
     sd grows instead of saturating, and the training loss sits ~50 instead of ~2.
 
     tau comes back already in normalized units. 

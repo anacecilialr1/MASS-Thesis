@@ -26,8 +26,7 @@ build:
 
 clean:
 	rm -rf build
-
-# rm -rf $(shell find /private/var/folders -name "par-*" -type d 2>/dev/null)
+	rm -rf $(shell find /private/var/folders -name "par-*" -type d 2>/dev/null)
 # cleans cached files from BIBER?
 
 check:

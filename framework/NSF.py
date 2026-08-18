@@ -102,9 +102,9 @@ def train(flow, bridge, D, key, steps=400, batch=16, lr=2e-3, lam=0.1, n_trip=32
 
 
 def checkTransition(flow, tau_n, sigma_n, x_s, dts, key, n=4000):
-    """STAGE 0 VALIDATION. The true DRW transition is known in closed form:
+    """The true DRW transition known in closed form:
         X_t | X_s ~ N( e^{-dt/tau} X_s ,  sigma^2 (1 - e^{-2 dt/tau}) )
-    so the learned p_theta can be checked against it directly. All quantities in NORMALISED units."""
+    so the learned p_theta can be checked against it. """
     a = np.exp(-dts / tau_n)
     true_m, true_v = a * x_s, sigma_n**2 * (1.0 - a**2)
     lm, lv = [], []

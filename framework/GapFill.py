@@ -6,8 +6,8 @@ from jax import random
 
 
 def fillGaps(bridge, t_obs, y_obs, n_samples=2000, grid_per_gap=40, seed=0):
-    """Monte-Carlo reconstructions between consecutive observations.
-    All inputs in NORMALIZED units. Returns (t_rec, s_rec (n_samples, M))."""
+    """Monte-Carlo reconstructions between observations,
+       returns (t_rec, s_rec (n_samples, M))."""
     key = random.PRNGKey(seed)
     t_all, s_all = [np.atleast_1d(t_obs[0])], [np.full((n_samples, 1), y_obs[0])]
 
@@ -32,9 +32,6 @@ def fillGaps(bridge, t_obs, y_obs, n_samples=2000, grid_per_gap=40, seed=0):
 
 def drwGPBaseline(t_obs, y_obs, yerr, t_pred, tau, sigma):
     """Bayes-optimal reference: a GP with the TRUE DRW kernel and TRUE parameters.
-    This is the ceiling since the data were generated from exactly this process
-    and it has been handed the parameters, just see how close we get.
-    All inputs in the SAME normalized units.
     """
     t_obs, y_obs = np.asarray(t_obs, float), np.asarray(y_obs, float)
     k = lambda a, b: sigma**2 * np.exp(-np.abs(a[:, None] - b[None, :]) / tau)

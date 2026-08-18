@@ -562,6 +562,93 @@
       \endverb
       \keyw{Black Holes (Astronomy),Electromagnetic Fields,Energy Sources,Rotating Matter,Active Galactic Nuclei,Astrophysics,Electron-Positron Pairs,Pair Production,Astrophysics}
     \endentry
+    \entry{JAX2018Github}{software}{maxbibnames=1,maxcitenames=1,maxsortnames=1}{}
+      \name{author}{12}{}{%
+        {{hash=b75383e6b48c8360c7a60031424c85cf}{%
+           family={{Bradbury}},
+           familyi={B\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod}}}%
+        {{hash=29563c986154ca2b45d286b4dd5ef92a}{%
+           family={Frostig},
+           familyi={F\bibinitperiod},
+           given={Roy},
+           giveni={R\bibinitperiod}}}%
+        {{hash=7ab2d7e7f2bfceec36e42ad1962fde11}{%
+           family={Hawkins},
+           familyi={H\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+        {{hash=e4d515e534ba184f553d5a2a926e0ea7}{%
+           family={Johnson},
+           familyi={J\bibinitperiod},
+           given={Matthew\bibnamedelima James},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=c2a1e1362a8a604eb4259283032f9188}{%
+           family={Katariya},
+           familyi={K\bibinitperiod},
+           given={Yash},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=0101ae5b219809cf901e7645ca40b9ae}{%
+           family={Leary},
+           familyi={L\bibinitperiod},
+           given={Chris},
+           giveni={C\bibinitperiod}}}%
+        {{hash=07e607fb522f06610feb023ecfa712e2}{%
+           family={Maclaurin},
+           familyi={M\bibinitperiod},
+           given={Dougal},
+           giveni={D\bibinitperiod}}}%
+        {{hash=bca7d753be3217d63404d860acb6e5f5}{%
+           family={Necula},
+           familyi={N\bibinitperiod},
+           given={George},
+           giveni={G\bibinitperiod}}}%
+        {{hash=56bf0b340039cf8594436a624ff548a9}{%
+           family={Paszke},
+           familyi={P\bibinitperiod},
+           given={Adam},
+           giveni={A\bibinitperiod}}}%
+        {{hash=0fd9a0e34f1b2adda41357c948d14986}{%
+           family={Vander{P}las},
+           familyi={V\bibinitperiod},
+           given={Jake},
+           giveni={J\bibinitperiod}}}%
+        {{hash=02f809ed2547f721c304772c06378c2d}{%
+           family={Wanderman-{M}ilne},
+           familyi={W\bibinithyphendelim M\bibinitperiod},
+           given={Skye},
+           giveni={S\bibinitperiod}}}%
+        {{hash=fe167f78433aabd363ac3c06710a1945}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Qiao},
+           giveni={Q\bibinitperiod}}}%
+      }
+      \strng{namehash}{be9c2f36b976223518e841214253df92}
+      \strng{fullhash}{7e2bb5ab7334c4392ca8a731064d56c7}
+      \strng{fullhashraw}{7e2bb5ab7334c4392ca8a731064d56c7}
+      \strng{bibnamehash}{be9c2f36b976223518e841214253df92}
+      \strng{authorbibnamehash}{be9c2f36b976223518e841214253df92}
+      \strng{authornamehash}{be9c2f36b976223518e841214253df92}
+      \strng{authorfullhash}{7e2bb5ab7334c4392ca8a731064d56c7}
+      \strng{authorfullhashraw}{7e2bb5ab7334c4392ca8a731064d56c7}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{JAX}: composable transformations of {P}ython+{N}um{P}y programs}
+      \field{version}{0.3.13}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb http://github.com/jax-ml/jax
+      \endverb
+      \verb{url}
+      \verb http://github.com/jax-ml/jax
+      \endverb
+    \endentry
     \entry{Burke2021TimescaleBHMass}{article}{}{}
       \name{author}{11}{}{%
         {{hash=00fbb8944d8384888a0e43e90f71343d}{%
@@ -956,6 +1043,46 @@
       \endverb
       \keyw{surveys,radio continuum: galaxies,infrared: galaxies,quasars: supermassive black holes,galaxies: groups: general,galaxies: interactions,Astrophysics - Astrophysics of Galaxies,Astrophysics - Cosmology and Nongalactic Astrophysics}
     \endentry
+    \entry{Collier2001Timescales}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=b2c85899c72d655ea08770a5b1a97196}{%
+           family={{Collier}},
+           familyi={C\bibinitperiod},
+           given={Stefan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=d9235e6cf41f9306904f873b2af9a74f}{%
+           family={{Peterson}},
+           familyi={P\bibinitperiod},
+           given={Bradley\bibnamedelima M.},
+           giveni={B\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{8d8fd3354db11fee3977a3bbe2915cc1}
+      \strng{fullhash}{8d8fd3354db11fee3977a3bbe2915cc1}
+      \strng{fullhashraw}{8d8fd3354db11fee3977a3bbe2915cc1}
+      \strng{bibnamehash}{8d8fd3354db11fee3977a3bbe2915cc1}
+      \strng{authorbibnamehash}{8d8fd3354db11fee3977a3bbe2915cc1}
+      \strng{authornamehash}{8d8fd3354db11fee3977a3bbe2915cc1}
+      \strng{authorfullhash}{8d8fd3354db11fee3977a3bbe2915cc1}
+      \strng{authorfullhashraw}{8d8fd3354db11fee3977a3bbe2915cc1}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{\apj}
+      \field{month}{7}
+      \field{number}{2}
+      \field{title}{{Characteristic Ultraviolet/Optical Timescales in Active Galactic Nuclei}}
+      \field{volume}{555}
+      \field{year}{2001}
+      \field{pages}{775\bibrangedash 785}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1086/321517
+      \endverb
+      \keyw{Accretion,Accretion Disks,Galaxies: Active,Ultraviolet: Galaxies,X-Rays: Galaxies}
+    \endentry
     \entry{Crummy2006BlurredReflectionSE}{article}{}{}
       \name{author}{4}{}{%
         {{hash=14f0b17f30b0494fc980ed0b12f89ec0}{%
@@ -1131,6 +1258,245 @@
       \endverb
       \keyw{methods: statistical,surveys,galaxies: active,Astrophysics of Galaxies,Instrumentation and Methods for Astrophysics}
     \endentry
+    \entry{Deepmind2020Optax}{software}{}{}
+      \name{author}{43}{}{%
+        {{hash=0831beb3084156aee5b3646a045a1151}{%
+           family={DeepMind},
+           familyi={D\bibinitperiod}}}%
+        {{hash=92efe2a8e13a9b7a3fb647951ee2391c}{%
+           family={Babuschkin},
+           familyi={B\bibinitperiod},
+           given={Igor},
+           giveni={I\bibinitperiod}}}%
+        {{hash=d1b5ce601ad8c08c17f7eb5179ed6187}{%
+           family={Baumli},
+           familyi={B\bibinitperiod},
+           given={Kate},
+           giveni={K\bibinitperiod}}}%
+        {{hash=b9c674fc3e66841ba4c3855335d9b0d4}{%
+           family={Bell},
+           familyi={B\bibinitperiod},
+           given={Alison},
+           giveni={A\bibinitperiod}}}%
+        {{hash=7341c72c27e12a41f380b94dc70fc957}{%
+           family={Bhupatiraju},
+           familyi={B\bibinitperiod},
+           given={Surya},
+           giveni={S\bibinitperiod}}}%
+        {{hash=5b2c0795367c8b133d89c2f76ed4b719}{%
+           family={Bruce},
+           familyi={B\bibinitperiod},
+           given={Jake},
+           giveni={J\bibinitperiod}}}%
+        {{hash=eaf44a38f8f7ec7097473625832cabc9}{%
+           family={Buchlovsky},
+           familyi={B\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+        {{hash=c23f8012677b40de82f339368c393522}{%
+           family={Budden},
+           familyi={B\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=3d7a83ed6eb983ca17cec804631dc22e}{%
+           family={Cai},
+           familyi={C\bibinitperiod},
+           given={Trevor},
+           giveni={T\bibinitperiod}}}%
+        {{hash=b06242c53973106520ab19f8e1fc3799}{%
+           family={Clark},
+           familyi={C\bibinitperiod},
+           given={Aidan},
+           giveni={A\bibinitperiod}}}%
+        {{hash=970650e9394fccd4144d4b829505d2b3}{%
+           family={Danihelka},
+           familyi={D\bibinitperiod},
+           given={Ivo},
+           giveni={I\bibinitperiod}}}%
+        {{hash=43f14537ff703e7104882698ef4f83ef}{%
+           family={Dedieu},
+           familyi={D\bibinitperiod},
+           given={Antoine},
+           giveni={A\bibinitperiod}}}%
+        {{hash=1ad7b386197e59e71fe4a33eb3b32109}{%
+           family={Fantacci},
+           familyi={F\bibinitperiod},
+           given={Claudio},
+           giveni={C\bibinitperiod}}}%
+        {{hash=3f8b59cd2dfceed714d405a08c389acb}{%
+           family={Godwin},
+           familyi={G\bibinitperiod},
+           given={Jonathan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=f5e3bc5ee6025ef3a58750c6498c5553}{%
+           family={Jones},
+           familyi={J\bibinitperiod},
+           given={Chris},
+           giveni={C\bibinitperiod}}}%
+        {{hash=8cd82910dfb2983d17a8603354df6db1}{%
+           family={Hemsley},
+           familyi={H\bibinitperiod},
+           given={Ross},
+           giveni={R\bibinitperiod}}}%
+        {{hash=0c1f2b1cf15f9e15216a9e652512bf6f}{%
+           family={Hennigan},
+           familyi={H\bibinitperiod},
+           given={Tom},
+           giveni={T\bibinitperiod}}}%
+        {{hash=1640e78f1e643c3d6f8e8c5b4b50896c}{%
+           family={Hessel},
+           familyi={H\bibinitperiod},
+           given={Matteo},
+           giveni={M\bibinitperiod}}}%
+        {{hash=dfe97de4c45eeb54c31466df32f36d11}{%
+           family={Hou},
+           familyi={H\bibinitperiod},
+           given={Shaobo},
+           giveni={S\bibinitperiod}}}%
+        {{hash=a99525ff7f511e216bf0509d375a9691}{%
+           family={Kapturowski},
+           familyi={K\bibinitperiod},
+           given={Steven},
+           giveni={S\bibinitperiod}}}%
+        {{hash=eae0a29d3c056da066d5dfcd35eef1b5}{%
+           family={Keck},
+           familyi={K\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+        {{hash=4ae271e8826431dc9e49d1c258700761}{%
+           family={Kemaev},
+           familyi={K\bibinitperiod},
+           given={Iurii},
+           giveni={I\bibinitperiod}}}%
+        {{hash=18e03b81ee82570e6a6063252ef4371a}{%
+           family={King},
+           familyi={K\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=a71f42c7cba0514dbbddd07f285b7c72}{%
+           family={Kunesch},
+           familyi={K\bibinitperiod},
+           given={Markus},
+           giveni={M\bibinitperiod}}}%
+        {{hash=be82cc43ea81e97463cf797f1a0a7580}{%
+           family={Martens},
+           familyi={M\bibinitperiod},
+           given={Lena},
+           giveni={L\bibinitperiod}}}%
+        {{hash=8420908faf756940f333a4cdaedbda1e}{%
+           family={Merzic},
+           familyi={M\bibinitperiod},
+           given={Hamza},
+           giveni={H\bibinitperiod}}}%
+        {{hash=a23b9c9307da460af11d485bcf54cdc3}{%
+           family={Mikulik},
+           familyi={M\bibinitperiod},
+           given={Vladimir},
+           giveni={V\bibinitperiod}}}%
+        {{hash=9f8e9956da7ac9c0ebec6851f1d1799b}{%
+           family={Norman},
+           familyi={N\bibinitperiod},
+           given={Tamara},
+           giveni={T\bibinitperiod}}}%
+        {{hash=eab39f18cad46e4abd05bb4d62b340cd}{%
+           family={Papamakarios},
+           familyi={P\bibinitperiod},
+           given={George},
+           giveni={G\bibinitperiod}}}%
+        {{hash=d1c6b8444cb95e400ca38d5ae5c5afd3}{%
+           family={Quan},
+           familyi={Q\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+        {{hash=50349f5d4ef065e417356ee70e0f7069}{%
+           family={Ring},
+           familyi={R\bibinitperiod},
+           given={Roman},
+           giveni={R\bibinitperiod}}}%
+        {{hash=44a81ae3fd01c9398d9e92f54984ab96}{%
+           family={Ruiz},
+           familyi={R\bibinitperiod},
+           given={Francisco},
+           giveni={F\bibinitperiod}}}%
+        {{hash=85daa0e611239d7aa981d410b9cd65c0}{%
+           family={Sanchez},
+           familyi={S\bibinitperiod},
+           given={Alvaro},
+           giveni={A\bibinitperiod}}}%
+        {{hash=42ca8d780fed00f1df268c6449f7f34c}{%
+           family={Sartran},
+           familyi={S\bibinitperiod},
+           given={Laurent},
+           giveni={L\bibinitperiod}}}%
+        {{hash=96453c4c280cc12c9ad9ecdb3e9ca509}{%
+           family={Schneider},
+           familyi={S\bibinitperiod},
+           given={Rosalia},
+           giveni={R\bibinitperiod}}}%
+        {{hash=1bdbcc12e77e973836005d5acb6b61f1}{%
+           family={Sezener},
+           familyi={S\bibinitperiod},
+           given={Eren},
+           giveni={E\bibinitperiod}}}%
+        {{hash=09fb373b896174d3d82163b630c927c2}{%
+           family={Spencer},
+           familyi={S\bibinitperiod},
+           given={Stephen},
+           giveni={S\bibinitperiod}}}%
+        {{hash=4f3bee5a2a960c7c2ae939da6e670103}{%
+           family={Srinivasan},
+           familyi={S\bibinitperiod},
+           given={Srivatsan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=3bb8fdd0819f5d1468fd9b6da51ff51c}{%
+           family={Stanojević},
+           familyi={S\bibinitperiod},
+           given={Miloš},
+           giveni={M\bibinitperiod}}}%
+        {{hash=0d3b5b23d0895df65a105a3979d60cbd}{%
+           family={Stokowiec},
+           familyi={S\bibinitperiod},
+           given={Wojciech},
+           giveni={W\bibinitperiod}}}%
+        {{hash=57220e244ce835a013b1585edc6373eb}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Luyu},
+           giveni={L\bibinitperiod}}}%
+        {{hash=d4cd12324400da4c5eed6fcccbfbd875}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Guangyao},
+           giveni={G\bibinitperiod}}}%
+        {{hash=5fe6121db340f7bc1617a2a31cb5e231}{%
+           family={Viola},
+           familyi={V\bibinitperiod},
+           given={Fabio},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{cec7cdc381d5448a488b67d747ee5936}
+      \strng{fullhash}{3e8ce71a901fb5067bc15f2d74b31b45}
+      \strng{fullhashraw}{3e8ce71a901fb5067bc15f2d74b31b45}
+      \strng{bibnamehash}{cec7cdc381d5448a488b67d747ee5936}
+      \strng{authorbibnamehash}{cec7cdc381d5448a488b67d747ee5936}
+      \strng{authornamehash}{cec7cdc381d5448a488b67d747ee5936}
+      \strng{authorfullhash}{3e8ce71a901fb5067bc15f2d74b31b45}
+      \strng{authorfullhashraw}{3e8ce71a901fb5067bc15f2d74b31b45}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The {D}eep{M}ind {JAX} {E}cosystem}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb http://github.com/google-deepmind
+      \endverb
+      \verb{url}
+      \verb http://github.com/google-deepmind
+      \endverb
+    \endentry
     \entry{Dent19653C273Var}{article}{}{}
       \name{author}{1}{}{%
         {{hash=03b76d5144805da60a742c49c91ab2fb}{%
@@ -1162,6 +1528,98 @@
       \range{pages}{1}
       \verb{doi}
       \verb 10.1086/109792
+      \endverb
+    \endentry
+    \entry{Dihn2015Coupling}{misc}{}{}
+      \name{author}{3}{}{%
+        {{hash=0976c27ff012c9556f4206afd4b48c1f}{%
+           family={Dinh},
+           familyi={D\bibinitperiod},
+           given={Laurent},
+           giveni={L\bibinitperiod}}}%
+        {{hash=e7f73df1af7c68ac1fa70ee32d1da619}{%
+           family={Krueger},
+           familyi={K\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=40a8e4774982146adc2688546f54efb2}{%
+           family={Bengio},
+           familyi={B\bibinitperiod},
+           given={Yoshua},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{fab8fbfa8fcad0ce655d99d0a578d28f}
+      \strng{fullhash}{fab8fbfa8fcad0ce655d99d0a578d28f}
+      \strng{fullhashraw}{fab8fbfa8fcad0ce655d99d0a578d28f}
+      \strng{bibnamehash}{fab8fbfa8fcad0ce655d99d0a578d28f}
+      \strng{authorbibnamehash}{fab8fbfa8fcad0ce655d99d0a578d28f}
+      \strng{authornamehash}{fab8fbfa8fcad0ce655d99d0a578d28f}
+      \strng{authorfullhash}{fab8fbfa8fcad0ce655d99d0a578d28f}
+      \strng{authorfullhashraw}{fab8fbfa8fcad0ce655d99d0a578d28f}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.LG}
+      \field{eprinttype}{arXiv}
+      \field{title}{NICE: Non-linear Independent Components Estimation}
+      \field{year}{2015}
+      \verb{eprint}
+      \verb 1410.8516
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1410.8516
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1410.8516
+      \endverb
+    \endentry
+    \entry{Dinh2017RealNVP}{misc}{maxbibnames=1,maxcitenames=1,maxsortnames=1}{}
+      \name{author}{3}{}{%
+        {{hash=0976c27ff012c9556f4206afd4b48c1f}{%
+           family={{Dinh}},
+           familyi={D\bibinitperiod},
+           given={Laurent},
+           giveni={L\bibinitperiod}}}%
+        {{hash=529bdf392a3471f000ce33ec88c41bd5}{%
+           family={Sohl-Dickstein},
+           familyi={S\bibinithyphendelim D\bibinitperiod},
+           given={Jascha},
+           giveni={J\bibinitperiod}}}%
+        {{hash=02404a92b0be3f52ec5ac08e41c13445}{%
+           family={Bengio},
+           familyi={B\bibinitperiod},
+           given={Samy},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{316b6e7f2dde0f3dd12df57c080f3c46}
+      \strng{fullhash}{8dfecb9e01eaa912afc81a7b63975730}
+      \strng{fullhashraw}{8dfecb9e01eaa912afc81a7b63975730}
+      \strng{bibnamehash}{316b6e7f2dde0f3dd12df57c080f3c46}
+      \strng{authorbibnamehash}{316b6e7f2dde0f3dd12df57c080f3c46}
+      \strng{authornamehash}{316b6e7f2dde0f3dd12df57c080f3c46}
+      \strng{authorfullhash}{8dfecb9e01eaa912afc81a7b63975730}
+      \strng{authorfullhashraw}{8dfecb9e01eaa912afc81a7b63975730}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.LG}
+      \field{eprinttype}{arXiv}
+      \field{title}{Density estimation using Real NVP}
+      \field{year}{2017}
+      \verb{eprint}
+      \verb 1605.08803
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1605.08803
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1605.08803
       \endverb
     \endentry
     \entry{Edge19593C273Catalogue}{article}{}{}
@@ -1502,6 +1960,65 @@
       \endverb
       \keyw{galaxies: active,galaxies: individual: Akn 564 Circinus IC 3639 IRAS 11058-1131 MCG-6-30-15 Mrk 34 Mrk 279 Mrk 348 Mrk 463e Mrk 493 Mrk 509 Mrk 705 Mrk 766 Mrk 1040 Mrk 1066 NGC 1358 NGC 1386 NGC 1667 NGC 2110 NGC 2273 NGC 3081 NGC 3227 NGC 339 NGC 3516 NGC 3783 NGC 4051 NGC 4303 NGC 4395 NGC 4507 NGC 5135 NGC 525 NGC 5283 NGC 5347 NGC 5427 NGC 5506 NGC 5548 NGC 5643 NGC 5695 NGC 572 NGC 5929 NGC 6300 NGC 7212 NGC 7469 NGC 7674 NGC 7682 NGC 788 UM 146,galaxies: kinematics and dynamics,galaxies: Seyfert,Astrophysics - Cosmology and Nongalactic Astrophysics}
     \endentry
+    \entry{ForemanMackey2017Celerite}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=297dd34bb5e0d14212907cc52b120315}{%
+           family={{Foreman-Mackey}},
+           familyi={F\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+        {{hash=88d62f92900fbe179a2b57965c7dc418}{%
+           family={Agol},
+           familyi={A\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod}}}%
+        {{hash=d9c475b9aa96449473cb1aff6757bc02}{%
+           family={Ambikasaran},
+           familyi={A\bibinitperiod},
+           given={Sivaram},
+           giveni={S\bibinitperiod}}}%
+        {{hash=728a14d9fa7221c442672f16f8fea328}{%
+           family={Angus},
+           familyi={A\bibinitperiod},
+           given={Ruth},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Astronomical Society}%
+      }
+      \strng{namehash}{f29a0c9a5cb44c8e87cd2d854d458a22}
+      \strng{fullhash}{8b61431220e9e829a862a5a146d4a4e6}
+      \strng{fullhashraw}{8b61431220e9e829a862a5a146d4a4e6}
+      \strng{bibnamehash}{f29a0c9a5cb44c8e87cd2d854d458a22}
+      \strng{authorbibnamehash}{f29a0c9a5cb44c8e87cd2d854d458a22}
+      \strng{authornamehash}{f29a0c9a5cb44c8e87cd2d854d458a22}
+      \strng{authorfullhash}{8b61431220e9e829a862a5a146d4a4e6}
+      \strng{authorfullhashraw}{8b61431220e9e829a862a5a146d4a4e6}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1538-3881}
+      \field{journaltitle}{The Astronomical Journal}
+      \field{month}{11}
+      \field{number}{6}
+      \field{title}{Fast and Scalable Gaussian Process Modeling with Applications to Astronomical Time Series}
+      \field{volume}{154}
+      \field{year}{2017}
+      \field{pages}{220}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3847/1538-3881/aa9332
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.3847/1538-3881/aa9332
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.3847/1538-3881/aa9332
+      \endverb
+    \endentry
     \entry{Giustini2019AGNOutflowsHighEddR}{article}{}{}
       \name{author}{2}{}{%
         {{hash=af0f0d3737a154bf2f5f5bf5608c1057}{%
@@ -1783,6 +2300,36 @@
       \field{type}{PhD Thesis}
       \field{year}{2014}
       \keyw{active galaxies,AGN feedback,quasars,AGN outflows}
+    \endentry
+    \entry{Hu2024TauBias}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=6fdf6241330edd42e3bc73b575fc29e4}{%
+           family={{Hu}},
+           familyi={H\bibinitperiod},
+           given={Xu-Fan},
+           giveni={X\bibinithyphendelim F\bibinitperiod}}}%
+      }
+      \strng{namehash}{6fdf6241330edd42e3bc73b575fc29e4}
+      \strng{fullhash}{6fdf6241330edd42e3bc73b575fc29e4}
+      \strng{fullhashraw}{6fdf6241330edd42e3bc73b575fc29e4}
+      \strng{bibnamehash}{6fdf6241330edd42e3bc73b575fc29e4}
+      \strng{authorbibnamehash}{6fdf6241330edd42e3bc73b575fc29e4}
+      \strng{authornamehash}{6fdf6241330edd42e3bc73b575fc29e4}
+      \strng{authorfullhash}{6fdf6241330edd42e3bc73b575fc29e4}
+      \strng{authorfullhashraw}{6fdf6241330edd42e3bc73b575fc29e4}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Astrophysical Journal}
+      \field{title}{{How Can the Optical Variation Properties of Active Galactic Nuclei Be Unbiasedly Measured?}}
+      \field{volume}{961}
+      \field{year}{2024}
+      \verb{doi}
+      \verb 10.3847/1538-4357/ad072f
+      \endverb
     \endentry
     \entry{Ishibashi2011RadioQuietAGN}{article}{}{}
       \name{author}{2}{}{%
@@ -2209,50 +2756,212 @@
       \endverb
       \keyw{Galaxies: Starburst,Radiation Mechanisms: Thermal,Astrophysics}
     \endentry
-    \entry{Korista2001DiffusionContBLR}{article}{}{}
+    \entry{Kidger2021Equinox}{misc}{}{}
       \name{author}{2}{}{%
-        {{hash=9917d103ca4e4026b8dabe7f46e0ca39}{%
-           family={{Korista}},
+        {{hash=051731aab4dfad9f49233270e9e83536}{%
+           family={Kidger},
            familyi={K\bibinitperiod},
-           given={Kirk\bibnamedelima T.},
-           giveni={K\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
-        {{hash=6032ef09f21cc4757d768be41e26ee47}{%
-           family={{Goad}},
+           given={Patrick},
+           giveni={P\bibinitperiod}}}%
+        {{hash=d20d588b22dcd2f75514ff84d16bd100}{%
+           family={Garcia},
            familyi={G\bibinitperiod},
-           given={Michael\bibnamedelima R.},
-           giveni={M\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+           given={Cristian},
+           giveni={C\bibinitperiod}}}%
       }
-      \strng{namehash}{a261b62dbb216afa281c7331860dc78f}
-      \strng{fullhash}{a261b62dbb216afa281c7331860dc78f}
-      \strng{fullhashraw}{a261b62dbb216afa281c7331860dc78f}
-      \strng{bibnamehash}{a261b62dbb216afa281c7331860dc78f}
-      \strng{authorbibnamehash}{a261b62dbb216afa281c7331860dc78f}
-      \strng{authornamehash}{a261b62dbb216afa281c7331860dc78f}
-      \strng{authorfullhash}{a261b62dbb216afa281c7331860dc78f}
-      \strng{authorfullhashraw}{a261b62dbb216afa281c7331860dc78f}
+      \strng{namehash}{ebd1e32c3250f90b52e3a6d1386561ff}
+      \strng{fullhash}{ebd1e32c3250f90b52e3a6d1386561ff}
+      \strng{fullhashraw}{ebd1e32c3250f90b52e3a6d1386561ff}
+      \strng{bibnamehash}{ebd1e32c3250f90b52e3a6d1386561ff}
+      \strng{authorbibnamehash}{ebd1e32c3250f90b52e3a6d1386561ff}
+      \strng{authornamehash}{ebd1e32c3250f90b52e3a6d1386561ff}
+      \strng{authorfullhash}{ebd1e32c3250f90b52e3a6d1386561ff}
+      \strng{authorfullhashraw}{ebd1e32c3250f90b52e3a6d1386561ff}
       \field{sortinit}{K}
       \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{eprintclass}{astro-ph}
+      \field{eprintclass}{cs.LG}
       \field{eprinttype}{arXiv}
-      \field{journaltitle}{\apj}
-      \field{month}{6}
-      \field{number}{2}
-      \field{title}{{The Variable Diffuse Continuum Emission of Broad-Line Clouds}}
-      \field{volume}{553}
-      \field{year}{2001}
-      \field{pages}{695\bibrangedash 708}
-      \range{pages}{14}
-      \verb{doi}
-      \verb 10.1086/320964
-      \endverb
+      \field{title}{Equinox: neural networks in JAX via callable PyTrees and filtered transformations}
+      \field{year}{2021}
       \verb{eprint}
-      \verb astro-ph/0101117
+      \verb 2111.00254
       \endverb
-      \keyw{Galaxies: Active,Galaxies: Individual: NGC Number: NGC 5548,Galaxies: Nuclei,Galaxies: Seyfert,Radiation Mechanisms: Thermal,Astrophysics}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2111.00254
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2111.00254
+      \endverb
+    \endentry
+    \entry{Kingma2017Adam}{misc}{}{}
+      \name{author}{2}{}{%
+        {{hash=b6fbd171848aad4edf3925543f1f1522}{%
+           family={Kingma},
+           familyi={K\bibinitperiod},
+           given={Diederik\bibnamedelima P.},
+           giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=8aa66e8231cc2fdbe67aa4f18ca970c6}{%
+           family={Ba},
+           familyi={B\bibinitperiod},
+           given={Jimmy},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{a09df9f123146b8e2c7f1134c9496932}
+      \strng{fullhash}{a09df9f123146b8e2c7f1134c9496932}
+      \strng{fullhashraw}{a09df9f123146b8e2c7f1134c9496932}
+      \strng{bibnamehash}{a09df9f123146b8e2c7f1134c9496932}
+      \strng{authorbibnamehash}{a09df9f123146b8e2c7f1134c9496932}
+      \strng{authornamehash}{a09df9f123146b8e2c7f1134c9496932}
+      \strng{authorfullhash}{a09df9f123146b8e2c7f1134c9496932}
+      \strng{authorfullhashraw}{a09df9f123146b8e2c7f1134c9496932}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.LG}
+      \field{eprinttype}{arXiv}
+      \field{title}{Adam: A Method for Stochastic Optimization}
+      \field{year}{2017}
+      \verb{eprint}
+      \verb 1412.6980
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1412.6980
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1412.6980
+      \endverb
+    \endentry
+    \entry{Kiyohara2025SNF}{inproceedings}{maxbibnames=1,maxcitenames=1,maxsortnames=1}{}
+      \name{author}{3}{}{%
+        {{hash=d211dd2eda35d3498d37bba09d7ef979}{%
+           family={{Kiyohara}},
+           familyi={K\bibinitperiod},
+           given={Naoki},
+           giveni={N\bibinitperiod}}}%
+        {{hash=e8b9c2d0422a09ca2502891822ec6759}{%
+           family={{Johns}},
+           familyi={J\bibinitperiod},
+           given={Edward},
+           giveni={E\bibinitperiod}}}%
+        {{hash=400e4d5630f4e518634cc6e80b62b62f}{%
+           family={{Li}},
+           familyi={L\bibinitperiod},
+           given={Yingzhen},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{ab92e7df2c53d5464a3b1e1dad596f9f}
+      \strng{fullhash}{57d7a067378245907af948a40f861ad5}
+      \strng{fullhashraw}{57d7a067378245907af948a40f861ad5}
+      \strng{bibnamehash}{ab92e7df2c53d5464a3b1e1dad596f9f}
+      \strng{authorbibnamehash}{ab92e7df2c53d5464a3b1e1dad596f9f}
+      \strng{authornamehash}{ab92e7df2c53d5464a3b1e1dad596f9f}
+      \strng{authorfullhash}{57d7a067378245907af948a40f861ad5}
+      \strng{authorfullhashraw}{57d7a067378245907af948a40f861ad5}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Advances in Neural Information Processing Systems}
+      \field{title}{Neural Stochastic Flows: Solver-Free Modelling and Inference for {SDE} Solutions}
+      \field{year}{2025}
+    \endentry
+    \entry{Kobyzev2021NFRev}{article}{maxbibnames=1,maxcitenames=1,maxsortnames=1}{}
+      \name{author}{3}{}{%
+        {{hash=bcace0bc7edc43ff8b28289e73d22358}{%
+           family={{Kobyzev}},
+           familyi={K\bibinitperiod},
+           given={Ivan},
+           giveni={I\bibinitperiod}}}%
+        {{hash=28ec62e6a6756d1310f22aa92ac3f433}{%
+           family={Prince},
+           familyi={P\bibinitperiod},
+           given={Simon\bibnamedelima J.D.},
+           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=f730d72d20df7a1ba533a0115b9e97d2}{%
+           family={Brubaker},
+           familyi={B\bibinitperiod},
+           given={Marcus\bibnamedelima A.},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{2}{%
+        {Institute of Electrical}%
+        {Electronics Engineers (IEEE)}%
+      }
+      \strng{namehash}{3a68c97a34d565c7f4228de3aedcde4d}
+      \strng{fullhash}{d0b5bc61e51d179657228e9360374ffe}
+      \strng{fullhashraw}{d0b5bc61e51d179657228e9360374ffe}
+      \strng{bibnamehash}{3a68c97a34d565c7f4228de3aedcde4d}
+      \strng{authorbibnamehash}{3a68c97a34d565c7f4228de3aedcde4d}
+      \strng{authornamehash}{3a68c97a34d565c7f4228de3aedcde4d}
+      \strng{authorfullhash}{d0b5bc61e51d179657228e9360374ffe}
+      \strng{authorfullhashraw}{d0b5bc61e51d179657228e9360374ffe}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1939-3539}
+      \field{journaltitle}{IEEE Transactions on Pattern Analysis and Machine Intelligence}
+      \field{month}{11}
+      \field{number}{11}
+      \field{title}{Normalizing Flows: An Introduction and Review of Current Methods}
+      \field{volume}{43}
+      \field{year}{2021}
+      \field{pages}{3964\bibrangedash 3979}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1109/tpami.2020.2992934
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1109/TPAMI.2020.2992934
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1109/TPAMI.2020.2992934
+      \endverb
+    \endentry
+    \entry{Kozlowski2016LimitationsOT}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=7b0e52a9b78af0ad8be0a6a6effe0609}{%
+           family={{Koz{ł}owski}},
+           familyi={K\bibinitperiod},
+           given={Szymon},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{7b0e52a9b78af0ad8be0a6a6effe0609}
+      \strng{fullhash}{7b0e52a9b78af0ad8be0a6a6effe0609}
+      \strng{fullhashraw}{7b0e52a9b78af0ad8be0a6a6effe0609}
+      \strng{bibnamehash}{7b0e52a9b78af0ad8be0a6a6effe0609}
+      \strng{authorbibnamehash}{7b0e52a9b78af0ad8be0a6a6effe0609}
+      \strng{authornamehash}{7b0e52a9b78af0ad8be0a6a6effe0609}
+      \strng{authorfullhash}{7b0e52a9b78af0ad8be0a6a6effe0609}
+      \strng{authorfullhashraw}{7b0e52a9b78af0ad8be0a6a6effe0609}
+      \field{extraname}{1}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv: Astrophysics of Galaxies}
+      \field{title}{Limitations on the recovery of the true AGN variability parameters using Damped Random Walk modeling}
+      \field{year}{2016}
+      \verb{urlraw}
+      \verb https://api.semanticscholar.org/CorpusID:119237192
+      \endverb
+      \verb{url}
+      \verb https://api.semanticscholar.org/CorpusID:119237192
+      \endverb
     \endentry
     \entry{Kozlowski2016SF}{article}{}{}
       \name{author}{1}{}{%
@@ -2270,8 +2979,10 @@
       \strng{authornamehash}{7b0e52a9b78af0ad8be0a6a6effe0609}
       \strng{authorfullhash}{7b0e52a9b78af0ad8be0a6a6effe0609}
       \strng{authorfullhashraw}{7b0e52a9b78af0ad8be0a6a6effe0609}
+      \field{extraname}{2}
       \field{sortinit}{K}
       \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradate}{2}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -3329,47 +4040,6 @@
       \endverb
       \keyw{Astrophysics - Astrophysics of Galaxies}
     \endentry
-    \entry{Netzer2022RM}{article}{}{}
-      \name{author}{1}{}{%
-        {{hash=76b977acc7aedd6db01b638808b18aa6}{%
-           family={{Netzer}},
-           familyi={N\bibinitperiod},
-           given={Hagai},
-           giveni={H\bibinitperiod}}}%
-      }
-      \strng{namehash}{76b977acc7aedd6db01b638808b18aa6}
-      \strng{fullhash}{76b977acc7aedd6db01b638808b18aa6}
-      \strng{fullhashraw}{76b977acc7aedd6db01b638808b18aa6}
-      \strng{bibnamehash}{76b977acc7aedd6db01b638808b18aa6}
-      \strng{authorbibnamehash}{76b977acc7aedd6db01b638808b18aa6}
-      \strng{authornamehash}{76b977acc7aedd6db01b638808b18aa6}
-      \strng{authorfullhash}{76b977acc7aedd6db01b638808b18aa6}
-      \strng{authorfullhashraw}{76b977acc7aedd6db01b638808b18aa6}
-      \field{extraname}{3}
-      \field{sortinit}{N}
-      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{eprintclass}{astro-ph.GA}
-      \field{eprinttype}{arXiv}
-      \field{journaltitle}{\mnras}
-      \field{month}{1}
-      \field{number}{2}
-      \field{title}{{Continuum reverberation mapping and a new lag-luminosity relationship for AGN}}
-      \field{volume}{509}
-      \field{year}{2022}
-      \field{pages}{2637\bibrangedash 2646}
-      \range{pages}{10}
-      \verb{doi}
-      \verb 10.1093/mnras/stab3133
-      \endverb
-      \verb{eprint}
-      \verb 2110.05512
-      \endverb
-      \keyw{accretion,accretion discs,galaxies: active,galaxies: nuclei,quasars: general,Astrophysics - Astrophysics of Galaxies}
-    \endentry
     \entry{OrrBrowne1982AGNBeaming}{article}{}{}
       \name{author}{2}{}{%
         {{hash=6b958432baec5d14abd7bae472c0acf9}{%
@@ -3651,7 +4321,6 @@
       \strng{authornamehash}{b5f638db922a8b0fe518065b7d8659b9}
       \strng{authorfullhash}{b5f638db922a8b0fe518065b7d8659b9}
       \strng{authorfullhashraw}{b5f638db922a8b0fe518065b7d8659b9}
-      \field{extraname}{1}
       \field{sortinit}{P}
       \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
       \field{extradatescope}{labelyear}
@@ -3669,39 +4338,6 @@
       \verb 10.1086/133140
       \endverb
       \keyw{Active Galactic Nuclei,Astronomical Maps,Emission Spectra,Reverberation,Astronomical Spectroscopy,Cross Correlation,Luminosity,Spectral Line Width,Transfer Functions,Astrophysics,GALAXIES: ACTIVE,GALAXIES: NUCLEI,METHODS: ANALYTICAL}
-    \endentry
-    \entry{Peterson2006BLR}{article}{}{}
-      \name{author}{1}{}{%
-        {{hash=b5f638db922a8b0fe518065b7d8659b9}{%
-           family={{Peterson}},
-           familyi={P\bibinitperiod},
-           given={B.\bibnamedelimi M.},
-           giveni={B\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
-      }
-      \strng{namehash}{b5f638db922a8b0fe518065b7d8659b9}
-      \strng{fullhash}{b5f638db922a8b0fe518065b7d8659b9}
-      \strng{fullhashraw}{b5f638db922a8b0fe518065b7d8659b9}
-      \strng{bibnamehash}{b5f638db922a8b0fe518065b7d8659b9}
-      \strng{authorbibnamehash}{b5f638db922a8b0fe518065b7d8659b9}
-      \strng{authornamehash}{b5f638db922a8b0fe518065b7d8659b9}
-      \strng{authorfullhash}{b5f638db922a8b0fe518065b7d8659b9}
-      \strng{authorfullhashraw}{b5f638db922a8b0fe518065b7d8659b9}
-      \field{extraname}{2}
-      \field{sortinit}{P}
-      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{isbn}{978-3-540-31207-9}
-      \field{journaltitle}{Lecture Notes in Physics}
-      \field{month}{01}
-      \field{title}{The Broad-Line Region in Active Galactic Nuclei}
-      \field{volume}{693}
-      \field{year}{2006}
-      \verb{doi}
-      \verb 10.1007/3-540-34621-X_3
-      \endverb
     \endentry
     \entry{Peterson2004AstNach}{article}{}{}
       \name{author}{2}{}{%
@@ -3901,6 +4537,82 @@
       \verb 1709.00019
       \endverb
       \keyw{Astrophysics - Astrophysics of Galaxies}
+    \endentry
+    \entry{Rasmussen2006GP}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=58d90ed7b7348c7a5a9b4a2a8f46df7b}{%
+           family={{Rasmussen}},
+           familyi={R\bibinitperiod},
+           given={Carl\bibnamedelima Edward},
+           giveni={C\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=6dedcea44b2da1415e95ac8a84fef83e}{%
+           family={{Williams}},
+           familyi={W\bibinitperiod},
+           given={Christopher},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {MIT Press}%
+      }
+      \strng{namehash}{fda08ea2b0c46a7d4c21b7994f550aa7}
+      \strng{fullhash}{fda08ea2b0c46a7d4c21b7994f550aa7}
+      \strng{fullhashraw}{fda08ea2b0c46a7d4c21b7994f550aa7}
+      \strng{bibnamehash}{fda08ea2b0c46a7d4c21b7994f550aa7}
+      \strng{authorbibnamehash}{fda08ea2b0c46a7d4c21b7994f550aa7}
+      \strng{authornamehash}{fda08ea2b0c46a7d4c21b7994f550aa7}
+      \strng{authorfullhash}{fda08ea2b0c46a7d4c21b7994f550aa7}
+      \strng{authorfullhashraw}{fda08ea2b0c46a7d4c21b7994f550aa7}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0-262-18253-9}
+      \field{title}{Gaussian Processes for Machine Learning}
+      \field{volume}{2}
+      \field{year}{2006}
+    \endentry
+    \entry{Rezende2016VIwNF}{misc}{maxbibnames=1,maxcitenames=1,maxsortnames=1}{}
+      \name{author}{2}{}{%
+        {{hash=ec9d0847975b9ff58f6b8ba2661c82fc}{%
+           family={{Rezende}},
+           familyi={R\bibinitperiod},
+           given={Danilo\bibnamedelima Jimenez},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=b520f2e46ec8803dd4c66bf1d6059482}{%
+           family={{Mohamed}},
+           familyi={M\bibinitperiod},
+           given={Shakir},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{b65436ab373a2da9cf20a07c37966dfa}
+      \strng{fullhash}{11ce8187ceb54b9d71569c11612050f1}
+      \strng{fullhashraw}{11ce8187ceb54b9d71569c11612050f1}
+      \strng{bibnamehash}{b65436ab373a2da9cf20a07c37966dfa}
+      \strng{authorbibnamehash}{b65436ab373a2da9cf20a07c37966dfa}
+      \strng{authornamehash}{b65436ab373a2da9cf20a07c37966dfa}
+      \strng{authorfullhash}{11ce8187ceb54b9d71569c11612050f1}
+      \strng{authorfullhashraw}{11ce8187ceb54b9d71569c11612050f1}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{stat.ML}
+      \field{eprinttype}{arXiv}
+      \field{title}{Variational Inference with Normalizing Flows}
+      \field{year}{2016}
+      \verb{eprint}
+      \verb 1505.05770
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1505.05770
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1505.05770
+      \endverb
     \endentry
     \entry{Ricci2026unificationmodelsactivegalactic}{misc}{}{}
       \name{author}{1}{}{%
@@ -4589,7 +5301,7 @@
     \entry{Sun2023QuasarMassDist}{article}{}{}
       \name{author}{1}{}{%
         {{hash=5536cfa71c517f02543b2b428b94a908}{%
-           family={Sun},
+           family={{Sun}},
            familyi={S\bibinitperiod},
            given={Mouyuan},
            giveni={M\bibinitperiod}}}%
@@ -6200,10 +6912,6 @@
       \keyw{Biotechnology,GRAVITATIONAL EFFECT,CHARGED PARTICLE,STELLAR EVOLUTION}
     \endentry
   \enddatalist
-  \missing{Kiyohara2025NSF}
-  \missing{RasmussenWilliams2006GP}
-  \missing{Sun2023QuasarMassDistDist}
-  \missing{YuEzTao2025}
 \endrefsection
 \endinput
 

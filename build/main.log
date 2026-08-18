@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.27)  1 AUG 2026 13:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.27)  17 AUG 2026 01:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -792,9 +792,58 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 284.
 )
 \Hy@SectionHShift=\skip126
-))
-\@quotelevel=\count447
-\@quotereset=\count448
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/siunitx/siunitx.sty
+Package: siunitx 2025-07-09 v3.4.14 A comprehensive (SI) units package
+\l__siunitx_number_uncert_offset_int=\count447
+\l__siunitx_number_exponent_fixed_int=\count448
+\l__siunitx_number_min_decimal_int=\count449
+\l__siunitx_number_min_integer_int=\count450
+\l__siunitx_number_round_precision_int=\count451
+\l__siunitx_number_lower_threshold_int=\count452
+\l__siunitx_number_upper_threshold_int=\count453
+\l__siunitx_number_group_first_int=\count454
+\l__siunitx_number_group_size_int=\count455
+\l__siunitx_number_group_minimum_int=\count456
+\l__siunitx_angle_tmp_dim=\dimen185
+\l__siunitx_angle_marker_box=\box58
+\l__siunitx_angle_unit_box=\box59
+\l__siunitx_compound_count_int=\count457
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translations/translations.sty
+Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages (CN)
+)
+\l__siunitx_table_tmp_box=\box60
+\l__siunitx_table_tmp_dim=\dimen186
+\l__siunitx_table_column_width_dim=\dimen187
+\l__siunitx_table_integer_box=\box61
+\l__siunitx_table_decimal_box=\box62
+\l__siunitx_table_uncert_box=\box63
+\l__siunitx_table_before_box=\box64
+\l__siunitx_table_after_box=\box65
+\l__siunitx_table_before_dim=\dimen188
+\l__siunitx_table_carry_dim=\dimen189
+\l__siunitx_unit_tmp_int=\count458
+\l__siunitx_unit_position_int=\count459
+\l__siunitx_unit_total_int=\count460
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/array.sty
+Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
+\col@sep=\dimen190
+\ar@mcellbox=\box66
+\extrarowheight=\dimen191
+\NC@list=\toks34
+\extratabsurround=\skip127
+\backup@length=\skip128
+\ar@cellbox=\box67
+)))
+\@quotelevel=\count461
+\@quotereset=\count462
+Package translations Info: No language package found. I am going to use `english' as default language. on input line 3.
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2025/01/14 v1.3e Standard LaTeX Color (DPC)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 149.
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx))
 LaTeX Font Info:    Trying to load font information for T1+CormorantGaramond-LF on input line 3.
 (/usr/local/texlive/2026/texmf-dist/tex/latex/cormorantgaramond/T1CormorantGaramond-LF.fd
 File: T1CormorantGaramond-LF.fd 2019/12/11 (autoinst) Font definitions for T1/CormorantGaramond-LF.
@@ -866,17 +915,17 @@ LaTeX Font Info:    ... okay on input line 3.
 
 (/usr/local/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count449
-\scratchdimen=\dimen185
-\scratchbox=\box58
-\nofMPsegments=\count450
-\nofMParguments=\count451
-\everyMPshowfont=\toks34
-\MPscratchCnt=\count452
-\MPscratchDim=\dimen186
-\MPnumerator=\count453
-\makeMPintoPDFobject=\count454
-\everyMPtoPDFconversion=\toks35
+\scratchcounter=\count463
+\scratchdimen=\dimen192
+\scratchbox=\box68
+\nofMPsegments=\count464
+\nofMParguments=\count465
+\everyMPshowfont=\toks35
+\MPscratchCnt=\count466
+\MPscratchDim=\dimen193
+\MPnumerator=\count467
+\makeMPintoPDFobject=\count468
+\everyMPtoPDFconversion=\toks36
 ) (/usr/local/texlive/2026/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -886,8 +935,8 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@mv@tabular=\count455
-\c@mv@boldtabular=\count456
+\c@mv@tabular=\count469
+\c@mv@boldtabular=\count470
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
 (/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/english.lbx
@@ -900,36 +949,7 @@ Package biblatex Info: Automatic encoding selection.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
-(build/main.bbl
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                Kiyohara2025NSF
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                RasmussenWilliams2006GP
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                Sun2023QuasarMassDistDist
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                YuEzTao2025
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-)
+(build/main.bbl)
 Package biblatex Info: Reference section=0 on input line 3.
 Package biblatex Info: Reference segment=0 on input line 3.
 Package hyperref Info: Link coloring OFF on input line 3.
@@ -937,8 +957,12 @@ Package hyperref Info: Link coloring OFF on input line 3.
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
+File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
+)
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 3.
 (./chapter/0_front.tex
-<assets/0_logos/MASS.pdf, id=128, 822.07124pt x 282.05376pt>
+<assets/0_logos/MASS.pdf, id=120, 822.07124pt x 282.05376pt>
 File: assets/0_logos/MASS.pdf Graphic file (type pdf)
 <use assets/0_logos/MASS.pdf>
 Package pdftex.def Info: assets/0_logos/MASS.pdf  used on input line 4.
@@ -979,27 +1003,27 @@ LaTeX Font Info:    Font shape `T1/CormorantGaramond-LF/m/sc' aliased to
 (Font)              `T1/CormorantGaramond-LF/regular/sc' on input line 38.
 LaTeX Font Info:    Font shape `T1/CormorantGaramond-LF/regular/sc' will be
 (Font)              scaled to size 14.4pt on input line 38.
-<assets/0_logos/UTOV.pdf, id=129, 548.13786pt x 130.55676pt>
+<assets/0_logos/UTOV.pdf, id=121, 548.13786pt x 130.55676pt>
 File: assets/0_logos/UTOV.pdf Graphic file (type pdf)
 <use assets/0_logos/UTOV.pdf>
 Package pdftex.def Info: assets/0_logos/UTOV.pdf  used on input line 43.
 (pdftex.def)             Requested size: 119.4532pt x 28.45274pt.
-<assets/0_logos/UBG2.pdf, id=130, 2472.23625pt x 734.745pt>
+<assets/0_logos/UBG2.pdf, id=122, 2472.23625pt x 734.745pt>
 File: assets/0_logos/UBG2.pdf Graphic file (type pdf)
 <use assets/0_logos/UBG2.pdf>
 Package pdftex.def Info: assets/0_logos/UBG2.pdf  used on input line 45.
 (pdftex.def)             Requested size: 95.70386pt x 28.45274pt.
-<assets/0_logos/UB.pdf, id=131, 554.82881pt x 199.1691pt>
+<assets/0_logos/UB.pdf, id=123, 554.82881pt x 199.1691pt>
 File: assets/0_logos/UB.pdf Graphic file (type pdf)
 <use assets/0_logos/UB.pdf>
 Package pdftex.def Info: assets/0_logos/UB.pdf  used on input line 47.
 (pdftex.def)             Requested size: 78.64899pt x 28.45274pt.
-<assets/0_logos/UCA.pdf, id=133, 226.61876pt x 67.17744pt>
+<assets/0_logos/UCA.pdf, id=125, 226.61876pt x 67.17744pt>
 File: assets/0_logos/UCA.pdf Graphic file (type pdf)
 <use assets/0_logos/UCA.pdf>
 Package pdftex.def Info: assets/0_logos/UCA.pdf  used on input line 49.
 (pdftex.def)             Requested size: 111.52481pt x 27.5992pt.
-<assets/0_logos/EU.pdf, id=135, 216.81pt x 227.85126pt>
+<assets/0_logos/EU.pdf, id=127, 216.81pt x 227.85126pt>
 File: assets/0_logos/EU.pdf Graphic file (type pdf)
 <use assets/0_logos/EU.pdf>
 Package pdftex.def Info: assets/0_logos/EU.pdf  used on input line 52.
@@ -1018,7 +1042,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has b
                    \relax 
 l.63 \newpage
               [1]
-<assets/0_logos/MatFak.pdf, id=1158, 519.44063pt x 614.295pt>
+<assets/0_logos/MatFak.pdf, id=1150, 519.44063pt x 614.295pt>
 File: assets/0_logos/MatFak.pdf Graphic file (type pdf)
 <use assets/0_logos/MatFak.pdf>
 Package pdftex.def Info: assets/0_logos/MatFak.pdf  used on input line 76.
@@ -1089,7 +1113,7 @@ LaTeX Font Info:    Font shape `T1/CormorantGaramond-LF/m/n' aliased to
 (Font)              `T1/CormorantGaramond-LF/regular/n' on input line 3.
 LaTeX Font Info:    Font shape `T1/CormorantGaramond-LF/regular/n' will be
 (Font)              scaled to size 5.0pt on input line 3.
-<assets/1_figures/SED-OG.pdf, id=1261, 401.5pt x 301.125pt>
+<assets/1_figures/SED-OG.pdf, id=1258, 401.5pt x 301.125pt>
 File: assets/1_figures/SED-OG.pdf Graphic file (type pdf)
 <use assets/1_figures/SED-OG.pdf>
 Package pdftex.def Info: assets/1_figures/SED-OG.pdf  used on input line 9.
@@ -1109,7 +1133,7 @@ LaTeX Font Info:    Font shape `T1/CormorantGaramond-LF/b/n' aliased to
 (Font)              `T1/CormorantGaramond-LF/bold/n' on input line 30.
 LaTeX Font Info:    Font shape `T1/CormorantGaramond-LF/bold/n' will be
 (Font)              scaled to size 17.28pt on input line 30.
-<assets/1_figures/AGN-Spectra.png, id=1327, 886.81313pt x 641.39626pt>
+<assets/1_figures/AGN-Spectra.png, id=1324, 886.81313pt x 641.39626pt>
 File: assets/1_figures/AGN-Spectra.png Graphic file (type png)
 <use assets/1_figures/AGN-Spectra.png>
 Package pdftex.def Info: assets/1_figures/AGN-Spectra.png  used on input line 37.
@@ -1122,7 +1146,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [9 <./assets/1_figures/AGN-Spectra.png>]
-<assets/1_figures/NGC1068.png, id=1347, 516.93124pt x 694.595pt>
+<assets/1_figures/NGC1068.png, id=1344, 516.93124pt x 694.595pt>
 File: assets/1_figures/NGC1068.png Graphic file (type png)
 <use assets/1_figures/NGC1068.png>
 Package pdftex.def Info: assets/1_figures/NGC1068.png  used on input line 49.
@@ -1135,7 +1159,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [10 <./assets/1_figures/NGC1068.png>]
-<assets/1_figures/UnifiedAGNModel.pdf, id=1367, 369.38pt x 226.8475pt>
+<assets/1_figures/UnifiedAGNModel.pdf, id=1364, 369.38pt x 226.8475pt>
 File: assets/1_figures/UnifiedAGNModel.pdf Graphic file (type pdf)
 <use assets/1_figures/UnifiedAGNModel.pdf>
 Package pdftex.def Info: assets/1_figures/UnifiedAGNModel.pdf  used on input line 58.
@@ -1157,7 +1181,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [11 <./assets/1_figures/UnifiedAGNModel.pdf>]
-<assets/1_figures/EddRatioDist.pdf, id=1401, 241.90375pt x 202.7575pt>
+<assets/1_figures/EddRatioDist.pdf, id=1398, 241.90375pt x 202.7575pt>
 File: assets/1_figures/EddRatioDist.pdf Graphic file (type pdf)
 <use assets/1_figures/EddRatioDist.pdf>
 Package pdftex.def Info: assets/1_figures/EddRatioDist.pdf  used on input line 88.
@@ -1170,7 +1194,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [12 <./assets/1_figures/EddRatioDist.pdf>]
-<assets/1_figures/BLR.pdf, id=1436, 219.82124pt x 241.90375pt>
+<assets/1_figures/BLR.pdf, id=1433, 219.82124pt x 241.90375pt>
 File: assets/1_figures/BLR.pdf Graphic file (type pdf)
 <use assets/1_figures/BLR.pdf>
 Package pdftex.def Info: assets/1_figures/BLR.pdf  used on input line 115.
@@ -1183,7 +1207,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [13 <./assets/1_figures/BLR.pdf>]
-<assets/1_figures/GRG.pdf, id=1469, 506.89375pt x 284.06125pt>
+<assets/1_figures/GRG.pdf, id=1466, 506.89375pt x 284.06125pt>
 File: assets/1_figures/GRG.pdf Graphic file (type pdf)
 <use assets/1_figures/GRG.pdf>
 Package pdftex.def Info: assets/1_figures/GRG.pdf  used on input line 131.
@@ -1196,7 +1220,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [14 <./assets/1_figures/GRG.pdf>]
-<assets/1_figures/bpt_alternative.pdf, id=1495, 542.025pt x 397.485pt>
+<assets/1_figures/bpt_alternative.pdf, id=1492, 542.025pt x 397.485pt>
 File: assets/1_figures/bpt_alternative.pdf Graphic file (type pdf)
 <use assets/1_figures/bpt_alternative.pdf>
 Package pdftex.def Info: assets/1_figures/bpt_alternative.pdf  used on input line 149.
@@ -1214,11 +1238,15 @@ Chapter 2.
 [16
 
 ]
-<assets/2_figures/KaraLags.pdf, id=1618, 366.36874pt x 219.82124pt>
+Overfull \hbox (1.21515pt too wide) in paragraph at lines 28--29
+[]\T1/CormorantGaramond-LF/regular/n/12 Naturally, both prop-a-gat-ing fluc-tu-a-tion lags and re-ver-ber-a-tion lags are si-mul-ta-ne-ously present
+ []
+
+<assets/2_figures/KaraLags.pdf, id=1617, 366.36874pt x 219.82124pt>
 File: assets/2_figures/KaraLags.pdf Graphic file (type pdf)
 <use assets/2_figures/KaraLags.pdf>
 Package pdftex.def Info: assets/2_figures/KaraLags.pdf  used on input line 32.
-(pdftex.def)             Requested size: 445.74045pt x 267.46036pt.
+(pdftex.def)             Requested size: 423.45206pt x 254.08717pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1227,10 +1255,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [17 <./assets/2_figures/KaraLags.pdf>]
-<assets/2_figures/RM.pdf, id=2148, 345.29pt x 112.42pt>
+<assets/2_figures/RM.pdf, id=2146, 345.29pt x 112.42pt>
 File: assets/2_figures/RM.pdf Graphic file (type pdf)
 <use assets/2_figures/RM.pdf>
-Package pdftex.def Info: assets/2_figures/RM.pdf  used on input line 55.
+Package pdftex.def Info: assets/2_figures/RM.pdf  used on input line 48.
 (pdftex.def)             Requested size: 445.74045pt x 145.12703pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1240,22 +1268,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [18 <./assets/2_figures/RM.pdf>]
-LaTeX Font Info:    Font shape `T1/CormorantGaramond-LF/m/it' aliased to
-(Font)              `T1/CormorantGaramond-LF/regular/it' on input line 106.
-LaTeX Font Info:    Font shape `T1/CormorantGaramond-LF/regular/it' will be
-(Font)              scaled to size 10.0pt on input line 106.
-<assets/2_figures/KaraFig5.pdf, id=2651, 358.33875pt x 211.79124pt>
+<assets/2_figures/KaraFig5.pdf, id=2639, 358.33875pt x 211.79124pt>
 File: assets/2_figures/KaraFig5.pdf Graphic file (type pdf)
 <use assets/2_figures/KaraFig5.pdf>
-Package pdftex.def Info: assets/2_figures/KaraFig5.pdf  used on input line 110.
+Package pdftex.def Info: assets/2_figures/KaraFig5.pdf  used on input line 105.
 (pdftex.def)             Requested size: 445.74045pt x 263.46512pt.
 
-Overfull \hbox (1.33429pt too wide) in paragraph at lines 114--115
+Overfull \hbox (1.33429pt too wide) in paragraph at lines 109--110
 []\T1/CormorantGaramond-LF/regular/n/12 The PSD also de-pends strongly on the ob-serv-ing wave-band, with op-ti-cal PSDs show-ing steeper
  []
-
-
-LaTeX Warning: Citation 'YuEzTao2025' on page 19 undefined on input line 120.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1277,10 +1298,22 @@ Chapter 3.
 [21
 
 ]
-<assets/3_figures/Kozlowski2016.pdf, id=3347, 506.89375pt x 236.885pt>
+Overfull \hbox (13.09834pt too wide) in paragraph at lines 42--43
+\T1/CormorantGaramond-LF/regular/n/12 structure-function rep-re-sen-ta-tion, the damped ran-dom walk is one mem-ber of a fam-ily parametrized
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[22]
+<assets/3_figures/Kozlowski2016.pdf, id=3349, 506.89375pt x 236.885pt>
 File: assets/3_figures/Kozlowski2016.pdf Graphic file (type pdf)
 <use assets/3_figures/Kozlowski2016.pdf>
-Package pdftex.def Info: assets/3_figures/Kozlowski2016.pdf  used on input line 41.
+Package pdftex.def Info: assets/3_figures/Kozlowski2016.pdf  used on input line 51.
 (pdftex.def)             Requested size: 445.74045pt x 208.31123pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1289,25 +1322,38 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[22{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc} <./assets/3_figures/Kozlowski2016.pdf>]
-
-LaTeX Warning: Citation 'Sun2023QuasarMassDistDist' on page 23 undefined on input line 86.
-
-
-Overfull \hbox (27.85477pt too wide) in paragraph at lines 85--88
-\T1/CormorantGaramond-LF/regular/n/12 pre-ferred model. Each sim-u-lated curve draws a value of $[] \OML/cmm/m/it/12 M[]$ \T1/CormorantGaramond-LF/regular/n/12 from the []
- []
-
-
-Overfull \hbox (3.76233pt too wide) in paragraph at lines 85--88
-\T1/CormorantGaramond-LF/regular/n/12 dis-tri-bu-tion by inverse-transform sam-pling, which is then mapped to a damp-ing timescale through
- []
-
-<assets/5_figures/FixedTauExp/TauDist.pdf, id=3427, 650.43pt x 238.49101pt>
-File: assets/5_figures/FixedTauExp/TauDist.pdf Graphic file (type pdf)
-<use assets/5_figures/FixedTauExp/TauDist.pdf>
-Package pdftex.def Info: assets/5_figures/FixedTauExp/TauDist.pdf  used on input line 91.
+[23 <./assets/3_figures/Kozlowski2016.pdf>]
+<assets/3_figures/tau_dist.pdf, id=3426, 650.43pt x 238.49101pt>
+File: assets/3_figures/tau_dist.pdf Graphic file (type pdf)
+<use assets/3_figures/tau_dist.pdf>
+Package pdftex.def Info: assets/3_figures/tau_dist.pdf  used on input line 69.
 (pdftex.def)             Requested size: 445.74045pt x 163.44177pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[24 <./assets/3_figures/tau_dist.pdf>]
+<assets/3_figures/example_lightcurve.pdf, id=3541, 650.43pt x 433.62pt>
+File: assets/3_figures/example_lightcurve.pdf Graphic file (type pdf)
+<use assets/3_figures/example_lightcurve.pdf>
+Package pdftex.def Info: assets/3_figures/example_lightcurve.pdf  used on input line 84.
+(pdftex.def)             Requested size: 445.74045pt x 297.16685pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[25{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc} <./assets/3_figures/example_lightcurve.pdf>]
+<assets/3_figures/regime.pdf, id=3611, 650.43pt x 216.81pt>
+File: assets/3_figures/regime.pdf Graphic file (type pdf)
+<use assets/3_figures/regime.pdf>
+Package pdftex.def Info: assets/3_figures/regime.pdf  used on input line 95.
+(pdftex.def)             Requested size: 445.74045pt x 148.58342pt.
 )
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1316,67 +1362,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[23 <./assets/5_figures/FixedTauExp/TauDist.pdf>] (./chapter/4_models.tex
+[26 <./assets/3_figures/regime.pdf>] (./chapter/4_models.tex
 Chapter 4.
-
-LaTeX Warning: Citation 'Kiyohara2025NSF' on page 24 undefined on input line 4.
-
-
-LaTeX Warning: Citation 'Kiyohara2025NSF' on page 24 undefined on input line 18.
-
-
-Overfull \hbox (2.6871pt too wide) in paragraph at lines 18--19
-\T1/CormorantGaramond-LF/regular/n/12 The flow and an aux-il-iary bridge model are trained jointly with the ob-jec-tive of [], 
- []
-
-
-LaTeX Warning: Citation 'Kiyohara2025NSF' on page 24 undefined on input line 28.
-
-
-Overfull \hbox (13.20615pt too wide) in paragraph at lines 27--29
-\T1/CormorantGaramond-LF/regular/n/12 as an aux-il-iary vari-a-tional dis-tri-bu-tion, yield-ing a tractable bidi-rec-tional bound ([]). 
- []
-
-[24
-
-]
-
-LaTeX Warning: Reference `fig:transition_check' on page 25 undefined on input line 62.
-
-
-LaTeX Warning: Citation 'Kiyohara2025NSF' on page 25 undefined on input line 62.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[25]
-
-LaTeX Warning: Citation 'RasmussenWilliams2006GP' on page 26 undefined on input line 72.
-
-)
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[26]
-Overfull \hbox (10.59058pt too wide) in paragraph at lines 36--36
-[][]\T1/CormorantGaramond-LF/regular/n/12 Bennert, Nicola (2005). ``The narrow-line re-gion of ac-tive galax-ies''. doc-tor-althe-sis. Ruhr-Universität
- []
-
+<assets/4_figures/NFSimple.pdf, id=3681, 236.885pt x 171.64125pt>
+File: assets/4_figures/NFSimple.pdf Graphic file (type pdf)
+<use assets/4_figures/NFSimple.pdf>
+Package pdftex.def Info: assets/4_figures/NFSimple.pdf  used on input line 18.
+(pdftex.def)             Requested size: 365.51042pt x 264.84949pt.
 [27
 
 ]
-Overfull \hbox (13.54648pt too wide) in paragraph at lines 36--36
-\T1/CormorantGaramond-LF/regular/n/12 AGNs''. In: \T1/CormorantGaramond-LF/regular/it/12 As-tron-omy and As-tro-physics \T1/CormorantGaramond-LF/regular/n/12 525, A118, A118. \T1/CormorantGaramond-LF/regular/sc/12 doi\T1/CormorantGaramond-LF/regular/n/12 : []$\T1/cmtt/m/n/12 10 . 1051 / 0004 -[] 6361 / 201014987$[]\T1/CormorantGaramond-LF/regular/n/12 .
- []
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1384,11 +1379,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[28]
-Overfull \hbox (11.63887pt too wide) in paragraph at lines 36--36
-\T1/CormorantGaramond-LF/regular/n/12 proach to Clas-si-fy-ing Con-tin-u-ously Vary-ing Sources''. In: \T1/CormorantGaramond-LF/regular/it/12 The As-tro-phys-i-cal Jour-nal \T1/CormorantGaramond-LF/regular/n/12 708.2, pp. 927^^U
- []
-
+[28 <./assets/4_figures/NFSimple.pdf>]
+<assets/4_figures/nsf_solutions.pdf, id=3771, 492.6706pt x 441.64816pt>
+File: assets/4_figures/nsf_solutions.pdf Graphic file (type pdf)
+<use assets/4_figures/nsf_solutions.pdf>
+Package pdftex.def Info: assets/4_figures/nsf_solutions.pdf  used on input line 47.
+(pdftex.def)             Requested size: 347.677pt x 311.67873pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1396,7 +1392,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[29]
+[29 <./assets/4_figures/nsf_solutions.pdf>]
+Overfull \hbox (4.32309pt too wide) in paragraph at lines 77--78
+[]\T1/CormorantGaramond-LF/regular/n/12 The two sides of Eq. []4.7[] can-not be com-pared di-rectly, since the two-step side re-quires marginal-
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1412,13 +1412,95 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[31]
-Overfull \hbox (0.87529pt too wide) in paragraph at lines 36--36
+[31])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[32] (./chapter/5_results.tex
+Chapter 5.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 5.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\tau' on input line 5.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 5.
+
+) [33
+
+]
+Overfull \hbox (10.59058pt too wide) in paragraph at lines 38--38
+[][]\T1/CormorantGaramond-LF/regular/n/12 Bennert, Nicola (2005). ``The narrow-line re-gion of ac-tive galax-ies''. doc-tor-althe-sis. Ruhr-Universität
+ []
+
+[34
+
+]
+Overfull \hbox (5.07329pt too wide) in paragraph at lines 38--38
+[][]\T1/CormorantGaramond-LF/regular/n/12 Collier, Ste-fan and Bradley M. Pe-ter-son (July 2001). ``Char-ac-ter-is-tic Ul-tra-vi-o-let/Optical Timescales
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[35]
+Overfull \hbox (13.54648pt too wide) in paragraph at lines 38--38
+\T1/CormorantGaramond-LF/regular/n/12 AGNs''. In: \T1/CormorantGaramond-LF/regular/it/12 As-tron-omy and As-tro-physics \T1/CormorantGaramond-LF/regular/n/12 525, A118, A118. \T1/CormorantGaramond-LF/regular/sc/12 doi\T1/CormorantGaramond-LF/regular/n/12 : []$\T1/cmtt/m/n/12 10 . 1051 / 0004 -[] 6361 / 201014987$[]\T1/CormorantGaramond-LF/regular/n/12 .
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[36]
+Overfull \hbox (11.63887pt too wide) in paragraph at lines 38--38
+\T1/CormorantGaramond-LF/regular/n/12 proach to Clas-si-fy-ing Con-tin-u-ously Vary-ing Sources''. In: \T1/CormorantGaramond-LF/regular/it/12 The As-tro-phys-i-cal Jour-nal \T1/CormorantGaramond-LF/regular/n/12 708.2, pp. 927^^U
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[37]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[38]
+Overfull \hbox (0.87529pt too wide) in paragraph at lines 38--38
 [][]\T1/CormorantGaramond-LF/regular/n/12 Suh, Hye-won et al. (Dec. 2015). ``Ed-ding-ton Ra-tio Dis-tri-bu-tion of X-ray-selected Broad-line AGNs
  []
 
 
-Overfull \hbox (2.34424pt too wide) in paragraph at lines 36--36
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[39]
+Overfull \hbox (2.34424pt too wide) in paragraph at lines 38--38
 \T1/CormorantGaramond-LF/regular/it/12 zbezdy i vy-de-leniye grav-i-tat-sion-noy en-ergii pri akkret-sii<\T1/CormorantGaramond-LF/regular/n/12 . NASA Tech-ni-cal Trans-la-tion, NASA/STI
  []
 
@@ -1429,33 +1511,30 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[32] (build/main.aux)
+[40] (build/main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 7D909A6998AD17B5946266D6FBC28E37;4596.
+(rerunfilecheck)             Checksum: B6ED97111B3FF1F134989BFA5FD1CDCA;4670.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 23235 strings out of 467525
- 422963 string characters out of 5418982
- 1321702 words of memory out of 5000000
- 51649 multiletter control sequences out of 15000+600000
- 752127 words of font info for 130 fonts, out of 8000000 for 9000
+ 27337 strings out of 467525
+ 549762 string characters out of 5418982
+ 1416519 words of memory out of 5000000
+ 55699 multiletter control sequences out of 15000+600000
+ 748563 words of font info for 134 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 78i,13n,81p,2040b,1999s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 78i,13n,81p,1678b,2192s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2026/texmf-dist/fonts/type1/catharsis/cormorantgaramond/CormorantGaramond-Bold.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/catharsis/cormorantgaramond/CormorantGaramond-Italic.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/catharsis/cormorantgaramond/CormorantGaramond-Regular.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on build/main.pdf (33 pages, 3546108 bytes).
+Output written on build/main.pdf (41 pages, 3856630 bytes).
 PDF statistics:
- 3901 PDF objects out of 4296 (max. 8388607)
- 3088 compressed objects within 31 object streams
- 189 named destinations out of 1000 (max. 500000)
- 361 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 4237 PDF objects out of 4296 (max. 8388607)
+ 3298 compressed objects within 33 object streams
+ 217 named destinations out of 1000 (max. 500000)
+ 365 words of extra memory for PDF output out of 10000 (max. 10000000)
 
