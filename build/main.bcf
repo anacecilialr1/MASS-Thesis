@@ -2545,6 +2545,7 @@
     <bcf:citekey order="169" intorder="1">Kingma2017Adam</bcf:citekey>
     <bcf:citekey order="170" intorder="1">Deepmind2020Optax</bcf:citekey>
     <bcf:citekey order="171" intorder="1">Yu2022Extao</bcf:citekey>
+    <bcf:citekey order="172" intorder="1">Kiyohara2025SNF</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

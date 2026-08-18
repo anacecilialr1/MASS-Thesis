@@ -1,29 +1,36 @@
-\contentsline {chapter}{\numberline {1}Background}{7}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Unified Model of AGN}{9}{section.1.1}%
-\contentsline {subsection}{\numberline {1.1.1}Accretion Disk}{11}{subsection.1.1.1}%
-\contentsline {subsection}{\numberline {1.1.2}Corona}{12}{subsection.1.1.2}%
-\contentsline {subsection}{\numberline {1.1.3}Broad-line Region}{12}{subsection.1.1.3}%
-\contentsline {subsection}{\numberline {1.1.4}Dusty Torus}{13}{subsection.1.1.4}%
-\contentsline {subsection}{\numberline {1.1.5}Relativistic Jets}{14}{subsection.1.1.5}%
-\contentsline {subsection}{\numberline {1.1.6}Narrow-line Region}{15}{subsection.1.1.6}%
-\contentsline {chapter}{\numberline {2}Variability of AGN}{16}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Physical Origin and Timescales}{16}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Reverberation Mapping}{18}{subsection.2.1.1}%
-\contentsline {section}{\numberline {2.2}Variability Characterization}{19}{section.2.2}%
-\contentsline {chapter}{\numberline {3}Simulation Framework}{21}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Stochastic Processes}{21}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}The Transition Probability}{22}{subsection.3.1.1}%
-\contentsline {section}{\numberline {3.2}The Damping Timescale}{23}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Physically Motivated Timescales}{24}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Light Curve Generation}{24}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Sampling Regime}{26}{section.3.5}%
-\contentsline {chapter}{\numberline {4}Neural Stochastic Flows}{27}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Normalizing Flows}{27}{section.4.1}%
-\contentsline {section}{\numberline {4.2}From Static Densities to Transition Laws}{28}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Triplets and Stochastic Bridges}{30}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Training Objective}{31}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Implementation}{31}{section.4.5}%
-\contentsline {chapter}{\numberline {5}Results and Discussion}{33}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Fixed Characteristic Timescale $\tau $}{33}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Sampling timescales}{33}{section.5.2}%
-\contentsline {chapter}{Bibliography}{34}{chapter*.20}%
+\contentsline {chapter}{\numberline {1}Background}{8}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Unified Model of AGN}{10}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Accretion Disk}{12}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Corona}{13}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.1.3}Broad-line Region}{13}{subsection.1.1.3}%
+\contentsline {subsection}{\numberline {1.1.4}Dusty Torus}{14}{subsection.1.1.4}%
+\contentsline {subsection}{\numberline {1.1.5}Relativistic Jets}{15}{subsection.1.1.5}%
+\contentsline {subsection}{\numberline {1.1.6}Narrow-line Region}{16}{subsection.1.1.6}%
+\contentsline {chapter}{\numberline {2}Variability of AGN}{17}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Physical Origin and Timescales}{17}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Reverberation Mapping}{19}{subsection.2.1.1}%
+\contentsline {section}{\numberline {2.2}Variability Characterization}{20}{section.2.2}%
+\contentsline {chapter}{\numberline {3}Simulation Framework}{22}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Stochastic Processes}{22}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}The Transition Probability}{23}{subsection.3.1.1}%
+\contentsline {section}{\numberline {3.2}The Damping Timescale}{24}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Physically Motivated Timescales}{25}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Light Curve Generation}{25}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Sampling Regime}{27}{section.3.5}%
+\contentsline {chapter}{\numberline {4}Neural Stochastic Flows}{28}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Normalizing Flows}{28}{section.4.1}%
+\contentsline {section}{\numberline {4.2}From Static Densities to Transition Laws}{29}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Triplets and Stochastic Bridges}{31}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Training Objective}{32}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Implementation}{32}{section.4.5}%
+\contentsline {chapter}{\numberline {5}Reconstructing AGN Light Curves}{34}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Experimental Setup}{34}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Low Noise Experiment}{35}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Fixed Timescale}{35}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Varying Timescale}{36}{subsection.5.2.2}%
+\contentsline {section}{\numberline {5.3}The ZTF Sampling Regime}{38}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Calibration Under ZTF Noise}{40}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Application to Real ZTF Light Curves}{42}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Discussion}{45}{section.5.6}%
+\contentsline {chapter}{Bibliography}{46}{chapter*.35}%
+\contentsline {chapter}{\numberline {A}Neural Stochastic Flow in Depth}{53}{appendix.A}%
