@@ -1,0 +1,14 @@
+\clearpage
+\thispagestyle{plain}   % or \thispagestyle{empty}
+\begin{center}
+    \vspace{5.0cm}
+    \textbf{\Large Abstract}
+\end{center}
+\vspace{1em}
+Active galactic nuclei (AGN) exhibit stochastic variability in a wide range of timescales across the entire electromagnetic spectrum. These brightness variations carry information about the physical structure of the accretion flow and the coupling between the central ionizing source and the surrounding disk. Time-domain studies of AGN light curves are therefore an important tool for studying black hole growth and accretion physics on otherwise unresolved scales.
+
+The light curves delivered by these surveys are irregularly sampled and contain substantial gaps, so that reconstructing the underlying signal is an ill-posed problem better addressed by a probabilistic method that returns a distribution of plausible light curves rather than a single estimate. This thesis investigates the use of neural stochastic flows, a recently proposed class of generative models that learn the transition density of a stochastic process directly, for the reconstruction of AGN photometric light curves modelled as a damped random walk. The method is trained and evaluated on simulated light curves with physically motivated parameters, and validated both against the analytic transition of the damped random walk, which the learned model should reproduce, and against a Gaussian process with the same kernel, which provides an optimal reconstruction baseline.
+
+On low-noise data the method recovers the analytic transition and reconstructs light curves to within a few per cent of the Bayes-optimal Gaussian process. When the sampling and noise are matched to those of the Zwicky Transient Facility, the reconstruction remains accurate but its uncertainty estimates become overconfident, a behaviour that is traced to the model treating the observed magnitudes as noise-free and anchoring too tightly to noisy observations. Applied to real light curves through a masking experiment, the method predicts withheld observations competitively with a fitted Gaussian process while both improve on simple interpolation. These results identify the handling of measurement noise as the principal limitation of the approach and motivate a latent formulation, in which the flow describes an unobserved signal related to the observations through an explicit noise model, as the natural next step.
+
+\clearpage

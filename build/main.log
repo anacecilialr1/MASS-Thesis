@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.27)  18 AUG 2026 04:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.27)  21 AUG 2026 03:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -864,20 +864,7 @@ LaTeX Font Info:    Font shape `T1/CormorantGaramond-LF/m/n' aliased to
 (Font)              `T1/CormorantGaramond-LF/regular/n' on input line 3.
 LaTeX Font Info:    Font shape `T1/CormorantGaramond-LF/regular/n' will be
 (Font)              scaled to size 12.0pt on input line 3.
-(build/main.aux
-
-LaTeX Warning: Label `eq:base' multiply defined.
-
-
-LaTeX Warning: Label `eq:coupling' multiply defined.
-
-
-LaTeX Warning: Label `eq:flow12' multiply defined.
-
-
-LaTeX Warning: Label `eq:flow21' multiply defined.
-
-)
+(build/main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
@@ -987,7 +974,7 @@ File: translations-basic-dictionary-english.trsl (english translation file `tran
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 3.
 (./chapter/0_front.tex
-<assets/0_logos/MASS.pdf, id=148, 822.07124pt x 282.05376pt>
+<assets/0_logos/MASS.pdf, id=184, 822.07124pt x 282.05376pt>
 File: assets/0_logos/MASS.pdf Graphic file (type pdf)
 <use assets/0_logos/MASS.pdf>
 Package pdftex.def Info: assets/0_logos/MASS.pdf  used on input line 4.
@@ -1028,27 +1015,27 @@ LaTeX Font Info:    Font shape `T1/CormorantGaramond-LF/m/sc' aliased to
 (Font)              `T1/CormorantGaramond-LF/regular/sc' on input line 38.
 LaTeX Font Info:    Font shape `T1/CormorantGaramond-LF/regular/sc' will be
 (Font)              scaled to size 14.4pt on input line 38.
-<assets/0_logos/UTOV.pdf, id=149, 548.13786pt x 130.55676pt>
+<assets/0_logos/UTOV.pdf, id=185, 548.13786pt x 130.55676pt>
 File: assets/0_logos/UTOV.pdf Graphic file (type pdf)
 <use assets/0_logos/UTOV.pdf>
 Package pdftex.def Info: assets/0_logos/UTOV.pdf  used on input line 43.
 (pdftex.def)             Requested size: 119.4532pt x 28.45274pt.
-<assets/0_logos/UBG2.pdf, id=150, 2472.23625pt x 734.745pt>
+<assets/0_logos/UBG2.pdf, id=186, 2472.23625pt x 734.745pt>
 File: assets/0_logos/UBG2.pdf Graphic file (type pdf)
 <use assets/0_logos/UBG2.pdf>
 Package pdftex.def Info: assets/0_logos/UBG2.pdf  used on input line 45.
 (pdftex.def)             Requested size: 95.70386pt x 28.45274pt.
-<assets/0_logos/UB.pdf, id=151, 554.82881pt x 199.1691pt>
+<assets/0_logos/UB.pdf, id=187, 554.82881pt x 199.1691pt>
 File: assets/0_logos/UB.pdf Graphic file (type pdf)
 <use assets/0_logos/UB.pdf>
 Package pdftex.def Info: assets/0_logos/UB.pdf  used on input line 47.
 (pdftex.def)             Requested size: 78.64899pt x 28.45274pt.
-<assets/0_logos/UCA.pdf, id=153, 226.61876pt x 67.17744pt>
+<assets/0_logos/UCA.pdf, id=189, 226.61876pt x 67.17744pt>
 File: assets/0_logos/UCA.pdf Graphic file (type pdf)
 <use assets/0_logos/UCA.pdf>
 Package pdftex.def Info: assets/0_logos/UCA.pdf  used on input line 49.
 (pdftex.def)             Requested size: 111.52481pt x 27.5992pt.
-<assets/0_logos/EU.pdf, id=155, 216.81pt x 227.85126pt>
+<assets/0_logos/EU.pdf, id=191, 216.81pt x 227.85126pt>
 File: assets/0_logos/EU.pdf Graphic file (type pdf)
 <use assets/0_logos/EU.pdf>
 Package pdftex.def Info: assets/0_logos/EU.pdf  used on input line 52.
@@ -1067,28 +1054,36 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has b
                    \relax 
 l.63 \newpage
               [1]
-<assets/0_logos/MatFak.pdf, id=1178, 519.44063pt x 614.295pt>
+<assets/0_logos/MatFak.pdf, id=1215, 519.44063pt x 614.295pt>
 File: assets/0_logos/MatFak.pdf Graphic file (type pdf)
 <use assets/0_logos/MatFak.pdf>
 Package pdftex.def Info: assets/0_logos/MatFak.pdf  used on input line 76.
 (pdftex.def)             Requested size: 103.45035pt x 122.34692pt.
-[2{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc} <./assets/0_logos/MatFak.pdf>]) (build/main.toc
+[2{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc} <./assets/0_logos/MatFak.pdf>]) (./chapter/01_abstract.tex
 LaTeX Font Info:    Font shape `T1/CormorantGaramond-LF/b/n' aliased to
-(Font)              `T1/CormorantGaramond-LF/bold/n' on input line 1.
+(Font)              `T1/CormorantGaramond-LF/bold/n' on input line 5.
 LaTeX Font Info:    Font shape `T1/CormorantGaramond-LF/bold/n' will be
-(Font)              scaled to size 12.0pt on input line 1.
-[3])
+(Font)              scaled to size 12.0pt on input line 5.
+LaTeX Font Info:    Font shape `T1/CormorantGaramond-LF/b/n' aliased to
+(Font)              `T1/CormorantGaramond-LF/bold/n' on input line 5.
+LaTeX Font Info:    Font shape `T1/CormorantGaramond-LF/bold/n' will be
+(Font)              scaled to size 17.28pt on input line 5.
+LaTeX Font Info:    Font shape `T1/CormorantGaramond-LF/m/n' aliased to
+(Font)              `T1/CormorantGaramond-LF/regular/n' on input line 14.
+LaTeX Font Info:    Font shape `T1/CormorantGaramond-LF/regular/n' will be
+(Font)              scaled to size 10.95pt on input line 14.
+LaTeX Font Info:    Font shape `T1/CormorantGaramond-LF/m/it' aliased to
+(Font)              `T1/CormorantGaramond-LF/regular/it' on input line 14.
+LaTeX Font Info:    Font shape `T1/CormorantGaramond-LF/regular/it' will be
+(Font)              scaled to size 10.95pt on input line 14.
+[3
+
+{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cormorantgaramond/cgrm_xwhmgi.enc}]) (build/main.toc [4
+
+])
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
-LaTeX Font Info:    Font shape `T1/CormorantGaramond-LF/m/n' aliased to
-(Font)              `T1/CormorantGaramond-LF/regular/n' on input line 12.
-LaTeX Font Info:    Font shape `T1/CormorantGaramond-LF/regular/n' will be
-(Font)              scaled to size 10.95pt on input line 12.
-LaTeX Font Info:    Font shape `T1/CormorantGaramond-LF/m/it' aliased to
-(Font)              `T1/CormorantGaramond-LF/regular/it' on input line 12.
-LaTeX Font Info:    Font shape `T1/CormorantGaramond-LF/regular/it' will be
-(Font)              scaled to size 10.95pt on input line 12.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1096,7 +1091,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[4{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cormorantgaramond/cgrm_xwhmgi.enc}] (build/main.lof [5])
+[5] (build/main.lof [6])
 \tf@lof=\write6
 \openout6 = `main.lof'.
 
@@ -1107,11 +1102,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[6] (build/main.lot)
+[7] (build/main.lot)
 \tf@lot=\write7
 \openout7 = `main.lot'.
 
-[7] (./chapter/1_background.tex
+[8] (./chapter/1_background.tex
 Chapter 1.
 LaTeX Font Info:    Font shape `T1/CormorantGaramond-LF/m/n' aliased to
 (Font)              `T1/CormorantGaramond-LF/regular/n' on input line 1.
@@ -1145,12 +1140,12 @@ LaTeX Font Info:    Font shape `T1/CormorantGaramond-LF/m/n' aliased to
 (Font)              `T1/CormorantGaramond-LF/regular/n' on input line 3.
 LaTeX Font Info:    Font shape `T1/CormorantGaramond-LF/regular/n' will be
 (Font)              scaled to size 5.0pt on input line 3.
-<assets/1_figures/SED-OG.pdf, id=1327, 401.5pt x 301.125pt>
+<assets/1_figures/SED-OG.pdf, id=1381, 401.5pt x 301.125pt>
 File: assets/1_figures/SED-OG.pdf Graphic file (type pdf)
 <use assets/1_figures/SED-OG.pdf>
 Package pdftex.def Info: assets/1_figures/SED-OG.pdf  used on input line 9.
 (pdftex.def)             Requested size: 416.06143pt x 312.01695pt.
-[8
+[9
 
 ]
 
@@ -1160,12 +1155,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[9 <./assets/1_figures/SED-OG.pdf>]
-LaTeX Font Info:    Font shape `T1/CormorantGaramond-LF/b/n' aliased to
-(Font)              `T1/CormorantGaramond-LF/bold/n' on input line 30.
-LaTeX Font Info:    Font shape `T1/CormorantGaramond-LF/bold/n' will be
-(Font)              scaled to size 17.28pt on input line 30.
-<assets/1_figures/AGN-Spectra.png, id=1394, 886.81313pt x 641.39626pt>
+[10 <./assets/1_figures/SED-OG.pdf>]
+<assets/1_figures/AGN-Spectra.png, id=1447, 886.81313pt x 641.39626pt>
 File: assets/1_figures/AGN-Spectra.png Graphic file (type png)
 <use assets/1_figures/AGN-Spectra.png>
 Package pdftex.def Info: assets/1_figures/AGN-Spectra.png  used on input line 37.
@@ -1177,8 +1168,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[10 <./assets/1_figures/AGN-Spectra.png>]
-<assets/1_figures/NGC1068.png, id=1413, 516.93124pt x 694.595pt>
+[11 <./assets/1_figures/AGN-Spectra.png>]
+<assets/1_figures/NGC1068.png, id=1466, 516.93124pt x 694.595pt>
 File: assets/1_figures/NGC1068.png Graphic file (type png)
 <use assets/1_figures/NGC1068.png>
 Package pdftex.def Info: assets/1_figures/NGC1068.png  used on input line 49.
@@ -1190,8 +1181,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[11 <./assets/1_figures/NGC1068.png>]
-<assets/1_figures/UnifiedAGNModel.pdf, id=1433, 369.38pt x 226.8475pt>
+[12 <./assets/1_figures/NGC1068.png>]
+<assets/1_figures/UnifiedAGNModel.pdf, id=1487, 369.38pt x 226.8475pt>
 File: assets/1_figures/UnifiedAGNModel.pdf Graphic file (type pdf)
 <use assets/1_figures/UnifiedAGNModel.pdf>
 Package pdftex.def Info: assets/1_figures/UnifiedAGNModel.pdf  used on input line 58.
@@ -1212,8 +1203,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[12 <./assets/1_figures/UnifiedAGNModel.pdf>]
-<assets/1_figures/EddRatioDist.pdf, id=1468, 241.90375pt x 202.7575pt>
+[13 <./assets/1_figures/UnifiedAGNModel.pdf>]
+<assets/1_figures/EddRatioDist.pdf, id=1522, 241.90375pt x 202.7575pt>
 File: assets/1_figures/EddRatioDist.pdf Graphic file (type pdf)
 <use assets/1_figures/EddRatioDist.pdf>
 Package pdftex.def Info: assets/1_figures/EddRatioDist.pdf  used on input line 88.
@@ -1225,8 +1216,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[13 <./assets/1_figures/EddRatioDist.pdf>]
-<assets/1_figures/BLR.pdf, id=1503, 219.82124pt x 241.90375pt>
+[14 <./assets/1_figures/EddRatioDist.pdf>]
+<assets/1_figures/BLR.pdf, id=1556, 219.82124pt x 241.90375pt>
 File: assets/1_figures/BLR.pdf Graphic file (type pdf)
 <use assets/1_figures/BLR.pdf>
 Package pdftex.def Info: assets/1_figures/BLR.pdf  used on input line 115.
@@ -1238,8 +1229,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[14 <./assets/1_figures/BLR.pdf>]
-<assets/1_figures/GRG.pdf, id=1536, 506.89375pt x 284.06125pt>
+[15 <./assets/1_figures/BLR.pdf>]
+<assets/1_figures/GRG.pdf, id=1589, 506.89375pt x 284.06125pt>
 File: assets/1_figures/GRG.pdf Graphic file (type pdf)
 <use assets/1_figures/GRG.pdf>
 Package pdftex.def Info: assets/1_figures/GRG.pdf  used on input line 131.
@@ -1251,13 +1242,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[15 <./assets/1_figures/GRG.pdf>]
-<assets/1_figures/bpt_alternative.pdf, id=1561, 542.025pt x 397.485pt>
+[16 <./assets/1_figures/GRG.pdf>]
+<assets/1_figures/bpt_alternative.pdf, id=1614, 542.025pt x 397.485pt>
 File: assets/1_figures/bpt_alternative.pdf Graphic file (type pdf)
 <use assets/1_figures/bpt_alternative.pdf>
 Package pdftex.def Info: assets/1_figures/bpt_alternative.pdf  used on input line 149.
 (pdftex.def)             Requested size: 378.8821pt x 277.8555pt.
-)
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1265,16 +1255,24 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[16 <./assets/1_figures/bpt_alternative.pdf>] (./chapter/2_variability.tex
+[17 <./assets/1_figures/bpt_alternative.pdf>])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[18] (./chapter/2_variability.tex
 Chapter 2.
-[17
+[19
 
 ]
 Overfull \hbox (1.21515pt too wide) in paragraph at lines 28--29
 []\T1/CormorantGaramond-LF/regular/n/12 Naturally, both prop-a-gat-ing fluc-tu-a-tion lags and re-ver-ber-a-tion lags are si-mul-ta-ne-ously present
  []
 
-<assets/2_figures/KaraLags.pdf, id=1686, 366.36874pt x 219.82124pt>
+<assets/2_figures/KaraLags.pdf, id=1750, 366.36874pt x 219.82124pt>
 File: assets/2_figures/KaraLags.pdf Graphic file (type pdf)
 <use assets/2_figures/KaraLags.pdf>
 Package pdftex.def Info: assets/2_figures/KaraLags.pdf  used on input line 32.
@@ -1286,8 +1284,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[18 <./assets/2_figures/KaraLags.pdf>]
-<assets/2_figures/RM.pdf, id=2217, 345.29pt x 112.42pt>
+[20 <./assets/2_figures/KaraLags.pdf>]
+<assets/2_figures/RM.pdf, id=2279, 345.29pt x 112.42pt>
 File: assets/2_figures/RM.pdf Graphic file (type pdf)
 <use assets/2_figures/RM.pdf>
 Package pdftex.def Info: assets/2_figures/RM.pdf  used on input line 48.
@@ -1299,8 +1297,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[19 <./assets/2_figures/RM.pdf>]
-<assets/2_figures/KaraFig5.pdf, id=2708, 358.33875pt x 211.79124pt>
+[21 <./assets/2_figures/RM.pdf>]
+<assets/2_figures/KaraFig5.pdf, id=2771, 358.33875pt x 211.79124pt>
 File: assets/2_figures/KaraFig5.pdf Graphic file (type pdf)
 <use assets/2_figures/KaraFig5.pdf>
 Package pdftex.def Info: assets/2_figures/KaraFig5.pdf  used on input line 105.
@@ -1317,7 +1315,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[20])
+[22])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1325,9 +1323,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[21 <./assets/2_figures/KaraFig5.pdf>] (./chapter/3_simulation.tex
+[23 <./assets/2_figures/KaraFig5.pdf>] (./chapter/3_simulation.tex
 Chapter 3.
-[22
+[24
 
 ]
 Overfull \hbox (13.09834pt too wide) in paragraph at lines 42--43
@@ -1341,8 +1339,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[23]
-<assets/3_figures/Kozlowski2016.pdf, id=3418, 506.89375pt x 236.885pt>
+[25]
+<assets/3_figures/Kozlowski2016.pdf, id=3482, 506.89375pt x 236.885pt>
 File: assets/3_figures/Kozlowski2016.pdf Graphic file (type pdf)
 <use assets/3_figures/Kozlowski2016.pdf>
 Package pdftex.def Info: assets/3_figures/Kozlowski2016.pdf  used on input line 51.
@@ -1354,8 +1352,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[24 <./assets/3_figures/Kozlowski2016.pdf>]
-<assets/3_figures/tau_dist.pdf, id=3497, 650.43pt x 238.49101pt>
+[26 <./assets/3_figures/Kozlowski2016.pdf>]
+<assets/3_figures/tau_dist.pdf, id=3559, 650.43pt x 238.49101pt>
 File: assets/3_figures/tau_dist.pdf Graphic file (type pdf)
 <use assets/3_figures/tau_dist.pdf>
 Package pdftex.def Info: assets/3_figures/tau_dist.pdf  used on input line 69.
@@ -1367,8 +1365,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[25 <./assets/3_figures/tau_dist.pdf>]
-<assets/3_figures/example_lightcurve.pdf, id=3610, 650.43pt x 433.62pt>
+[27 <./assets/3_figures/tau_dist.pdf>]
+<assets/3_figures/example_lightcurve.pdf, id=3673, 650.43pt x 433.62pt>
 File: assets/3_figures/example_lightcurve.pdf Graphic file (type pdf)
 <use assets/3_figures/example_lightcurve.pdf>
 Package pdftex.def Info: assets/3_figures/example_lightcurve.pdf  used on input line 84.
@@ -1380,8 +1378,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[26{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc} <./assets/3_figures/example_lightcurve.pdf>]
-<assets/3_figures/regime.pdf, id=3680, 650.43pt x 216.81pt>
+[28{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc} <./assets/3_figures/example_lightcurve.pdf>]
+<assets/3_figures/regime.pdf, id=3743, 650.43pt x 216.81pt>
 File: assets/3_figures/regime.pdf Graphic file (type pdf)
 <use assets/3_figures/regime.pdf>
 Package pdftex.def Info: assets/3_figures/regime.pdf  used on input line 95.
@@ -1394,14 +1392,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[27 <./assets/3_figures/regime.pdf>] (./chapter/4_models.tex
+[29 <./assets/3_figures/regime.pdf>] (./chapter/4_models.tex
 Chapter 4.
-<assets/4_figures/NFSimple.pdf, id=3751, 236.885pt x 171.64125pt>
+<assets/4_figures/NFSimple.pdf, id=3813, 236.885pt x 171.64125pt>
 File: assets/4_figures/NFSimple.pdf Graphic file (type pdf)
 <use assets/4_figures/NFSimple.pdf>
 Package pdftex.def Info: assets/4_figures/NFSimple.pdf  used on input line 18.
 (pdftex.def)             Requested size: 365.51042pt x 264.84949pt.
-[28
+[30
 
 ]
 
@@ -1411,8 +1409,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[29 <./assets/4_figures/NFSimple.pdf>]
-<assets/4_figures/nsf_solutions.pdf, id=3840, 492.6706pt x 441.64816pt>
+[31 <./assets/4_figures/NFSimple.pdf>]
+<assets/4_figures/nsf_solutions.pdf, id=3904, 492.6706pt x 441.64816pt>
 File: assets/4_figures/nsf_solutions.pdf Graphic file (type pdf)
 <use assets/4_figures/nsf_solutions.pdf>
 Package pdftex.def Info: assets/4_figures/nsf_solutions.pdf  used on input line 47.
@@ -1424,7 +1422,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[30 <./assets/4_figures/nsf_solutions.pdf>]
+[32 <./assets/4_figures/nsf_solutions.pdf>]
 Overfull \hbox (4.32309pt too wide) in paragraph at lines 77--78
 []\T1/CormorantGaramond-LF/regular/n/12 The two sides of Eq. []4.7[] can-not be com-pared di-rectly, since the two-step side re-quires marginal-
  []
@@ -1436,7 +1434,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[31]
+[33]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1444,7 +1442,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[32])
+[34]
+<assets/5_figures/VaryTauExp/MCSamples.pdf, id=3959, 469.755pt x 231.26399pt>
+File: assets/5_figures/VaryTauExp/MCSamples.pdf Graphic file (type pdf)
+<use assets/5_figures/VaryTauExp/MCSamples.pdf>
+Package pdftex.def Info: assets/5_figures/VaryTauExp/MCSamples.pdf  used on input line 107.
+(pdftex.def)             Requested size: 445.74045pt x 219.44193pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1452,25 +1455,41 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[33] (./chapter/5_results.tex
+[35 <./assets/5_figures/VaryTauExp/MCSamples.pdf>])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[36] (./chapter/5_results.tex
 Chapter 5.
-[34
+[37
 
 ]
-<assets/5_figures/FixedTauExp/Loss.pdf, id=3932, 361.35pt x 158.99399pt>
+<assets/5_figures/LC_FD.pdf, id=4047, 445.665pt x 844.15375pt>
+File: assets/5_figures/LC_FD.pdf Graphic file (type pdf)
+<use assets/5_figures/LC_FD.pdf>
+Package pdftex.def Info: assets/5_figures/LC_FD.pdf  used on input line 26.
+(pdftex.def)             Requested size: 356.5937pt x 675.43985pt.
+
+LaTeX Warning: Float too large for page by 5.76042pt on input line 28.
+
+<assets/5_figures/FixedTauExp/Loss.pdf, id=4050, 361.35pt x 158.99399pt>
 File: assets/5_figures/FixedTauExp/Loss.pdf Graphic file (type pdf)
 <use assets/5_figures/FixedTauExp/Loss.pdf>
-Package pdftex.def Info: assets/5_figures/FixedTauExp/Loss.pdf  used on input line 30.
+Package pdftex.def Info: assets/5_figures/FixedTauExp/Loss.pdf  used on input line 43.
 (pdftex.def)             Requested size: 401.16368pt x 176.51451pt.
-<assets/5_figures/FixedTauExp/LearnedTrans.pdf, id=3933, 578.16pt x 209.58301pt>
+<assets/5_figures/FixedTauExp/LearnedTrans.pdf, id=4051, 578.16pt x 209.58301pt>
 File: assets/5_figures/FixedTauExp/LearnedTrans.pdf Graphic file (type pdf)
 <use assets/5_figures/FixedTauExp/LearnedTrans.pdf>
-Package pdftex.def Info: assets/5_figures/FixedTauExp/LearnedTrans.pdf  used on input line 39.
+Package pdftex.def Info: assets/5_figures/FixedTauExp/LearnedTrans.pdf  used on input line 52.
 (pdftex.def)             Requested size: 445.74045pt x 161.58087pt.
-<assets/5_figures/FixedTauExp/Error.pdf, id=3934, 361.35pt x 289.08pt>
+<assets/5_figures/FixedTauExp/Error.pdf, id=4052, 361.35pt x 289.08pt>
 File: assets/5_figures/FixedTauExp/Error.pdf Graphic file (type pdf)
 <use assets/5_figures/FixedTauExp/Error.pdf>
-Package pdftex.def Info: assets/5_figures/FixedTauExp/Error.pdf  used on input line 56.
+Package pdftex.def Info: assets/5_figures/FixedTauExp/Error.pdf  used on input line 69.
 (pdftex.def)             Requested size: 378.8821pt x 303.10626pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1479,16 +1498,24 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[35 <./assets/5_figures/FixedTauExp/Loss.pdf> <./assets/5_figures/FixedTauExp/LearnedTrans.pdf>]
-<assets/5_figures/VaryTauExp/LearnedTransMedian.pdf, id=4024, 578.16pt x 209.58301pt>
+[38 <./assets/5_figures/FixedTauExp/Loss.pdf> <./assets/5_figures/FixedTauExp/LearnedTrans.pdf>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[39 <./assets/5_figures/LC_FD.pdf>]
+<assets/5_figures/VaryTauExp/LearnedTransMedian.pdf, id=4195, 578.16pt x 209.58301pt>
 File: assets/5_figures/VaryTauExp/LearnedTransMedian.pdf Graphic file (type pdf)
 <use assets/5_figures/VaryTauExp/LearnedTransMedian.pdf>
-Package pdftex.def Info: assets/5_figures/VaryTauExp/LearnedTransMedian.pdf  used on input line 67.
+Package pdftex.def Info: assets/5_figures/VaryTauExp/LearnedTransMedian.pdf  used on input line 80.
 (pdftex.def)             Requested size: 445.74045pt x 161.58087pt.
-<assets/5_figures/VaryTauExp/FilledLightCurve.pdf, id=4026, 650.43pt x 448.07399pt>
+<assets/5_figures/VaryTauExp/FilledLightCurve.pdf, id=4197, 650.43pt x 448.07399pt>
 File: assets/5_figures/VaryTauExp/FilledLightCurve.pdf Graphic file (type pdf)
 <use assets/5_figures/VaryTauExp/FilledLightCurve.pdf>
-Package pdftex.def Info: assets/5_figures/VaryTauExp/FilledLightCurve.pdf  used on input line 75.
+Package pdftex.def Info: assets/5_figures/VaryTauExp/FilledLightCurve.pdf  used on input line 88.
 (pdftex.def)             Requested size: 445.74045pt x 307.0724pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1497,7 +1524,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[36 <./assets/5_figures/FixedTauExp/Error.pdf>]
+[40 <./assets/5_figures/FixedTauExp/Error.pdf>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1505,16 +1532,21 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[37 <./assets/5_figures/VaryTauExp/LearnedTransMedian.pdf> <./assets/5_figures/VaryTauExp/FilledLightCurve.pdf>]
-<assets/5_figures/ZTF/ZTF_real_lc_example.pdf, id=4222, 794.97pt x 289.08pt>
+[41 <./assets/5_figures/VaryTauExp/LearnedTransMedian.pdf> <./assets/5_figures/VaryTauExp/FilledLightCurve.pdf>]
+<assets/5_figures/ZTF_FD.pdf, id=4391, 489.83pt x 850.17625pt>
+File: assets/5_figures/ZTF_FD.pdf Graphic file (type pdf)
+<use assets/5_figures/ZTF_FD.pdf>
+Package pdftex.def Info: assets/5_figures/ZTF_FD.pdf  used on input line 101.
+(pdftex.def)             Requested size: 359.50127pt x 623.94724pt.
+<assets/5_figures/ZTF/ZTF_real_lc_example.pdf, id=4393, 794.97pt x 289.08pt>
 File: assets/5_figures/ZTF/ZTF_real_lc_example.pdf Graphic file (type pdf)
 <use assets/5_figures/ZTF/ZTF_real_lc_example.pdf>
-Package pdftex.def Info: assets/5_figures/ZTF/ZTF_real_lc_example.pdf  used on input line 90.
+Package pdftex.def Info: assets/5_figures/ZTF/ZTF_real_lc_example.pdf  used on input line 109.
 (pdftex.def)             Requested size: 445.74045pt x 162.091pt.
-<assets/5_figures/ZTF/ZTF_statistics.pdf, id=4224, 794.97pt x 505.89pt>
+<assets/5_figures/ZTF/ZTF_statistics.pdf, id=4395, 794.97pt x 505.89pt>
 File: assets/5_figures/ZTF/ZTF_statistics.pdf Graphic file (type pdf)
 <use assets/5_figures/ZTF/ZTF_statistics.pdf>
-Package pdftex.def Info: assets/5_figures/ZTF/ZTF_statistics.pdf  used on input line 98.
+Package pdftex.def Info: assets/5_figures/ZTF/ZTF_statistics.pdf  used on input line 117.
 (pdftex.def)             Requested size: 356.5937pt x 226.9305pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1523,21 +1555,34 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[38 <./assets/5_figures/ZTF/ZTF_real_lc_example.pdf> <./assets/5_figures/ZTF/ZTF_statistics.pdf>]
-<assets/5_figures/ZTF/simulation_g_regime.pdf, id=4335, 650.43pt x 216.81pt>
+[42 <./assets/5_figures/ZTF/ZTF_statistics.pdf>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[43 <./assets/5_figures/ZTF_FD.pdf>]
+<assets/5_figures/ZTF/ZTF_simulated_lc_r.png, id=4500, 650.43pt x 245.718pt>
+File: assets/5_figures/ZTF/ZTF_simulated_lc_r.png Graphic file (type png)
+<use assets/5_figures/ZTF/ZTF_simulated_lc_r.png>
+Package pdftex.def Info: assets/5_figures/ZTF/ZTF_simulated_lc_r.png  used on input line 132.
+(pdftex.def)             Requested size: 445.74045pt x 168.39455pt.
+<assets/5_figures/ZTF/simulation_g_regime.pdf, id=4501, 650.43pt x 216.81pt>
 File: assets/5_figures/ZTF/simulation_g_regime.pdf Graphic file (type pdf)
 <use assets/5_figures/ZTF/simulation_g_regime.pdf>
-Package pdftex.def Info: assets/5_figures/ZTF/simulation_g_regime.pdf  used on input line 108.
+Package pdftex.def Info: assets/5_figures/ZTF/simulation_g_regime.pdf  used on input line 141.
 (pdftex.def)             Requested size: 365.51042pt x 121.83952pt.
-<assets/5_figures/ZTF/simulation_r_regime.pdf, id=4336, 650.43pt x 216.81pt>
+<assets/5_figures/ZTF/simulation_r_regime.pdf, id=4502, 650.43pt x 216.81pt>
 File: assets/5_figures/ZTF/simulation_r_regime.pdf Graphic file (type pdf)
 <use assets/5_figures/ZTF/simulation_r_regime.pdf>
-Package pdftex.def Info: assets/5_figures/ZTF/simulation_r_regime.pdf  used on input line 113.
+Package pdftex.def Info: assets/5_figures/ZTF/simulation_r_regime.pdf  used on input line 146.
 (pdftex.def)             Requested size: 365.51042pt x 121.83952pt.
-<assets/5_figures/ZTF/simulation_i_regime.pdf, id=4337, 650.43pt x 216.81pt>
+<assets/5_figures/ZTF/simulation_i_regime.pdf, id=4503, 650.43pt x 216.81pt>
 File: assets/5_figures/ZTF/simulation_i_regime.pdf Graphic file (type pdf)
 <use assets/5_figures/ZTF/simulation_i_regime.pdf>
-Package pdftex.def Info: assets/5_figures/ZTF/simulation_i_regime.pdf  used on input line 118.
+Package pdftex.def Info: assets/5_figures/ZTF/simulation_i_regime.pdf  used on input line 151.
 (pdftex.def)             Requested size: 365.51042pt x 121.83952pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1546,35 +1591,40 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[39 <./assets/5_figures/ZTF/simulation_g_regime.pdf> <./assets/5_figures/ZTF/simulation_r_regime.pdf> <./assets/5_figures/ZTF/simulation_i_regime.pdf>]
-<assets/5_figures/ZTF/ZTF_LearnedTransg.pdf, id=4497, 650.43pt x 216.81pt>
+[44 <./assets/5_figures/ZTF/ZTF_real_lc_example.pdf> <./assets/5_figures/ZTF/ZTF_simulated_lc_r.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[45 <./assets/5_figures/ZTF/simulation_g_regime.pdf> <./assets/5_figures/ZTF/simulation_r_regime.pdf> <./assets/5_figures/ZTF/simulation_i_regime.pdf>]
+<assets/5_figures/ZTF/calibrationvsSN.pdf, id=4715, 794.97pt x 231.26399pt>
+File: assets/5_figures/ZTF/calibrationvsSN.pdf Graphic file (type pdf)
+<use assets/5_figures/ZTF/calibrationvsSN.pdf>
+Package pdftex.def Info: assets/5_figures/ZTF/calibrationvsSN.pdf  used on input line 210.
+(pdftex.def)             Requested size: 445.74045pt x 129.67279pt.
+<assets/5_figures/ZTF/ZTF_LearnedTransg.pdf, id=4716, 650.43pt x 216.81pt>
 File: assets/5_figures/ZTF/ZTF_LearnedTransg.pdf Graphic file (type pdf)
 <use assets/5_figures/ZTF/ZTF_LearnedTransg.pdf>
-Package pdftex.def Info: assets/5_figures/ZTF/ZTF_LearnedTransg.pdf  used on input line 182.
-(pdftex.def)             Requested size: 445.74045pt x 148.58342pt.
-<assets/5_figures/ZTF/ZTF_LearnedTransr.pdf, id=4498, 650.43pt x 216.81pt>
+Package pdftex.def Info: assets/5_figures/ZTF/ZTF_LearnedTransg.pdf  used on input line 220.
+(pdftex.def)             Requested size: 401.16368pt x 133.72276pt.
+<assets/5_figures/ZTF/ZTF_LearnedTransr.pdf, id=4717, 650.43pt x 216.81pt>
 File: assets/5_figures/ZTF/ZTF_LearnedTransr.pdf Graphic file (type pdf)
 <use assets/5_figures/ZTF/ZTF_LearnedTransr.pdf>
-Package pdftex.def Info: assets/5_figures/ZTF/ZTF_LearnedTransr.pdf  used on input line 187.
-(pdftex.def)             Requested size: 445.74045pt x 148.58342pt.
-<assets/5_figures/ZTF/ZTF_LearnedTransi.pdf, id=4499, 650.43pt x 216.81pt>
+Package pdftex.def Info: assets/5_figures/ZTF/ZTF_LearnedTransr.pdf  used on input line 227.
+(pdftex.def)             Requested size: 401.16368pt x 133.72276pt.
+<assets/5_figures/ZTF/ZTF_LearnedTransi.pdf, id=4718, 650.43pt x 216.81pt>
 File: assets/5_figures/ZTF/ZTF_LearnedTransi.pdf Graphic file (type pdf)
 <use assets/5_figures/ZTF/ZTF_LearnedTransi.pdf>
-Package pdftex.def Info: assets/5_figures/ZTF/ZTF_LearnedTransi.pdf  used on input line 192.
-(pdftex.def)             Requested size: 445.74045pt x 148.58342pt.
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[40]
-<assets/5_figures/ZTF/ZTF_Error.pdf, id=4507, 433.62pt x 289.08pt>
+Package pdftex.def Info: assets/5_figures/ZTF/ZTF_LearnedTransi.pdf  used on input line 234.
+(pdftex.def)             Requested size: 401.16368pt x 133.72276pt.
+<assets/5_figures/ZTF/ZTF_Error.pdf, id=4719, 433.62pt x 289.08pt>
 File: assets/5_figures/ZTF/ZTF_Error.pdf Graphic file (type pdf)
 <use assets/5_figures/ZTF/ZTF_Error.pdf>
-Package pdftex.def Info: assets/5_figures/ZTF/ZTF_Error.pdf  used on input line 202.
-(pdftex.def)             Requested size: 378.8821pt x 252.60031pt.
+Package pdftex.def Info: assets/5_figures/ZTF/ZTF_Error.pdf  used on input line 241.
+(pdftex.def)             Requested size: 222.87022pt x 148.58011pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1582,10 +1632,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[41 <./assets/5_figures/ZTF/ZTF_LearnedTransg.pdf> <./assets/5_figures/ZTF/ZTF_LearnedTransr.pdf> <./assets/5_figures/ZTF/ZTF_LearnedTransi.pdf>]
-
-LaTeX Warning: Reference `fig:ztf_filled' on page 42 undefined on input line 213.
-
+[46 <./assets/5_figures/ZTF/calibrationvsSN.pdf>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1593,17 +1640,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[42 <./assets/5_figures/ZTF/ZTF_Error.pdf>]
-<assets/5_figures/ZTF/ZTF_FilledGapg.pdf, id=4759, 650.43pt x 433.62pt>
-File: assets/5_figures/ZTF/ZTF_FilledGapg.pdf Graphic file (type pdf)
-<use assets/5_figures/ZTF/ZTF_FilledGapg.pdf>
-Package pdftex.def Info: assets/5_figures/ZTF/ZTF_FilledGapg.pdf  used on input line 242.
-(pdftex.def)             Requested size: 401.16368pt x 267.44554pt.
-<assets/5_figures/ZTF/ZTF_FilledGapr.pdf, id=4760, 650.43pt x 433.62pt>
-File: assets/5_figures/ZTF/ZTF_FilledGapr.pdf Graphic file (type pdf)
-<use assets/5_figures/ZTF/ZTF_FilledGapr.pdf>
-Package pdftex.def Info: assets/5_figures/ZTF/ZTF_FilledGapr.pdf  used on input line 248.
-(pdftex.def)             Requested size: 401.16368pt x 267.44554pt.
+[47 <./assets/5_figures/ZTF/ZTF_LearnedTransg.pdf> <./assets/5_figures/ZTF/ZTF_LearnedTransr.pdf> <./assets/5_figures/ZTF/ZTF_LearnedTransi.pdf> <./assets/5_figures/ZTF/ZTF_Error.pdf>]
+<assets/5_figures/ZTF/ZTF_filled.pdf, id=5021, 794.97pt x 650.43pt>
+File: assets/5_figures/ZTF/ZTF_filled.pdf Graphic file (type pdf)
+<use assets/5_figures/ZTF/ZTF_filled.pdf>
+Package pdftex.def Info: assets/5_figures/ZTF/ZTF_filled.pdf  used on input line 287.
+(pdftex.def)             Requested size: 445.74045pt x 364.70477pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1611,12 +1653,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[43 <./assets/5_figures/ZTF/ZTF_FilledGapg.pdf>]
-<assets/5_figures/ZTF/ZTF_FilledGapi.pdf, id=4839, 650.43pt x 433.62pt>
-File: assets/5_figures/ZTF/ZTF_FilledGapi.pdf Graphic file (type pdf)
-<use assets/5_figures/ZTF/ZTF_FilledGapi.pdf>
-Package pdftex.def Info: assets/5_figures/ZTF/ZTF_FilledGapi.pdf  used on input line 254.
-(pdftex.def)             Requested size: 401.16368pt x 267.44554pt.
+[48])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1624,7 +1661,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[44 <./assets/5_figures/ZTF/ZTF_FilledGapr.pdf> <./assets/5_figures/ZTF/ZTF_FilledGapi.pdf>])
+[49 <./assets/5_figures/ZTF/ZTF_filled.pdf>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1632,15 +1669,19 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[45]
-Overfull \hbox (10.59058pt too wide) in paragraph at lines 38--38
+[50] (./chapter/6_conclusions.tex
+Chapter 6.
+) [51
+
+]
+Overfull \hbox (10.59058pt too wide) in paragraph at lines 43--43
 [][]\T1/CormorantGaramond-LF/regular/n/12 Bennert, Nicola (2005). ``The narrow-line re-gion of ac-tive galax-ies''. doc-tor-althe-sis. Ruhr-Universität
  []
 
-[46
+[52
 
 ]
-Overfull \hbox (5.07329pt too wide) in paragraph at lines 38--38
+Overfull \hbox (5.07329pt too wide) in paragraph at lines 43--43
 [][]\T1/CormorantGaramond-LF/regular/n/12 Collier, Ste-fan and Bradley M. Pe-ter-son (July 2001). ``Char-ac-ter-is-tic Ul-tra-vi-o-let/Optical Timescales
  []
 
@@ -1651,8 +1692,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[47]
-Overfull \hbox (13.54648pt too wide) in paragraph at lines 38--38
+[53]
+Overfull \hbox (13.54648pt too wide) in paragraph at lines 43--43
 \T1/CormorantGaramond-LF/regular/n/12 AGNs''. In: \T1/CormorantGaramond-LF/regular/it/12 As-tron-omy and As-tro-physics \T1/CormorantGaramond-LF/regular/n/12 525, A118, A118. \T1/CormorantGaramond-LF/regular/sc/12 doi\T1/CormorantGaramond-LF/regular/n/12 : []$\T1/cmtt/m/n/12 10 . 1051 / 0004 -[] 6361 / 201014987$[]\T1/CormorantGaramond-LF/regular/n/12 .
  []
 
@@ -1663,8 +1704,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[48]
-Overfull \hbox (11.63887pt too wide) in paragraph at lines 38--38
+[54]
+Overfull \hbox (11.63887pt too wide) in paragraph at lines 43--43
 \T1/CormorantGaramond-LF/regular/n/12 proach to Clas-si-fy-ing Con-tin-u-ously Vary-ing Sources''. In: \T1/CormorantGaramond-LF/regular/it/12 The As-tro-phys-i-cal Jour-nal \T1/CormorantGaramond-LF/regular/n/12 708.2, pp. 927^^U
  []
 
@@ -1675,7 +1716,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[49]
+[55]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1683,8 +1724,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[50]
-Overfull \hbox (0.87529pt too wide) in paragraph at lines 38--38
+[56]
+Overfull \hbox (0.87529pt too wide) in paragraph at lines 43--43
 [][]\T1/CormorantGaramond-LF/regular/n/12 Suh, Hye-won et al. (Dec. 2015). ``Ed-ding-ton Ra-tio Dis-tri-bu-tion of X-ray-selected Broad-line AGNs
  []
 
@@ -1695,8 +1736,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[51]
-Overfull \hbox (2.34424pt too wide) in paragraph at lines 38--38
+[57]
+Overfull \hbox (2.34424pt too wide) in paragraph at lines 43--43
 \T1/CormorantGaramond-LF/regular/it/12 zbezdy i vy-de-leniye grav-i-tat-sion-noy en-ergii pri akkret-sii<\T1/CormorantGaramond-LF/regular/n/12 . NASA Tech-ni-cal Trans-la-tion, NASA/STI
  []
 
@@ -1707,16 +1748,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[52] (./chapter/01_appendix.tex
+[58] (./chapter/07_appendix.tex
 Appendix A.
+[59
 
-Overfull \hbox (1.39967pt too wide) in paragraph at lines 6--7
-\T1/CormorantGaramond-LF/regular/n/12 Let $\OML/cmm/m/it/12 c \OT1/cmr/m/n/12 := (\OML/cmm/m/it/12 x[]; \OT1/cmr/m/n/12 ^^A\OML/cmm/m/it/12 t; t[]\OT1/cmr/m/n/12 )$ \T1/CormorantGaramond-LF/regular/n/12 de-note the con-di-tion-ing vari-ables, with $\OML/cmm/m/it/12 t[]$ \T1/CormorantGaramond-LF/regular/n/12 re-tained only for non-autonomous
- []
-
-[53
-
-])
+]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1724,36 +1760,59 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[54] (build/main.aux)
+[60]
+Appendix B.
+[61
+
+]
+Overfull \hbox (1.01488pt too wide) detected at line 116
+[][][]\OML/cmm/m/it/12 `[] \OT1/cmr/m/n/12 = [] \OML/cmm/m/it/12 p[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x[] \OMS/cmsy/m/n/12 j \OML/cmm/m/it/12 x[]; \OT1/cmr/m/n/12 ^^A\OML/cmm/m/it/12 t[]\OT1/cmr/m/n/12 ) + [] \OML/cmm/m/it/12 q[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x[] \OMS/cmsy/m/n/12 j \OML/cmm/m/it/12 x[]; x[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^@ [] \OML/cmm/m/it/12 p[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x[] \OMS/cmsy/m/n/12 j \OML/cmm/m/it/12 x[]; \OT1/cmr/m/n/12 ^^A\OML/cmm/m/it/12 t[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^@ [] \OML/cmm/m/it/12 p[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x[] \OMS/cmsy/m/n/12 j \OML/cmm/m/it/12 x[]; \OT1/cmr/m/n/12 ^^A\OML/cmm/m/it/12 t[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 :
+ []
+
+
+Overfull \hbox (1.01488pt too wide) detected at line 134
+[][][]\OML/cmm/m/it/12 `[] \OT1/cmr/m/n/12 = [] \OML/cmm/m/it/12 p[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x[] \OMS/cmsy/m/n/12 j \OML/cmm/m/it/12 x[]; \OT1/cmr/m/n/12 ^^A\OML/cmm/m/it/12 t[]\OT1/cmr/m/n/12 ) + [] \OML/cmm/m/it/12 p[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x[] \OMS/cmsy/m/n/12 j \OML/cmm/m/it/12 x[]; \OT1/cmr/m/n/12 ^^A\OML/cmm/m/it/12 t[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^@ [] \OML/cmm/m/it/12 q[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x[] \OMS/cmsy/m/n/12 j \OML/cmm/m/it/12 x[]; x[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^@ [] \OML/cmm/m/it/12 p[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x[] \OMS/cmsy/m/n/12 j \OML/cmm/m/it/12 x[]; \OT1/cmr/m/n/12 ^^A\OML/cmm/m/it/12 t[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 :
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[62])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[63] (build/main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: EC4553D812B39A145B2291970A467998;5890.
+(rerunfilecheck)             Checksum: C93BC5DB1CAC3015C11548A4B4B54815;7302.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 27730 strings out of 467525
- 560701 string characters out of 5418982
- 1422966 words of memory out of 5000000
- 56039 multiletter control sequences out of 15000+600000
+ 27838 strings out of 467525
+ 563018 string characters out of 5418982
+ 1423949 words of memory out of 5000000
+ 56109 multiletter control sequences out of 15000+600000
  747017 words of font info for 128 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  78i,13n,81p,1678b,2194s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2026/texmf-dist/fonts/type1/catharsis/cormorantgaramond/CormorantGaramond-Bold.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/catharsis/cormorantgaramond/CormorantGaramond-Italic.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/catharsis/cormorantgaramond/CormorantGaramond-Regular.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on build/main.pdf (55 pages, 5354254 bytes).
+</usr/local/texlive/2026/texmf-dist/fonts/type1/catharsis/cormorantgaramond/CormorantGaramond-Bold.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/catharsis/cormorantgaramond/CormorantGaramond-Italic.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/catharsis/cormorantgaramond/CormorantGaramond-Regular.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/fourier/fourier-ml.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/fourier/fourier-mlit.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/fourier/fourier-ms.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/adobe/utopia/putb8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/adobe/utopia/putr8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/adobe/utopia/putri8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
+Output written on build/main.pdf (64 pages, 5281899 bytes).
 PDF statistics:
- 5412 PDF objects out of 6186 (max. 8388607)
- 3726 compressed objects within 38 object streams
- 262 named destinations out of 1000 (max. 500000)
- 506 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 5586 PDF objects out of 6186 (max. 8388607)
+ 3905 compressed objects within 40 object streams
+ 294 named destinations out of 1000 (max. 500000)
+ 593 words of extra memory for PDF output out of 10000 (max. 10000000)
 

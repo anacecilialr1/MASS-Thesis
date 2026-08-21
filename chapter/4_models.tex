@@ -1,7 +1,7 @@
 \chapter{Neural Stochastic Flows}
 \label{chap:nsf}
 
-The reconstruction of a gappy light curve was framed in \S\,\ref{ssec:RebMap} as an ill-posed problem, best approached by returning a distribution of signals consistent with the data rather than a single curve. The damped random walk introduced in Chapter \ref{chap:simulation} already provides such a probabilistic description because it is a Gaussian process and the transition between any two epochs has a known analytic form. The method adopted in this thesis replaces that transition with a flexible one learned directly from data, using \textit{neural stochastic flows} (NSF; \cite{Kiyohara2025SNF}). The motivation is twofold, flexibility and efficiency. A learned transition can in principle capture departures from the damped random walk that a fixed kernel cannot, and, more generally, neural stochastic flows are \textit{solver-free}: they model the transition density of a stochastic differential equation directly, without the numerical integration that conventional neural SDEs require. In the damped random walk case considered here the transition is analytically known, which provides an exact reference against which the learned model can be validated (see Chapter \ref{chap:reconstruction}). 
+The reconstruction of a gappy light curve was framed in \S\,\ref{ssec:RebMap} as an ill-posed problem, best approached by returning a distribution of signals consistent with the data rather than a single curve. The damped random walk introduced in Chapter \ref{chap:simulation} already provides such a probabilistic description because it is a Gaussian process and the transition between any two epochs has a known analytic form. The method adopted in this thesis replaces that transition with a flexible one learned directly from data, using neural stochastic flows (NSF; \cite{Kiyohara2025SNF}). The motivation is twofold, flexibility and efficiency. A learned transition can in principle capture departures from the damped random walk that a fixed kernel cannot, and, more generally, neural stochastic flows are \textit{solver-free}: they model the transition density of a stochastic differential equation directly, without the numerical integration that conventional neural SDEs require. In the damped random walk case considered here the transition is analytically known, which provides an exact reference against which the learned model can be validated (see Chapter \ref{chap:reconstruction}). 
 
 \section{Normalizing Flows}
 \label{sec:normflows}
@@ -84,9 +84,8 @@ with the expectation over $p_\theta(x_k \mid x_i)\,q_\xi(x_j \mid x_i, x_k)$, an
     \label{eq:flow21}
     \mathcal{L}_\mathrm{2\text{-}to\text{-}1} = \mathbb{E}\!\left[\log \frac{p_\theta(x_j \mid x_i)\, p_\theta(x_k \mid x_j)}{q_\xi(x_j \mid x_i, x_k)\, p_\theta(x_k \mid x_i)}\right],
 \end{equation}
-with the expectation over $p_\theta(x_j \mid x_i)\,p_\theta(x_k \mid x_j)$. Their sum is the flow-consistency loss, $\mathcal{L}_\mathrm{flow} = \mathcal{L}_\mathrm{1\text{-}to\text{-}2} + \mathcal{L}_\mathrm{2\text{-}to\text{-}1}$.
+with the expectation over $p_\theta(x_j \mid x_i)\,p_\theta(x_k \mid x_j)$. Their sum is the flow-consistency loss, $\mathcal{L}_\mathrm{flow} = \mathcal{L}_\mathrm{1\text{-}to\text{-}2} + \mathcal{L}_\mathrm{2\text{-}to\text{-}1}$. The explicit form of these bounds, as a difference of log-densities evaluated on Monte Carlo samples for a single triplet, is given in Appendix \ref{app:loss}, together with the architecture of the bridge model.
 
-The derivation will be explained more in depth in the Appendix A 
 \section{Training Objective}
 \label{sec:objective}
 
@@ -95,7 +94,22 @@ The model is trained by minimising a loss with two terms \parencite{Kiyohara2025
     \label{eq:loss}
     \mathcal{L}(\theta, \xi) = \mathcal{L}_\mathrm{data}(\theta) + \lambda\,\mathcal{L}_\mathrm{flow}(\theta, \xi),
 \end{equation}
-where $\mathcal{L}_\mathrm{data}$ is the negative log-likelihood of the observed transitions under the flow, evaluated through the change-of-variables formula of Eq. \ref{eq:changeofvars}, and $\mathcal{L}_\mathrm{flow}$ is the flow-consistency term of Equations \ref{eq:flow12} and \ref{eq:flow21}, weighted by a hyperparameter $\lambda$. The data term anchors the model to the observed light curves, while the consistency term enforces that the learned transitions compose correctly across time. Both terms are necessary: the consistency term alone admits self-consistent but arbitrary transitions, and it is the data likelihood that ties the learned process to the damped random walk actually present in the light curves. The sensitivity of the results to the weighting $\lambda$ is examined in Chapter \ref{chap:reconstruction}.
+where $\mathcal{L}_\mathrm{data}$ is the negative log-likelihood of the observed transitions under the flow, evaluated through the change-of-variables formula of Eq. \ref{eq:changeofvars}, and $\mathcal{L}_\mathrm{flow}$ is the flow-consistency term of Equations \ref{eq:flow12} and \ref{eq:flow21}, weighted by a hyperparameter $\lambda$. The data term anchors the model to the observed light curves, while the consistency term enforces that the learned transitions compose correctly across time. Both terms are necessary: the consistency term alone admits self-consistent but arbitrary transitions, and it is the data likelihood that ties the learned process to the damped random walk actually present in the light curves. The balance between the two terms is set by $\lambda$, but the results are insensitive to its precise value: varying $\lambda$ over more than an order of magnitude, from $0.03$ to $1.0$, changes the coverage on the low-noise validation set by at most a few per cent, from $0.62$ to $0.60$, and leaves the RMSE unchanged at $0.18$. A value of $\lambda = 0.1$ is used throughout.
+
+\section{Reconstruction}
+\label{sec:reconstruction}
+
+Once trained, the bridge performs the gap filling. Reconstructing a gap means conditioning on the observations at \textit{both} of its ends, which is precisely what the bridge does. %Conditioning on the preceding observation alone would be forecasting, not interpolation. T
+he flux is reconstructed on a dense grid between each pair of consecutive observations. For a grid point lying between two observations, the bracketing observations provide the conditioning states $x_i$ and $x_k$ and their times, and the bridge $q_\xi$ of Eq. \ref{eq:bridge} gives the distribution of the flux at the intermediate time. Because this distribution can be sampled in a single pass, a set of Monte Carlo realizations of the reconstruction is drawn by sampling the bridge independently at each grid point, as illustrated in Figure \ref{fig:mcsamples}. The reconstruction is summarized by the pointwise median of these samples, taken as the central estimate, and by the interval between the $16$th and $84$th percentiles, which gives the central $68\%$ predictive band. At the observations themselves the reconstruction is pinned to the measured values, so the band closes to zero width there and widens across the interior of an interval, where the elapsed time to the nearest observation is longer and the transition is correspondingly more uncertain. It is this predictive distribution, rather than any single reconstructed curve, that the evaluation of Chapter \ref{chap:reconstruction} assesses.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{assets/5_figures/VaryTauExp/MCSamples.pdf}
+    \caption[Monte Carlo bridge reconstructions across a gap]{\label{fig:mcsamples} Monte Carlo reconstructions of a single gap in a varying-timescale validation curve. Each thin line is one sample drawn from the bridge conditioned on the two bracketing observations (black); their pointwise median (blue) and central $68\%$ interval (shaded) summarize the ensemble. The samples fan out across the interior of the gap and converge at the endpoints, and together they bracket the latent signal (grey).}
+\end{figure}
+
+The flow and bridge are conditioned on the flux values and times alone: the per-epoch measurement uncertainties enter neither their conditioning, nor the training objective, nor the sampling at inference. The predictive intervals of the reconstruction therefore express the variance of the learned process and carry no information about the measurement error of the observations on which they are conditioned. The Gaussian process baseline, by contrast, includes the per-epoch uncertainties directly in its covariance, and it is this difference that underlies the comparison of their calibration in Chapter \ref{chap:reconstruction}.
+
 
 \section{Implementation}
 \label{sec:implementation}

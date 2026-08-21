@@ -1,0 +1,150 @@
+\chapter{Derivation of the Damped Random Walk Transition Probability}
+\label{app:transition}
+
+The transition probability of Equation \ref{eq:drw_transition} follows from solving the Ornstein-Uhlenbeck stochastic differential equation. Writing the damping rate as $\theta = 1/\tau$, the process of Equation \ref{eq:drw_sde} is
+\begin{equation}
+    \label{eq:app_ou}
+    \mathrm{d}X_t = \theta\,(\mu - X_t)\,\mathrm{d}t + \sigma\,\mathrm{d}W_t,
+\end{equation}
+where $\mu$ is the long-term mean, $\theta$ the mean-reversion rate, $\sigma$ the driving amplitude, and $W_t$ a Wiener process. The equation is solved by variation of parameters, using the integrating factor $e^{\theta t}$. Defining $f(X_t, t) = X_t\,e^{\theta t}$ and applying It\^o's lemma,
+\begin{equation}
+    \label{eq:app_ito}
+    \mathrm{d}\!\left(X_t\, e^{\theta t}\right) = \theta X_t\, e^{\theta t}\,\mathrm{d}t + e^{\theta t}\,\mathrm{d}X_t
+    = e^{\theta t}\,\theta\mu\,\mathrm{d}t + \sigma\, e^{\theta t}\,\mathrm{d}W_t,
+\end{equation}
+where the drift terms in $X_t$ cancel on substituting Equation \ref{eq:app_ou}. Integrating from $0$ to $t$,
+\begin{equation}
+    \label{eq:app_integrated}
+    X_t\, e^{\theta t} - X_0
+    = \theta\mu \int_0^t e^{\theta s}\,\mathrm{d}s
+    + \sigma \int_0^t e^{\theta s}\,\mathrm{d}W_s
+    = \mu\left(e^{\theta t} - 1\right) + \sigma \int_0^t e^{\theta s}\,\mathrm{d}W_s,
+\end{equation}
+and multiplying through by $e^{-\theta t}$ gives the solution
+\begin{equation}
+    \label{eq:app_solution}
+    X_t = X_0\, e^{-\theta t} + \mu\left(1 - e^{-\theta t}\right)
+    + \sigma \int_0^t e^{-\theta(t-s)}\,\mathrm{d}W_s.
+\end{equation}
+
+The first two terms are deterministic, since $X_0$, $\mu$, and $\theta$ are fixed. The final term is an It\^o integral of a deterministic function against the Wiener process, and is therefore Gaussian: it can be approximated as a weighted sum of independent Gaussian increments $\mathrm{d}W_s \sim \sqrt{\mathrm{d}s}\,\varepsilon_s$ with $\varepsilon_s \sim \mathcal{N}(0,1)$, and any linear combination of Gaussians is itself Gaussian. The state $X_t$ conditioned on $X_0$ is thus normally distributed, and it remains to compute its mean and variance.
+
+The mean is obtained by taking the expectation of Equation \ref{eq:app_solution}. The It\^o integral has zero mean, so
+\begin{equation}
+    \label{eq:app_mean}
+    \mathbb{E}\!\left[X_t \mid X_0\right]
+    = X_0\, e^{-\theta t} + \mu\left(1 - e^{-\theta t}\right).
+\end{equation}
+The variance comes from the It\^o isometry, which turns the variance of the stochastic integral into an ordinary integral of the squared integrand,
+\begin{equation}
+    \label{eq:app_var}
+    \mathrm{Var}\!\left[X_t \mid X_0\right]
+    = \sigma^2 \int_0^t e^{-2\theta(t-s)}\,\mathrm{d}s
+    = \frac{\sigma^2}{2\theta}\left(1 - e^{-2\theta t}\right).
+\end{equation}
+
+Collecting the mean and variance, the transition probability is
+\begin{equation}
+    \label{eq:app_transition}
+    X_t \mid X_0 \;\sim\; \mathcal{N}\!\left(\mu + \left(X_0 - \mu\right)e^{-\theta t},\;\; \frac{\sigma^2}{2\theta}\left(1 - e^{-2\theta t}\right)\right).
+\end{equation}
+Writing the elapsed time as $\Delta t$ and the damping timescale as $\tau = 1/\theta$, and identifying the stationary variance $\sigma^2/(2\theta)$ with the light-curve variance retained in the main text, this is Equation \ref{eq:drw_transition}.
+
+\chapter{Neural Stochastic Flow in Depth}
+\label{app:loss}
+
+This appendix supplements the description of the reconstruction method in Chapter \ref{chap:nsf}. It first gives the architecture of the bridge model, the counterpart of the flow whose construction is set out in the main text, and then makes explicit the triplet-consistency loss through which the two models are trained jointly.
+
+\section{The Bridge Architecture}
+\label{app:bridge_arch}
+
+The flow $F_\theta$ of Chapter \ref{chap:nsf} models the transition between two states separated by an elapsed time, and its construction, a state-dependent Gaussian base distribution followed by conditioned affine-coupling layers, is given in Equations \ref{eq:base} and \ref{eq:coupling}. The bridge $q_\xi$ of Equation \ref{eq:bridge} is built in the same way, but it models a different conditional: the intermediate state $x_j$ given \textit{both} bracketing states $x_i$ and $x_k$ and the three times, rather than a future state given a single past one. It is this conditioning on both endpoints that makes the bridge suitable for gap filling, where the observations on either side of a gap are known.
+
+The bridge conditioner is
+\begin{equation}
+    \label{eq:app_bridge_cond}
+    c_b := \big(x_i,\, x_k,\, \Delta t_{ij},\, \Delta t_{jk}\big),
+\end{equation}
+carrying both surrounding states and the two elapsed times to the intermediate point, in place of the single pair $(x_s, \Delta t)$ used by the flow. As with the flow, a sample of the intermediate state is drawn by first initializing a Gaussian base distribution and then transforming it through a sequence of $L$ conditioned affine-coupling layers,
+\begin{equation}
+    \label{eq:app_bridge_sample}
+    x_j = G_\xi(z_b, c_b) = g_L(\,\cdot\,; c_b, \xi_L) \circ \cdots \circ g_1(z_b; c_b, \xi_1),
+    \qquad z_b \sim \mathcal{N}\big(\mu_b(c_b),\, \sigma_b^2(c_b)\big),
+\end{equation}
+where the mean and variance of the base distribution and the scale and shift of each coupling layer are produced by multilayer perceptrons taking the conditioner $c_b$ as input, in the same manner as Equations \ref{eq:base} and \ref{eq:coupling} for the flow. The bridge and the flow therefore share the same affine-coupling structure and differ only in what they are conditioned on, so that both admit a tractable likelihood through the change-of-variables formula of Equation \ref{eq:changeofvars} and can be sampled in a single pass.
+
+\section{The Triplet-Consistency Loss}
+\label{app:triplet_loss}
+
+The flow-consistency term of Chapter \ref{chap:nsf} is written in Equations \ref{eq:flow12} and \ref{eq:flow21} as two variational bounds on the Kullback-Leibler divergence between the one-step and two-step transitions. This section makes explicit how those bounds are evaluated in practice, as a difference of log-densities computed on Monte Carlo samples drawn from the models, for a single time triplet.
+
+Consider one light curve and three times $t_i < t_j < t_k$, with corresponding states $x_i$, $x_j$, and $x_k$. The flow defines the one-step transition densities
+\begin{equation}
+    \label{eq:app_onestep}
+    p_\theta(x_k \mid x_i, \Delta t_{ik}), \qquad
+    p_\theta(x_j \mid x_i, \Delta t_{ij}), \qquad
+    p_\theta(x_k \mid x_j, \Delta t_{jk}),
+\end{equation}
+and the bridge defines the intermediate conditional $q_\xi(x_j \mid x_i, x_k)$. The joint distribution over the intermediate and final states $(x_j, x_k)$ can be written in two ways, and the loss enforces that they assign consistent log-densities to samples generated from the models.
+
+\subsection{Forward Direction}
+
+In the forward direction the final state is drawn from the one-step flow and the intermediate state from the bridge,
+\begin{equation}
+    \label{eq:app_fwd_sample}
+    x_k \sim p_\theta(\,\cdot \mid x_i, \Delta t_{ik}), \qquad
+    x_j \sim q_\xi(\,\cdot \mid x_i, x_k),
+\end{equation}
+which corresponds to the factorization
+\begin{equation}
+    \label{eq:app_fwd_fact}
+    p_\theta(x_k \mid x_i, \Delta t_{ik})\; q_\xi(x_j \mid x_i, x_k).
+\end{equation}
+The same joint distribution can be written as a two-step flow through the intermediate state,
+\begin{equation}
+    \label{eq:app_fwd_twostep}
+    p_\theta(x_j \mid x_i, \Delta t_{ij})\; p_\theta(x_k \mid x_j, \Delta t_{jk}).
+\end{equation}
+Given the sample $(x_j, x_k)$, the contribution to the loss is the difference of the log-densities of the two factorizations,
+\begin{equation}
+    \label{eq:app_l12}
+    \ell_{1\text{-}\mathrm{to}\text{-}2}
+    = \log p_\theta(x_k \mid x_i, \Delta t_{ik})
+    + \log q_\xi(x_j \mid x_i, x_k)
+    - \log p_\theta(x_j \mid x_i, \Delta t_{ij})
+    - \log p_\theta(x_k \mid x_j, \Delta t_{jk}).
+\end{equation}
+
+\subsection{Reverse Direction}
+
+In the reverse direction both states are generated by two consecutive flow transitions,
+\begin{equation}
+    \label{eq:app_rev_sample}
+    x_j \sim p_\theta(\,\cdot \mid x_i, \Delta t_{ij}), \qquad
+    x_k \sim p_\theta(\,\cdot \mid x_j, \Delta t_{jk}),
+\end{equation}
+and this is compared with the factorization that uses the bridge and the direct one-step flow, $q_\xi(x_j \mid x_i, x_k)\,p_\theta(x_k \mid x_i, \Delta t_{ik})$. The corresponding log-density difference is
+\begin{equation}
+    \label{eq:app_l21}
+    \ell_{2\text{-}\mathrm{to}\text{-}1}
+    = \log p_\theta(x_j \mid x_i, \Delta t_{ij})
+    + \log p_\theta(x_k \mid x_j, \Delta t_{jk})
+    - \log q_\xi(x_j \mid x_i, x_k)
+    - \log p_\theta(x_k \mid x_i, \Delta t_{ik}).
+\end{equation}
+
+\subsection{Combined Loss}
+
+The total consistency loss for the triplet is the sum of the two directions,
+\begin{equation}
+    \label{eq:app_ltriplet}
+    \ell_\mathrm{triplet} = \ell_{1\text{-}\mathrm{to}\text{-}2} + \ell_{2\text{-}\mathrm{to}\text{-}1},
+\end{equation}
+and the flow-consistency term of the training objective is its expectation over triplets sampled from the light curves and over the Monte Carlo samples drawn from the models,
+\begin{equation}
+    \label{eq:app_expectation}
+    \mathcal{L}_\mathrm{flow}
+    = \mathbb{E}_\mathrm{triplets}\,
+      \mathbb{E}_\mathrm{samples}\big[\ell_\mathrm{triplet}\big].
+\end{equation}
+When the flow and bridge are mutually consistent, the two factorizations of the joint distribution over $(x_j, x_k)$ coincide, and the expected log-density differences of Equations \ref{eq:app_l12} and \ref{eq:app_l21} vanish.

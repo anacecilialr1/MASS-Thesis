@@ -1,4 +1,4 @@
-\chapter{Reconstructing AGN Light Curves}
+\chapter{Results}
 \label{chap:reconstruction}
 
 This chapter reports the performance of the reconstruction method. It proceeds from the most controlled setting to the most realistic. A fixed-timescale, low noise experiment first establishes that the method learns the analytic damped random walk transition and reconstructs light curves close to the theoretical, optimal case. A varying-timescale experiment then introduces a distribution of damping timescales. The sampling regime of the Zwicky Transient Facility (ZTF) is then measured and reproduced, and it is in this regime, with higher and epoch-dependent noise, that a limitation appears in the way the model treats measurement error. The method is finally applied to real ZTF light curves through a masking experiment.
@@ -13,8 +13,21 @@ Three quantities are used to check the reconstructions. The \textit{coverage} is
 
 Performance is measured against a Gaussian process with the damped random walk kernel. In the low noise experiments this baseline is given the true parameters of each curve, in which case it is the Bayes-optimal predictor: no method conditioned on the same observations can achieve a lower expected error, so it sets the ceiling that the reconstruction is measured against. On real data, where the true parameters are unknown, the Gaussian process is instead given parameters fitted to the observations, and a linear interpolation is added as a trivial reference that provides a point prediction with no associated uncertainty.
 
-\section{Low Noise Experiment}
+The two experimental pipelines, for the simulated and the ZTF-matched experiments, are summarized in Figures \ref{fig:pipeline_sim} and \ref{fig:pipeline_ztf}, and open the two sections that follow.
+
+
+\section{Low Noise Simulations}
 \label{sec:lownoise}
+
+
+\begin{figure}[p]
+
+    \centering
+    \includegraphics[width=0.8\textwidth]{assets/5_figures/LC_FD.pdf}
+    \caption[Pipeline of the idealized simulation experiments]{\label{fig:pipeline_sim} Pipeline of the idealized simulation experiments.}
+\end{figure}
+
+
 
 \subsection{Fixed Timescale}
 \label{ssec:fixedtau}
@@ -80,8 +93,14 @@ In reconstruction the method stays close to the Bayes-optimal reference. Over th
 
 \newpage
 
-\section{The ZTF Sampling Regime}
-\label{sec:ztfregime}
+\section{ZTF Experiments}
+\label{sec:ztf}
+
+\begin{figure}[p]
+    \centering
+    \includegraphics[height=0.9\textheight]{assets/5_figures/ZTF_FD.pdf}
+    \caption[Pipeline of the ZTF experiments]{\label{fig:pipeline_ztf} Pipeline of the ZTF experiments.}
+\end{figure}
 
 The sampling regime that the simulations must reproduce is measured from a sample of real AGN. Starting from a catalogue of spectroscopically confirmed quasars, light curves are drawn from ZTF in the $g$, $r$, and $i$ bands, and objects are retained only if they have at least $50$ epochs in each band after same-night observations are combined, giving a sample of $150$ AGN over a baseline of roughly seven years. An example is shown in Figure \ref{fig:ztfexample}, with the irregular cadence and seasonal gaps characteristic of a ground-based survey.
 
@@ -101,7 +120,21 @@ The distributions of the number of epochs, the cadence, and the photometric unce
 
 The quantity that controls the difficulty of reconstruction is the size of the gaps relative to the damping timescale, since a damped random walk loses memory as $e^{-\Delta t/\tau}$ and it is gaps comparable to or larger than $\tau$ that make reconstruction non-trivial. Expressed in these units the three bands probe noticeably different regimes (Figure \ref{fig:ztfregime}). In the $g$ band the median largest gap per curve is $1.24\,\tau$, with $73\%$ of curves containing a gap wider than the damping timescale; in the $r$ band the median largest gap is $1.05\,\tau$, with $56\%$ exceeding $\tau$; and in the $i$ band the median largest gap is $2.10\,\tau$, with $89\%$ exceeding $\tau$ and a tail reaching almost seven damping timescales. The $i$ band therefore contains the widest gaps, some large enough that the endpoints retain essentially no information about the intervening signal, and it is the band in which single-band reconstruction is most strongly limited.
 
-\begin{figure}[t]
+An example of a simulated light curve from the ZTF-matched configuration is shown in Figure \ref{fig:ztfsim_example}, reproducing the cadence and noise of the corresponding real band.
+ 
+\section{Calibration on Simulated ZTF Data}
+\label{sec:ztfnoise}
+
+Trained and evaluated on light curves matched to the ZTF regime, the method continues to reconstruct the underlying signal but its predictive intervals become badly overconfident. To establish that this is a property of the model rather than of a particular training run, the training is repeated across five random seeds; the results are shown in Table \ref{tab:seeds}. The coverage at the $68\%$ level is far below nominal in every band, at $0.30$, $0.33$, and $0.42$ in $g$, $r$, and $i$, and the scatter across seeds is small, so the overconfidence is systematic. The predictive log-likelihood worsens sharply with the noise level of the band, from $-3.29$ in the least noisy band to $-10.63$ in the noisiest, since the noisiest band produces the narrowest intervals relative to the scatter of the truth and is penalized most heavily for the points that fall outside them.
+
+\begin{figure}[b]
+    \centering
+    \includegraphics[width=\textwidth]{assets/5_figures/ZTF/ZTF_simulated_lc_r.png}
+    \caption[An example simulated ZTF-matched light curve]{\label{fig:ztfsim_example} A simulated light curve from the ZTF-matched configuration, with the dense underlying realization and the sparse noisy observations drawn from it at the survey cadence.}
+\end{figure}
+
+
+\begin{figure}[H]
     \centering
     \begin{subfigure}{\textwidth}
         \centering
@@ -120,11 +153,6 @@ The quantity that controls the difficulty of reconstruction is the size of the g
     \end{subfigure}
     \caption[Sampling regime of the ZTF-matched light curves per band]{\label{fig:ztfregime} The spacing between consecutive epochs (left) and the single largest gap per curve (right), in units of the damping timescale, for the ZTF-matched simulations in each band. The line marks $\Delta t = \tau$.}
 \end{figure}
-
-\section{Calibration Under ZTF Noise}
-\label{sec:ztfnoise}
-
-Trained and evaluated on light curves matched to the ZTF regime, the method continues to reconstruct the underlying signal but its predictive intervals become badly overconfident. To establish that this is a property of the model rather than of a particular training run, the training is repeated across five random seeds; the results are shown in Table \ref{tab:seeds}. The coverage at the $68\%$ level is far below nominal in every band, at $0.30$, $0.33$, and $0.42$ in $g$, $r$, and $i$, and the scatter across seeds is small, so the overconfidence is systematic. The predictive log-likelihood worsens sharply with the noise level of the band, from $-3.29$ in the least noisy band to $-10.63$ in the noisiest, since the noisiest band produces the narrowest intervals relative to the scatter of the truth and is penalized most heavily for the points that fall outside them.
 
 \begin{table}[H]
 \centering
@@ -175,40 +203,57 @@ Band & Method & \multicolumn{4}{c}{Coverage at nominal level} & RMSE \\
 
 The agreement with the analytic transition is now lost, the learned mean overshoots, passing below zero instead of relaxing to it, and the learned standard deviation inflates to roughly $1.33$ and fails to saturate at unity. The dynamics have not been cleanly recovered as the bridge might be anchoring too tightly to the noisy observations at the gap endpoints, treating each noisy magnitude as if it were the true signal, a reconstruction pulled towards the noise.
 
+The reconstruction error still grows smoothly with gap width (Figure \ref{fig:error_ztf}). Second, the coverage somewhat worsens as the number of epochs per curve increases (Figure \ref{fig:calib_sampling}). More epochs would ordinarily be expected to improve a reconstruction, but here a denser light curve supplies more noisy observations for the bridge to hold on to, not more usable information. The same effect appears across the bands, the sparsely sampled $i$ band being the least overconfident. A model that weighted observations by their individual uncertainties would improve with more epochs rather than degrade, so this dependence points directly at the absence of such a mechanism.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{assets/5_figures/ZTF/calibrationvsSN.pdf}
+    %\rule{0.85\textwidth}{0.35\textheight} % PLACEHOLDER 
+    \caption[Calibration against sampling in the ZTF regime]{\label{fig:calib_sampling} Coverage as a function of the number of epochs per curve, for the three ZTF bands where coverage worsens slightly as the number of epochs grows.}
+\end{figure}
+
+
 \begin{figure}[H]
     \centering
     \begin{subfigure}{\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{assets/5_figures/ZTF/ZTF_LearnedTransg.pdf}
+        \includegraphics[width=0.9\textwidth]{assets/5_figures/ZTF/ZTF_LearnedTransg.pdf}
         \caption{$g$ band}
+        \label{fig:trans_ztf_g}
     \end{subfigure}
+
     \begin{subfigure}{\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{assets/5_figures/ZTF/ZTF_LearnedTransr.pdf}
+        \includegraphics[width=0.9\textwidth]{assets/5_figures/ZTF/ZTF_LearnedTransr.pdf}
         \caption{$r$ band}
+        \label{fig:trans_ztf_r}
     \end{subfigure}
+
     \begin{subfigure}{\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{assets/5_figures/ZTF/ZTF_LearnedTransi.pdf}
+        \includegraphics[width=0.9\textwidth]{assets/5_figures/ZTF/ZTF_LearnedTransi.pdf}
         \caption{$i$ band}
+        \label{fig:trans_ztf_i}
     \end{subfigure}
-    \caption[The learned transition under ZTF noise, per band]{\label{fig:trans_ztf} As Figure \ref{fig:trans_fixed}, for models trained in the ZTF regime in each band. The learned mean overshoots past zero and the learned standard deviation inflates and does not saturate at unity.}
+
+    \begin{subfigure}{\textwidth}
+        \centering
+        \includegraphics[width=0.5\textwidth]{assets/5_figures/ZTF/ZTF_Error.pdf}
+        \caption{Reconstruction error against gap width}
+        \label{fig:error_ztf}
+    \end{subfigure}
+
+    \caption[The learned transition and reconstruction error under ZTF noise]{\label{fig:trans_ztf} Behaviour of the reconstruction in the ZTF regime. Panels (a)--(c): the learned transition for models trained in each band, as in Figure \ref{fig:trans_fixed}. The learned mean overshoots past zero and the learned standard deviation inflates and does not saturate at unity. Panel (d): the reconstruction error as a function of gap width in units of the damping timescale, for the three bands, compared with the Gaussian process.}
 \end{figure}
 
-The reconstruction error still grows smoothly with gap width (Figure \ref{fig:error_ztf})... Second, the coverage somewhat worsens as the number of epochs per curve increases (maybe add this figures). More epochs would ordinarily be expected to improve a reconstruction, but here a denser light curve supplies more noisy observations for the bridge to hold on to, not more usable information. The same effect appears across the bands, the sparsely sampled $i$ band being the least overconfident. A model that weighted observations by their individual uncertainties would improve with more epochs rather than degrade, so this dependence points directly at the absence of such a mechanism.
 
-\begin{figure}[t]
-    \centering
-    \includegraphics[width=0.85\textwidth]{assets/5_figures/ZTF/ZTF_Error.pdf}
-    \caption[Reconstruction error against gap width in the ZTF regime]{\label{fig:error_ztf} Reconstruction error as a function of gap width in units of the damping timescale, for the three ZTF bands, compared with the Gaussian process.}
-\end{figure}
 
 \section{Application to Real ZTF Light Curves}
 \label{sec:realztf}
 
 The method is finally applied to the real ZTF light curves. Since the true signal is unavailable, the reconstruction is tested by masking. A fraction of the observations in each curve is withheld, in two forms: randomly removed isolated points, which are bracketed by nearby retained observations and test the reconstruction where it is well constrained, and points removed inside contiguous intervals, which test it across genuine gaps. Before masking, isolated outliers are removed with a local median filter, so that a single discrepant epoch is not mistaken for a real excursion. The retained points alone are used to fit the normalization and, for the Gaussian process baseline, the damping timescale and amplitude, so that the withheld observations play no part in the reconstruction. Each masked curve is reconstructed by the flow, by this fitted Gaussian process, and by linear interpolation, and the predictions are compared with the withheld observations.
 
-Because the withheld observations are themselves noisy, a reconstruction that perfectly recovered the latent signal would still not pass through them exactly, but would scatter around them by the measurement error. The predictive intervals are therefore compared with the observations after adding the uncertainty of each withheld point to the interval in quadrature\footnote{The measurement variance of a withheld point is added to the predictive variance, since the observation is a noisy realization of the latent signal the interval describes.}, so that a method calibrated against the latent signal covers the noisy observations at the nominal level.
+Because the withheld observations are themselves noisy, a reconstruction of the latent signal should scatter around them rather than pass through them exactly. Each withheld point's measurement variance is therefore added to the predictive interval in quadrature\footnote{The observation is a noisy realization of the latent signal the interval describes, so its variance adds to the predictive variance.} before scoring, equally for the flow and the Gaussian process. Since these points are withheld, their noise enters neither reconstruction, so the adjustment is external to both models.
 
 The results are shown in Table \ref{tab:realztf}, separately for the isolated points and for those inside gaps. On the isolated points both methods are close to calibrated, with coverage between $0.68$ and $0.74$, and the fitted Gaussian process remains close to calibrated on the harder in-gap points as well, at $0.69$ to $0.75$. The reconstruction instead over-covers on the in-gap points, reaching $0.85$ to $0.88$ against the nominal $0.68$, so that across real gaps its intervals are wider than necessary. In accuracy both methods predict the withheld observations to within about one variability amplitude, the Gaussian process being consistently the more accurate; both improve on linear interpolation, and both additionally provide an uncertainty, which interpolation does not. Example reconstructions in the three bands are shown in Figure \ref{fig:ztf_filled}.
 
@@ -237,23 +282,12 @@ Band & Points & NSF & GP & NSF & GP \\
 \end{tabular}
 \end{table}
 
-\begin{figure}[H]
+\begin{figure}[t]
     \centering
-    \includegraphics[width=0.9\textwidth]{assets/5_figures/ZTF/ZTF_FilledGapg.pdf}
-    \caption[Reconstruction of a real ZTF $g$-band light curve]{\label{fig:ztf_filled_g} Reconstruction of a real ZTF light curve in the $g$ band, showing the retained observations (black), the withheld observations (open), the posterior median (blue), and the central $68\%$ interval (shaded).}
+    \includegraphics[width=\textwidth]{assets/5_figures/ZTF/ZTF_filled.pdf}
+    \caption[Reconstruction of a real ZTF light curve]{\label{fig:ztf_filled} Reconstruction of a real ZTF light curve, showing the observations in green, red and yellow for the  $g$, $r$, and $i$ bands, respectively. The posterior median is shown in red, and the central $68\%$ interval (shaded). The interval widens across the wider gaps in the real cadence.}
 \end{figure}
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.9\textwidth]{assets/5_figures/ZTF/ZTF_FilledGapr.pdf}
-    \caption[Reconstruction of a real ZTF $r$-band light curve]{\label{fig:ztf_filled_r} Reconstruction of a real ZTF light curve in the $r$ band, with markers as in Figure \ref{fig:ztf_filled_g}.}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.9\textwidth]{assets/5_figures/ZTF/ZTF_FilledGapi.pdf}
-    \caption[Reconstruction of a real ZTF $i$-band light curve]{\label{fig:ztf_filled_i} Reconstruction of a real ZTF light curve in the $i$ band, with markers as in Figure \ref{fig:ztf_filled_g}.}
-\end{figure}
 
 The result on real data appears at first to contradict the simulated evaluation, where the reconstruction was overconfident but, in the simulated experiment, the intervals are compared with the noise-free underlying signal, while here they are compared with noisy observations and are broadened by the observational uncertainty, so the two evaluations measure the coverage of different quantities. What holds across both is that the fitted Gaussian process is a strong and well-calibrated baseline on real data, and that the calibration of the reconstruction depends on how measurement noise is treated.
 
@@ -261,6 +295,6 @@ The result on real data appears at first to contradict the simulated evaluation,
 \section{Discussion}
 \label{sec:discussion}
 
-Taken together, the experiments express the limitation of the method. On low noise data, at both fixed and varying timescale, the reconstruction approaches the analytic transition and performs within a few per cent of the Bayes-optimal Gaussian process, so the model and its training objective are sound across a distribution of dynamics. The difficulty appears only when the data carry a significant noise: the reconstruction error tracks the Gaussian process and grows smoothly with gap width, while the coverage departs from nominal. The dependence of this collapse on the number of epochs, deepening a little as more noisy observations are added, together with the loss of the learned transition under noise, points to the model treating the observed magnitudes as if they were the true signal.
+Taken together, the experiments express the limitation of the method. On low noise data, at both fixed and varying timescale, the reconstruction approaches the analytic transition and performs within a few per cent of the Bayes-optimal Gaussian process, so the model and its training objective are solid across a distribution of dynamics. The difficulty appears only when the data carry a significant noise: the reconstruction error tracks the Gaussian process and grows smoothly with gap width, while the coverage departs from nominal. The dependence of this collapse on the number of epochs, deepening a little as more noisy observations are added, together with the loss of the learned transition under noise, points to the model treating the observed magnitudes as if they were the true signal.
 
-The discussed, natural next step is model that consumes the per-epoch uncertainties, treating each observation as a noisy measurement of a latent state rather than as the state itself and propagate that uncertainty into its predictions. Such a latent formulation, in which the flow describes the evolution of an unobserved signal with a term that relates it to the noisy observations, is the principal direction left for future work. A second direction, motivated by the widest gaps found in the $i$ band, is the extension to multiple bands, since the coordinated variability across bands discussed in Chapter \ref{chap:variability} would allow a gap in one band to be constrained by the others.
+%The discussed, natural next step is model that consumes the per-epoch uncertainties, treating each observation as a noisy measurement of a latent state rather than as the state itself and propagate that uncertainty into its predictions. Such a latent formulation, in which the flow describes the evolution of an unobserved signal with a term that relates it to the noisy observations, is the principal direction left for future work. A second direction, motivated by the widest gaps found in the $i$ band, is the extension to multiple bands, since the coordinated variability across bands discussed in Chapter \ref{chap:variability} would allow a gap in one band to be constrained by the others.

@@ -1,10 +1,12 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {2.1}{\ignorespaces AGN region size scales and variability timescales}}{19}{table.caption.12}%
+\contentsline {table}{\numberline {2.1}{\ignorespaces AGN region size scales and variability timescales}}{21}{table.caption.12}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Reconstruction performance across seeds on ZTF-matched data}}{40}{table.caption.27}%
-\contentsline {table}{\numberline {5.2}{\ignorespaces Coverage at multiple levels on ZTF-matched data}}{40}{table.caption.28}%
-\contentsline {table}{\numberline {5.3}{\ignorespaces Held-out prediction on real ZTF light curves}}{43}{table.caption.31}%
+\contentsline {table}{\numberline {5.1}{\ignorespaces Reconstruction performance across seeds on ZTF-matched data}}{45}{table.caption.31}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces Coverage at multiple levels on ZTF-matched data}}{46}{table.caption.32}%
+\contentsline {table}{\numberline {5.3}{\ignorespaces Held-out prediction on real ZTF light curves}}{48}{table.caption.35}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
 \addvspace {10\p@ }
