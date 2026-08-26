@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber build/main"] 1787273606.15578 "build/main.bcf" "build/main.bbl" "build/main" 1787277536.17351 0
-  "build/main.bcf" 1787277535.9871 121924 426b683388e769fa31ab61c1b27badaa "pdflatex"
-  "references.bib" 1787019911.25737 88203 f62755fa374606a6afc2ab7776b64ef7 ""
+["biber build/main"] 1787776761.08341 "build/main.bcf" "build/main.bbl" "build/main" 1787776800.53698 0
+  "build/main.bcf" 1787776800.35219 122317 70a1467465dfd1db828bf703697ade8b "pdflatex"
+  "references.bib" 1787659611.02979 85872 180ac1cc580c8476309d750e9ea2fb11 ""
   (generated)
   "build/main.bbl"
   "build/main.blg"
   (rewritten before read)
-["pdflatex"] 1787277532.3404 "main.tex" "build/main.pdf" "main" 1787277536.17379 0
+["pdflatex"] 1787776796.38926 "main.tex" "build/main.pdf" "main" 1787776800.53728 0
   "/Users/anacecilialr/Library/texlive/2026/texmf-var/fonts/tfm/lh/lh-t2a/larm1440.tfm" 1782249862.94495 3256 3daaa33cf35cf3f354983aa3214ecd7f ""
   "/Users/anacecilialr/Library/texlive/2026/texmf-var/fonts/tfm/lh/lh-t2a/larm2074.tfm" 1782249860.46655 3264 03c2b9e4787a40d3b9c197c38b93b558 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
@@ -226,19 +226,19 @@
   "assets/5_figures/ZTF/simulation_i_regime.pdf" 1787009032.56741 28699 d3e8b411ae5897b5637637fd812db01c ""
   "assets/5_figures/ZTF/simulation_r_regime.pdf" 1787009029.0421 29373 09cc50b1741bd1792a07cf225e0755ff ""
   "assets/5_figures/ZTF_FD.pdf" 1787267256.03736 116280 c162bddba4121831b5bcf25318fadf22 ""
-  "build/main.aux" 1787277535.95678 52319 e0f52371c5c070b03b7dfaf832fc6209 "pdflatex"
-  "build/main.bbl" 1787273608.80285 286913 bea0f8144e155832af4f30ce9dbc1584 "biber build/main"
-  "build/main.lof" 1787277535.98814 4395 ce0d512e567c612c1dbf896fce376948 "pdflatex"
-  "build/main.lot" 1787277535.98818 679 f4f343dc847d21f89e8eb68a6f03722e "pdflatex"
-  "build/main.out" 1787277535.98447 7302 c93bc5db1cac3015c11548a4b4b54815 "pdflatex"
-  "build/main.run.xml" 1787277535.98793 2311 e66a0e3ff336a5af941c7fe634558519 "pdflatex"
-  "build/main.toc" 1787277535.98802 3752 35aec4bb196251a129765cbb089a72c1 "pdflatex"
+  "build/main.aux" 1787776800.32162 53342 e6dc415633e670bd3b5040241921e9ff "pdflatex"
+  "build/main.bbl" 1787776788.35529 294490 890ab97e5f5c17b78b1364b9e7f25523 "biber build/main"
+  "build/main.lof" 1787776800.35284 4395 9e99940fce125d33038a30b24409495b "pdflatex"
+  "build/main.lot" 1787776800.35288 679 f4f343dc847d21f89e8eb68a6f03722e "pdflatex"
+  "build/main.out" 1787776800.34988 7136 8c7dc26dad6e2c4562e73c5e831f0693 "pdflatex"
+  "build/main.run.xml" 1787776800.35274 2311 e66a0e3ff336a5af941c7fe634558519 "pdflatex"
+  "build/main.toc" 1787776800.35282 3670 4af2e94dd9fcbb2ccb9a6b751da5bbfb "pdflatex"
   "chapter/01_abstract.tex" 1787244824.60311 2440 d8859b1c74753f6ecb31488221571da7 ""
-  "chapter/07_appendix.tex" 1787275037.04298 9716 a7a8fec88b0c66b73a17250b1bcf37b6 ""
+  "chapter/07_appendix.tex" 1787608514.85242 9788 dfe54ba077a33824c8dcd75d635af14e ""
   "chapter/0_front.tex" 1787241753.9088 2893 70a867558debab0b5075dcd7aa14550c ""
   "chapter/1_background.tex" 1787277476.03183 31443 65d5f4b96e86d2f87513cdb76af57b24 ""
-  "chapter/2_variability.tex" 1787272084.56154 17750 b21cb885a7b38ff24441d888cb52ced0 ""
-  "chapter/3_simulation.tex" 1787012399.46654 17027 dee1edeb210a6bb6deb11c96fac14e0a ""
+  "chapter/2_variability.tex" 1787606446.30975 19244 5e22f9a08d80faa7a5faed72482c984f ""
+  "chapter/3_simulation.tex" 1787776673.22562 18333 821fccb3ef98ea5715f973b51e210749 ""
   "chapter/4_models.tex" 1787277532.00513 19986 bde5e7e9caef861188b9ff7f53061f42 ""
   "chapter/5_results.tex" 1787276571.44019 27290 16e21c077123701148ea44e2b8d1785a ""
   "chapter/6_conclusions.tex" 1787275631.37002 3017 f310502110f267af1869fa84fa761f06 ""

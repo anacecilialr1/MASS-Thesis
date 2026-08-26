@@ -1,58 +1,61 @@
 \chapter{Simulation Framework}
 \label{chap:simulation}
 
-The reconstruction method developed in this thesis is trained and tested on simulated light curves, for which the underlying signal is known exactly. This chapter sets out the framework used to generate them. It begins with the stochastic process and damped random walk, derives the transition probability that the reconstruction method will later learn, and then describes the simulation itself, including the way physically motivated timescales are assigned and the sampling regime.
+The reconstruction method developed in this thesis is trained and tested, first, on simulated light curves, for which the underlying signal is known exactly. This chapter sets out the framework used to generate them. It begins with the stochastic process and damped random walk, derives the transition probability that the reconstruction method will later learn, and then describes the simulation itself, including the way physically motivated timescales are assigned and the sampling regime.
 
 \section{Stochastic Processes}
 \label{sec:stochastic}
 
-The variability introduced in Chapter \ref{chap:variability} is aperiodic and aleatory, so it is not well described by a deterministic model with a fixed set of parameters. It is instead naturally treated as a realization of a \textit{stochastic process}: a family of random variables indexed by time, whose statistical properties, rather than whose exact values, are the object of study. Rather than predicting the flux at a given epoch, one models the distribution from which that flux is drawn, conditioned on the values already observed.
+The variability introduced in Chapter \ref{chap:variability} is aperiodic and aleatory, so it is not well described by a deterministic model with a fixed set of parameters. It is instead treated as a realization of a \textit{stochastic process}: a collection of random variables indexed by time, whose statistical properties, rather than whose exact values, are the object of study \parencite{Ross1995StochasticP}. Preferably than predicting the flux at a given epoch, one models the distribution from which that flux is drawn, conditioned on the values already observed. 
 
-The simplest stochastic model consistent with the observed variability of AGN is the \textit{damped random walk} (DRW), also known as an Ornstein-Uhlenbeck process \parencite{Kelly2009ThermalFluc}. It is described by the stochastic differential equation
+The simplest stochastic model consistent with the observed variability of AGN is the \textit{damped random walk} (DRW), also known as an Ornstein-Uhlenbeck process. It is described by the stochastic differential equation
+
 \begin{equation}
-    df(t) = -\frac{1}{\tau} f(t) dt + \sigma_{\mathrm{d}} \sqrt{dt} \epsilon(t)
+    df(t) = -\frac{1}{\tau}(f(t) - \mu)\,dt + \sigma\,dW_t,
     \label{eq:drw_sde}
 \end{equation}
-where $\tau$ is the damping timescale, $\sigma_{\mathrm{d}}$ sets the amplitude of the driving noise, and $\epsilon(t)$ is a white noise process\footnote{A white noise process is one with a mean zero and no correlation between its values at different times.}. The two terms admit a direct physical reading. The first is a restoring term that pulls the flux back towards its mean on the timescale $\tau$, so that excursions do not grow without bound, while the second perturbs it with stochastic kicks. The competition between damping and driving produces the characteristic behaviour of AGN light curves, which vary coherently on timescales shorter than $\tau$ and decorrelate into noise on timescales much longer than $\tau$.
+where $f(t)$ is the flux at time $t$, $\tau$ is the damping timescale, $\mu$ is the long-term mean flux, $\sigma$ is the variability amplitude, and $dW_t$ is an infinitesimal Wiener increment\footnote{$dW_t \sim \mathcal{N}(0, dt)$ is an infinitesimal increment of a standard Wiener process $W_t$, a continuous-time stochastic process with independent normally distributed increments: $W_{t+\Delta t} - W_t \sim \mathcal{N}(0, \Delta t)$. It is continuous in time but nowhere differentiable, and random at every timescale.}. The first one is a restoring term that pulls the flux back towards $\mu$ on the timescale $\tau$, so that excursions do not grow without bound, while the second perturbs it with stochastic fluctuations. The competition between damping and driving produces the characteristic behaviour of AGN light curves, which vary coherently on timescales shorter than $\tau$ and decorrelate into noise on timescales much longer than $\tau$. 
 
-The DRW provides a good statistical description of optical AGN light curves \parencites{Kelly2009ThermalFluc}{Kozlowski2010DRW}{MacLeod2010ScalRel} and, importantly, it is a \textit{Gaussian process}, a distribution over functions such that the values at any finite set of times follow a multivariate normal distribution, specified by a mean function and a covariance function \parencite{Rasmussen2006GP}. Conditioning on observed values yields a Gaussian predictive distribution in closed form, which is what makes such processes analytically tractable for interpolation. Its exponential autocorrelation function
+The DRW provides a good statistical description of optical AGN light curves \parencites{Kelly2009ThermalFluc}{Kozlowski2010DRW}{MacLeod2010ScalRel} and, importantly, it is a \textit{Gaussian process}: a distribution over functions such that the values at any finite set of times follow a multivariate normal distribution, specified by a mean function and a covariance function \parencite{Rasmussen2006GP}. For the DRW the mean is constant at $\mu$ and the
+covariance function, the \textit{kernel}, is exponential,
+
 \begin{equation}
-    \mathrm{ACF}(\Delta t) = \exp\!\left(-\frac{|\Delta t|}{\tau}\right),
     \label{eq:drw_acf}
-\end{equation}
-corresponding to a power spectrum of the form $P(\nu) \propto \nu^{-2}$ at high frequencies that flattens to white noise below the break frequency $\nu_b = 1/(2\pi\tau)$. 
+    k(\Delta t) = \sigma^{2}\exp\!\left(-\frac{|\Delta t|}{\tau}\right),
+\end{equation} 
 
-The damped random walk is also the simplest member of the broader family of \textit{continuous-time autoregressive moving average} (CARMA) processes \parencite{Kelly2014CARMA}, corresponding to the case CARMA$(1,0)$. A general CARMA$(p,q)$ process is the solution of a linear stochastic differential equation of order $p$, driven by white noise through an order-$q$ moving-average term, and can reproduce a wider range of power-spectrum shapes than the damped random walk alone. In particular the CARMA$(2,1)$ process, also known as the damped harmonic oscillator, has been found to describe some observed AGN light curves more faithfully \parencite{Yu2025ScalableEztao}. The damped random walk is nonetheless retained throughout this work as the generative model, both because it remains an adequate approximation on the timescales probed by the surveys considered here and because its analytic tractability provides a controlled setting in which to develop and test the reconstruction method. The consequences of this choice, in particular the effect of model misspecification when the method is applied to real data, are returned to in Chapter \ref{chap:reconstruction}.
+with $\Delta t = |t_i - t_j|$. Conditioning on observed values yields a Gaussian predictive distribution in closed form, which is what makes such processes analytically tractable for interpolation. Equation~\ref{eq:drw_acf} is the $\beta = 1$ member of a broader family of autocorrelation functions,
+
+\begin{equation}
+    \label{eq:acf_family}
+    \mathrm{ACF}(\Delta t) = \exp\!\left(-\left(\frac{|\Delta t|}{\tau}\right)^{\!\beta}\right),
+\end{equation}
+
+related to the covariance by $k(\Delta t) = \sigma^{2}\,\mathrm{ACF}(\Delta t)$, with $\beta = 1$ recovering the DRW exponential decay and $\beta = 2$ a Gaussian correlation. The exponent controls the smoothness of the realizations: $\beta = 1$ gives paths that are continuous but nowhere differentiable, consistent with the Wiener driving term of Equation \ref{eq:drw_sde}, whereas $\beta = 2$ gives realizations that are infinitely differentiable and therefore too smooth to represent AGN variability. The DRW case also corresponds to a power spectrum $P(\nu) \propto \nu^{-2}$ at high frequencies, flattening to white noise below the break frequency $\nu_b = 1/(2\pi\tau)$. In the structure function representation, the DRW produces a power-law rise of slope $\gamma = 0.5$ on short timescales, flattening above $\tau$ (Figure~\ref{fig:kozlowski}); real AGN light curves are consistent with exponents scattered around this value \parencite{Kozlowski2016SF}, which is one of the empirical justifications for adopting the DRW as a baseline.
+
+\begin{figure}[t] 
+    \centering
+    \includegraphics[width=1.03\textwidth]{assets/3_figures/Kozlowski2016.pdf}
+    \caption[The structure-function family and the place of the damped random walk]{\label{fig:kozlowski} Left: autocorrelation functions of the family of Equation~\ref{eq:acf_family} for a range of the decay exponent $\beta$. Right: the corresponding structure functions, with short-timescale slope $\gamma$. The DRW ($\beta = 1$, red) produces a structure function of slope $\gamma = 0.5$ below the damping timescale, flattening above it. All curves cross at $\Delta t = \tau$, illustrating the role of the damping timescale as the characteristic decorrelation lag. Adapted from \cite{Kozlowski2016SF}.}
+\end{figure}
+
+The damped random walk is also the simplest member of the broader family of \textit{continuous-time autoregressive moving average} (CARMA) processes \parencite{Kelly2014CARMA}, corresponding to the case CARMA$(1,0)$. A general CARMA$(p,q)$ process is the solution of a linear stochastic differential equation of order $p$, driven by white noise through an order $q$ moving-average term, and can reproduce a wider range of power-spectrum shapes than the damped random walk alone. In particular the CARMA$(2,1)$ process, also known as the damped harmonic oscillator, has been found to describe some observed AGN light curves more faithfully \parencite{Yu2022VariabilityBeyondDRW}. Both of these, however, are only phenomenological models and the precise PSD of intrinsic AGN UV/optical variability remains under debate (e.g., \cite{Petrecca2024PSD}; \cite{Beard2025testingdiscreprocessingmodels}). 
+The damped random walk is nonetheless retained throughout this work as the generative model, both because it remains an adequate approximation on the timescales probed by the surveys considered here and because its analytic tractability provides a controlled setting in which to develop and test the reconstruction method. The consequences of this choice, in particular the effect of model misspecification when the method is applied to real data, are returned to in Chapter \ref{chap:reconstruction}.
 
 \subsection{The Transition Probability}
 \label{ssec:transition}
 
-The exponential autocorrelation of Equation \ref{eq:drw_acf} has a consequence that is central to this work. Because the damped random walk is a Gaussian process, and because Eq. \ref{eq:drw_sde} is first-order and Markovian\footnote{A process is Markovian if its future depends only on its present state and not on the path by which it was reached, so that the state at one time contains all the information relevant to predicting later times.}, the distribution of the state at a time $t + \Delta t$ given its value at time $t$ is itself Gaussian and depends only on the elapsed time $\Delta t$. This \textit{transition probability} is
+The exponential autocorrelation of Equation \ref{eq:} has a consequence that is central to this work. Because the damped random walk is a Gaussian process, and because Eq. \ref{eq:drw_sde} is first order and Markovian\footnote{A process is Markovian if its future depends only on its present state and not on the path by which it was reached, so that the state at one time contains all the information relevant to predicting later times.}, the distribution of the state at a time $t + \Delta t$ given its value at time $t$ is itself Gaussian and depends only on the elapsed time $\Delta t$. This \textit{transition probability} is
 \begin{equation}
     X_{t+\Delta t} \mid X_t \;\sim\; \mathcal{N}\!\left(\mu + e^{-\Delta t/\tau}\big(X_t - \mu\big),\; \sigma^{2}\big(1 - e^{-2\Delta t/\tau}\big)\right),
     \label{eq:drw_transition}
 \end{equation}
 where $\mu$ is the long-term mean and $\sigma$ the stationary standard deviation of the light curve. The mean relaxes exponentially from the current value towards $\mu$ on the timescale $\tau$, while the variance grows from zero at $\Delta t = 0$ to the stationary value $\sigma^{2}$ as $\Delta t$ becomes large compared with $\tau$. Both limits are the expected ones. At short separations the process retains a strong memory of its previous state and the distribution is narrow and centred near $X_t$, whereas at separations much longer than $\tau$ the memory is lost and the distribution approaches the stationary marginal $\mathcal{N}(\mu, \sigma^{2})$.
 
-Equation \ref{eq:drw_transition} is the object that the reconstruction method of Chapter \ref{chap:nsf} learns from data. It provides both a target against which the learned transition can be validated and, through the same expression, the exact Gaussian process baseline against which the method is compared. After the light curves are centred, $\mu = 0$, the mean reduces to $X_t\,e^{-\Delta t/\tau}$ and the variance to $\sigma^{2}(1 - e^{-2\Delta t/\tau})$.
 
-\section{The Damping Timescale}
-\label{sec:tauconventions}
+Equation \ref{eq:drw_transition} is the object that the reconstruction method of Chapter \ref{chap:nsf} learns from data. It provides both a target against which the learned transition can be validated and, through the same expression, the exact Gaussian process baseline against which the method is compared. After the light curves are centred, $\mu = 0$, the mean reduces to $X_t\,e^{-\Delta t/\tau}$ and the variance to $\sigma^{2}(1 - e^{-2\Delta t/\tau})$. Refer to Appendix \ref{app:transition} for a full derivation of the transition probability. %% check whether this is applied properly
 
-The damping timescale is the quantity that most directly characterizes the variability, and it requires some care because its definition and its measured value depend on convention. In the structure-function representation, the damped random walk is one member of a family parametrized by the exponent of the autocorrelation decay,
-\begin{equation}
-    \label{eq:acf_family}
-    \mathrm{ACF}(\Delta t) = \exp\!\left(-\left(\frac{|\Delta t|}{\tau}\right)^{\!\beta}\right),
-\end{equation}
-where $\beta = 1$ recovers the damped random walk and $\beta = 2$ a Gaussian correlation. The corresponding structure function rises as a power law on short timescales, $\mathrm{SF}(\Delta t) \propto (\Delta t / \tau)^{\gamma}$ for $\Delta t \ll \tau$, before flattening above the damping timescale; the damped random walk corresponds to a short-timescale slope $\gamma = 0.5$ (Figure \ref{fig:kozlowski}). Real light curves are consistent with exponents scattered around these values, which is one of the empirical justifications for adopting the damped random walk as a baseline while remaining aware of its limitations.
-
-\begin{figure}[t]
-    \centering
-    \includegraphics[width=\textwidth]{assets/3_figures/Kozlowski2016.pdf}
-    \caption[The structure-function family and the place of the damped random walk]{\label{fig:kozlowski} Left: autocorrelation functions of the family of Equation \ref{eq:acf_family} for a range of the decay exponent $\beta$. Right: the corresponding structure functions, with short-timescale slope $\gamma$. The damped random walk ($\beta = 1$, red) produces a structure function of slope $\gamma = 0.5$ below the damping timescale, flattening above it, and sits between a slowly declining correlation and a Gaussian one ($\beta = 2$, blue). All curves cross at $\Delta t = \tau$, illustrating the role of the damping timescale as the characteristic decorrelation lag. Adapted from \cite{Kozlowski2016SF}.}
-\end{figure}
-
-A second source of ambiguity is the reference frame. The damping timescale measured from an observed light curve is stretched relative to its rest-frame value by a factor of $(1 + z)$, so that comparisons between sources at different redshifts, or between measurements and physical models, must specify whether $\tau$ is quoted in the observed or the rest frame. Throughout this work $\tau$ refers to the rest-frame timescale unless stated otherwise.
+Note that $X_t$ enters the mean of Equation~\ref{eq:drw_transition} but not its variance, which depends only on $\Delta t$; since $\sigma$ in Equation \ref{eq:drw_sde} is constant, the amplitude of the stochastic fluctuations does not depend on the current flux. The predictive uncertainty is therefore set by the sampling alone, and two light curves observed with the same cadence receive the same uncertainty estimates regardless of the values measured. % This assumption is revisited in Chapter~\ref{chap:reconstruction}.
 
 \section{Physically Motivated Timescales}
 \label{sec:tausampling}
@@ -62,7 +65,7 @@ For the simulated light curves to resemble a real population, the damping timesc
     \tau = 107^{+11}_{-12}\ \mathrm{days}\,\left(\frac{M_{\mathrm{BH}}}{10^{8}\,M_\odot}\right)^{0.38^{+0.05}_{-0.04}}.
     \label{eq:burke}
 \end{equation}
-The mass distribution is digitized from the observed sample and sampled in full by inverse-transform sampling, so the resulting timescales inherit its shape through Equation \ref{eq:burke}, including its high-mass tail. The induced distribution has a median of $\tau \approx 166$ d, with the central $68\%$ of curves falling between $119$ and $227$ d (Figure \ref{fig:taudist}).
+The mass distribution is digitized from the observed sample and sampled in full by inverse-transform sampling, so the resulting timescales inherit its shape through Equation \ref{eq:burke}, including its high-mass tail. The induced distribution has a median of $\tau \approx 166$ d, with the central $68\%$ of curves falling between $119$ and $227$ d (Figure \ref{fig:taudist}). % explain further how the inverse-transform sampling works
 
 \begin{figure}[t]
     \centering
@@ -71,6 +74,8 @@ The mass distribution is digitized from the observed sample and sampled in full 
 \end{figure}
 
 This procedure defines the varying-timescale configuration used for most of the experiments, in which each light curve is assigned its own $\tau$ and the reconstruction method must generalize across the range shown in Figure \ref{fig:taudist}. A simpler configuration was also used, in which the timescale was held fixed at $\tau = 100$ d for all curves and served as a controlled setting in which the sampling and noise can be studied in isolation from any variation in $\tau$. The varying-timescale case is the more realistic and more demanding test, and is the one against which the main results are reported.
+
+\textit{A note on conventions:} the amplitude parameter $\sigma$ in Equation~\ref{eq:drw_sde} differs from the structure-function amplitude $\mathrm{SF}_\infty$ and the \textcite{Kelly2009ThermalFluc} amplitude $\sigma_\mathrm{KBS}$ used in some of the literature, related by $\mathrm{SF}_\infty^2 = 2\sigma^2$ and $\sigma^2 = \tau\,\sigma_\mathrm{KBS}^2/2$ \parencite{Yu2022Extao}. Similarly, the damping timescale measured from an observed light curve is stretched by a factor of $(1+z)$ relative to its rest-frame value; throughout this work $\tau$ refers to the rest-frame timescale in the \textsc{EzTao} convention unless stated otherwise.
 
 \section{Light Curve Generation}
 \label{sec:framework}
@@ -90,7 +95,7 @@ The observed light curve is then formed from this dense realization rather than 
 
 The difficulty of gap filling is controlled by a single dimensionless quantity, the gap length in units of the damping timescale, $\Delta t / \tau$, because a damped random walk loses memory as $e^{-\Delta t/\tau}$. The sampling parameters are therefore quoted in units of $\tau$ rather than in days. With a three-year baseline ($t_{\max} = 1095$ d), $130$ attempted epochs, and a gap fraction of $0.35$ distributed over three windows, at the fiducial timescale $\tau = 100$ d the baseline spans $10.9\,\tau$, the mean spacing between consecutive epochs is $8.4$ d $= 0.084\,\tau$, and the mean gap is $128$ d $= 1.28\,\tau$. Consecutive epochs are therefore strongly correlated, while the gaps straddle the decorrelation scale, the regime in which reconstruction is neither trivial nor impossible. Figure \ref{fig:regime} shows the resulting distributions of the consecutive spacing and of the largest gap in each curve, both in units of $\tau$.
 
-\begin{figure}[t]
+\begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{assets/3_figures/regime.pdf}
     \caption[Sampling regime of the simulated light curves]{\label{fig:regime} Left: the distribution of the spacing between consecutive epochs, in units of the damping timescale. Right: the distribution of the single largest gap in each light curve, in the same units. Most consecutive spacings lie well below $\tau$, while the largest gaps straddle $\tau$, the regime in which reconstruction is most demanding. The line marks $\Delta t = \tau$.}

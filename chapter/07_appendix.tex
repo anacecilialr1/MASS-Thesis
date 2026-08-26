@@ -1,10 +1,10 @@
 \chapter{Derivation of the Damped Random Walk Transition Probability}
 \label{app:transition}
 
-The transition probability of Equation \ref{eq:drw_transition} follows from solving the Ornstein-Uhlenbeck stochastic differential equation. Writing the damping rate as $\theta = 1/\tau$, the process of Equation \ref{eq:drw_sde} is
+The transition probability of Equation~\ref{eq:drw_transition} follows from solving the Ornstein-Uhlenbeck stochastic differential equation. Here $X_t$ denotes the flux process $f(t)$ of Equation~\ref{eq:drw_sde}, rewritten using the standard Itô notation $dX_t$ and the damping rate $\theta = 1/\tau$:
 \begin{equation}
     \label{eq:app_ou}
-    \mathrm{d}X_t = \theta\,(\mu - X_t)\,\mathrm{d}t + \sigma\,\mathrm{d}W_t,
+    \mathrm{d}X_t = \theta\,(\mu - X_t)\,\mathrm{d}t + \sigma\,\mathrm{d}W_t.
 \end{equation}
 where $\mu$ is the long-term mean, $\theta$ the mean-reversion rate, $\sigma$ the driving amplitude, and $W_t$ a Wiener process. The equation is solved by variation of parameters, using the integrating factor $e^{\theta t}$. Defining $f(X_t, t) = X_t\,e^{\theta t}$ and applying It\^o's lemma,
 \begin{equation}
