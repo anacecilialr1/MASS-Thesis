@@ -1,8 +1,7 @@
 # MASS-Thesis
 
 Reconstructing photometric light curves of active galactic nuclei with neural
-stochastic flows. Master's thesis, University of Belgrade, Faculty of Mathematics.
-
+stochastic flows. 
 This repository contains the code, data, and LaTeX sources for the thesis. The
 method reconstructs gaps in AGN light curves, modelled as a damped random walk,
 using neural stochastic flows, and is validated against the analytic transition
