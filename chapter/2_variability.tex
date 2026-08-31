@@ -2,13 +2,13 @@
 \label{chap:variability}
 % 1.1 in Kara & Garcia
 
-The first quasar discovered, 3C 273 \parencite{Edge19593C273Catalogue}, had been documented in photographic plates at least as early as 1887 \parencite{Slavchevamihova20133c273half}. This emblematic radio-loud object showed variable emission in the optical and radio bands on timescales from days to years \parencites{SmithH19633C273Var2}{Dent19653C273Var}, indicating that the size of the emitting region spanned only a few light-days in size. This compactness, coupled with the finding of its distant redshift \parencite{Schmidt19633C273z}, was very difficult to explain by dynamics that operate in normal galaxies, and variability thus became one of the key arguments that the enormous luminosities of quasars had to originate from an exceptionally compact and energetic central engine \parencites{Salpeter1964AccretionTheory}{Zeldovich1964AccretionTheory}.
+%The first quasar discovered, 3C 273 \parencite{Edge19593C273Catalogue}, had been documented in photographic plates at least as early as 1887 \parencite{Slavchevamihova20133c273half}. This emblematic radio-loud object showed variable emission in the optical and radio bands on timescales from days to years \parencites{SmithH19633C273Var2}{Dent19653C273Var}, indicating that the size of the emitting region spanned only a few light-days in size. This compactness, coupled with the finding of its distant redshift \parencite{Schmidt19633C273z}, was very difficult to explain by dynamics that operate in normal galaxies, and variability thus became one of the key arguments that the enormous luminosities of quasars had to originate from an exceptionally compact and energetic central engine \parencites{Salpeter1964AccretionTheory}{Zeldovich1964AccretionTheory}.
 % or some objects, rapid optical variability implied brightness temperatures that clearly required a nonthermal emission mechanism. For example, Oke (1967) observed day-to-day changes of 0.25 and 0.1 mag for 3C 279 and 3C 446 (Shields NED)
 
-Now we know that variability in all wavelengths is an ubiquitous property of AGN, and so, its studies have been essential in understanding the physics of their nuclear regions, which, in general, cannot be resolved by current telescopes. This had been strictly true only until the observations of Sgr A* and M87 \parencite{EventHorizonTelescope2019} and, more recently, with the GRAVITY interferometer on the VLT resolving the outer BLR in 3C 273 \parencite{Gravity20183C273BLR}; still, these surveys are limited to massive sources in the very nearby universe. 
-For the vast majority of AGN, variability studies therefore rely on the \textit{light curve}, a time series recording how the brightness (or flux) of the AGN, measured within a given wavelength band, varies over a monitoring period. The time scales, spectral changes, and the correlations and delays between variations extracted from these light curves provide crucial information on the nature and location of these components and on their interdependencies \parencite{Ulrich1997VARIABILITY}. 
+%Now we know that variability in all wavelengths is an ubiquitous property of AGN, and so, its studies have been essential in understanding the physics of their nuclear regions, which, in general, cannot be resolved by current telescopes. This had been strictly true only until the observations of Sgr A* and M87 \parencite{EventHorizonTelescope2019} and, more recently, with the GRAVITY interferometer on the VLT resolving the outer BLR in 3C 273 \parencite{Gravity20183C273BLR}; still, these surveys are limited to massive sources in the very nearby universe. 
+%For the vast majority of AGN, variability studies therefore rely on the \textit{light curve}, a time series recording how the brightness (or flux) of the AGN, measured within a given wavelength band, varies over a monitoring period. The time scales, spectral changes, and the correlations and delays between variations extracted from these light curves provide crucial information on the nature and location of these components and on their interdependencies \parencite{Ulrich1997VARIABILITY}. 
 
-While variability-based methods are, generally speaking, more effective than other methods (e.g., SED-based) at providing a clearer signature of the nuclear activity against host galaxy emission \parencite{Yu2025ScalableEztao}, deriving the features and their uncertainties from an irregularly sampled light curve is very challenging; thereon, high quality light curves are indispensable to enable its robust characterization \parencite{Kelly2014CARMA}. 
+%While variability-based methods are, generally speaking, more effective than other methods (e.g., SED-based) at providing a clearer signature of the nuclear activity against host galaxy emission \parencite{Yu2025ScalableEztao}, deriving the features and their uncertainties from an irregularly sampled light curve is very challenging; thereon, high quality light curves are indispensable to enable its robust characterization \parencite{Kelly2014CARMA}. 
 
 % Variability experiments mostly can be categorized by the region being probed and the type of \textit{reverberation signal} (\S \ref{ssec:RebMap}) being measured, as illustrated in Figure \ref{fig:CackettSchematic}. 
 %\begin{figure}[t]
@@ -16,7 +16,6 @@ While variability-based methods are, generally speaking, more effective than oth
 %    \includegraphics[width=\textwidth]{assets/2_figures/RM.pdf}
 %    \caption[Schematic of AGN reverberation mapping across different physical scales]{\label{fig:CackettSchematic} Cross-sectional schematic of an AGN illustrating the four main types of reverberation mapping and their corresponding radial scales from the central black hole. Taken from \cite{Cackett2021RMFiguresGOOD}.}
 %\end{figure}
-
 
 \section{Physical Origin and Timescales}
 \label{sec:PhysOrigin}
@@ -134,21 +133,26 @@ What can be extracted from these light curves is set by the survey itself, by it
 \label{ssec:ZTF}
 The Zwicky Transient Facility (ZTF) \parencite{Bellm2019ZTF,Graham2019ZTFsciobj} is an optical time-domain survey carried out with the 48-inch Samuel Oschin Schmidt Telescope at Palomar Observatory, operating since 2018. Its wide-field camera images tens of square degrees at once, covering the entire visible northern sky every few nights. Observations are taken in three custom bands, $g$, $r$, and $i$, with central wavelengths of $4799$, $6467$, and $7879$ \AA\ (Figure \ref{fig:ztf_throughput}). The public Northern Sky Survey observes in $g$ and $r$ on a cadence of about three nights, reaching median five-sigma depths of $20.8$ and $20.6$ mag in $30$ second exposures. The $i$ band is observed within a separate programme, on a slower cadence and to a shallower depth of about $20.0$ mag, so it is more sparsely sampled than the other two. This uneven coverage between bands carries directly into the light curves used in this work, in which the $i$ band contains the fewest epochs and the widest gaps.
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.66\textwidth]{assets/2_figures/ztf_filter.pdf}
-    \caption[ZTF instrument throughput]{\label{fig:ztf_throughput} On-axis transmission of the three ZTF bands $g$, $r$, and $i$, with central wavelengths of $4799$, $6467$, and $7879$ \AA.}
-\end{figure}
-
-
 \subsection{Legacy Survey of Space and Time}
 \label{ssec:LSST}
-The Legacy Survey of Space and Time (LSST) \parencite{Ivezi2019LSST}, to be conducted at the Vera C. Rubin Observatory, will survey the southern sky over ten years. It uses a telescope with an $8.4$ meter primary mirror ($6.5$ m effective aperture) and a $9.6$ square degree field of view, imaged by a $3.2$-gigapixel camera, in six bands, $u$, $g$, $r$, $i$, $z$, and $y$, spanning $320$ to $1050$ nm (Figure \ref{fig:lsst_throughput}). In the main Wide-Fast-Deep survey each of roughly $18,000$ square degrees is visited on the order of eight hundred times over the ten years, distributed among the six bands, with a single-exposure five-sigma depth of about $24.0$ mag in $r$. The photometric accuracy of the survey is specified at $10$ mmag\footnote{\url{https://rubinobservatory.org/for-scientists/rubin-101/key-numbers}}, and over its lifetime it is expected to deliver light curves for more than ten million AGN, each sampled from tens to a few hundred times per band.
+The Legacy Survey of Space and Time (LSST) \parencite{Ivezi2019LSST}, to be conducted at the Vera C. Rubin Observatory, will survey the southern sky over ten years. It uses a telescope with an $8.4$ meter primary mirror ($6.5$ m effective aperture) and a $9.6$ square degree field of view, imaged by a $3.2$-gigapixel camera, in six bands, $u$, $g$, $r$, $i$, $z$, and $y$, spanning $320$ to $1050$ nm (Figure \ref{fig:lsst_throughput}). In the main Wide-Fast-Deep survey each of roughly $18{,}000$ square degrees is visited on the order of eight hundred times over the ten years, distributed among the six bands, with a single-exposure five-sigma depth of about $24.0$ mag in $r$. The photometric accuracy of the survey is specified at $10$ mmag\footnote{\url{https://rubinobservatory.org/for-scientists/rubin-101/key-numbers}}, and over its lifetime it is expected to deliver light curves for more than ten million AGN, each sampled from tens to a few hundred times per band.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.68\textwidth]{assets/2_figures/lsst_filter.pdf}
-    \caption[LSST instrument throughput]{\label{fig:lsst_throughput} Total throughput of the six LSST bands $u$, $g$, $r$, $i$, $z$, and $y$, including atmospheric transmission, optics, and detector sensitivity.}
+    \begin{subfigure}{0.49\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{assets/2_figures/ztf_filter.pdf}
+        \caption{ZTF}
+        \label{fig:ztf_throughput}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.49\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{assets/2_figures/lsst_filter.pdf}
+        \caption{LSST}
+        \label{fig:lsst_throughput}
+    \end{subfigure}
+    \caption[Instrument throughput of ZTF and LSST]{\label{fig:throughputs} Instrument throughput of the two surveys. \textbf{(a)} The three ZTF bands $g$, $r$, and $i$, with central wavelengths $4799$, $6467$, and $7879$ \AA. \textbf{(b)} The six LSST bands $u$, $g$, $r$, $i$, $z$, and $y$, spanning $320$ to $1050$ nm, including atmospheric transmission, optics, and detector sensitivity.}
 \end{figure}
 
 %check Ricci for cHanging obscuration/state

@@ -1,49 +1,50 @@
 \contentsline {chapter}{\numberline {1}Introduction}{9}{chapter.1}%
-\contentsline {section}{\numberline {1.1}AGN structure}{11}{section.1.1}%
-\contentsline {subsection}{\numberline {1.1.1}Accretion Disk}{13}{subsection.1.1.1}%
-\contentsline {subsection}{\numberline {1.1.2}Corona}{14}{subsection.1.1.2}%
-\contentsline {subsection}{\numberline {1.1.3}Broad-line Region}{14}{subsection.1.1.3}%
-\contentsline {subsection}{\numberline {1.1.4}Dusty Torus}{15}{subsection.1.1.4}%
-\contentsline {subsection}{\numberline {1.1.5}Relativistic Jets}{16}{subsection.1.1.5}%
-\contentsline {subsection}{\numberline {1.1.6}Narrow-line Region}{17}{subsection.1.1.6}%
-\contentsline {chapter}{\numberline {2}Variability of AGN}{18}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Physical Origin and Timescales}{18}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Reverberation Mapping}{20}{subsection.2.1.1}%
-\contentsline {section}{\numberline {2.2}Variability Characterization}{21}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Time-Domain Surveys}{23}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}The Zwicky Transient Facility}{23}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}Legacy Survey of Space and Time}{24}{subsection.2.3.2}%
-\contentsline {chapter}{\numberline {3}Simulation Framework}{25}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Stochastic Processes}{25}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}The Transition Probability}{27}{subsection.3.1.1}%
-\contentsline {section}{\numberline {3.2}Physically Motivated Timescales}{28}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Light Curve Generation}{29}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Sampling Regime}{29}{section.3.4}%
-\contentsline {chapter}{\numberline {4}Neural Stochastic Flows}{32}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Normalizing Flows}{32}{section.4.1}%
-\contentsline {section}{\numberline {4.2}From Static Densities to Transition Laws}{33}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Triplets and Stochastic Bridges}{35}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Training Objective}{36}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Reconstruction}{36}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Evaluation}{37}{section.4.6}%
-\contentsline {section}{\numberline {4.7}Implementation}{38}{section.4.7}%
-\contentsline {chapter}{\numberline {5}Results}{40}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Experimental Setup}{40}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Low Noise Simulations}{42}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Fixed Timescale}{42}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Varying Timescale}{45}{subsection.5.2.2}%
-\contentsline {section}{\numberline {5.3}ZTF Experiments}{48}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Calibration on Simulated ZTF Data}{49}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Application to Real ZTF Light Curves}{53}{section.5.5}%
-\contentsline {section}{\numberline {5.6}Discussion}{55}{section.5.6}%
-\contentsline {chapter}{\numberline {6}Conclusions}{56}{chapter.6}%
-\contentsline {chapter}{Bibliography}{58}{chapter*.41}%
-\contentsline {chapter}{\numberline {A}Derivation of the Damped Random Walk Transition Probability}{65}{appendix.A}%
-\contentsline {chapter}{\numberline {B}Neural Stochastic Flow in Depth}{67}{appendix.B}%
-\contentsline {section}{\numberline {B.1}The Bridge Architecture}{67}{section.B.1}%
-\contentsline {section}{\numberline {B.2}The Triplet-Consistency Loss}{68}{section.B.2}%
-\contentsline {subsection}{\numberline {B.2.1}Data Term}{68}{subsection.B.2.1}%
-\contentsline {subsection}{\numberline {B.2.2}Flow-Consistency Term}{68}{subsection.B.2.2}%
-\contentsline {subsubsection}{Forward Direction}{68}{subsubsection*.42}%
-\contentsline {subsubsection}{Reverse Direction}{69}{subsubsection*.43}%
-\contentsline {subsubsection}{Combined Loss}{69}{subsubsection*.44}%
+\contentsline {chapter}{\numberline {2}Active Galactic Nuclei}{11}{chapter.2}%
+\contentsline {section}{\numberline {2.1}AGN structure}{13}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Accretion Disk}{15}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Corona}{16}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Broad-line Region}{16}{subsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.1.4}Dusty Torus}{17}{subsection.2.1.4}%
+\contentsline {subsection}{\numberline {2.1.5}Relativistic Jets}{18}{subsection.2.1.5}%
+\contentsline {subsection}{\numberline {2.1.6}Narrow-line Region}{19}{subsection.2.1.6}%
+\contentsline {chapter}{\numberline {3}Variability of AGN}{20}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Physical Origin and Timescales}{20}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Reverberation Mapping}{21}{subsection.3.1.1}%
+\contentsline {section}{\numberline {3.2}Variability Characterization}{22}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Time-Domain Surveys}{24}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}The Zwicky Transient Facility}{25}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Legacy Survey of Space and Time}{25}{subsection.3.3.2}%
+\contentsline {chapter}{\numberline {4}Simulation Framework}{26}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Stochastic Processes}{26}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}The Transition Probability}{28}{subsection.4.1.1}%
+\contentsline {section}{\numberline {4.2}Physically Motivated Timescales}{29}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Light Curve Generation}{30}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Sampling Regime}{31}{section.4.4}%
+\contentsline {chapter}{\numberline {5}Neural Stochastic Flows}{32}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Normalizing Flows}{32}{section.5.1}%
+\contentsline {section}{\numberline {5.2}From Static Densities to Transition Laws}{33}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Triplets and Stochastic Bridges}{35}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Training Objective}{36}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Reconstruction}{36}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Evaluation}{37}{section.5.6}%
+\contentsline {section}{\numberline {5.7}Implementation}{38}{section.5.7}%
+\contentsline {chapter}{\numberline {6}Results}{40}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Experimental Setup}{40}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Low Noise Simulations}{42}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Fixed Timescale}{42}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Varying Timescale}{45}{subsection.6.2.2}%
+\contentsline {section}{\numberline {6.3}ZTF Experiments}{48}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Calibration on Simulated ZTF Data}{49}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Application to Real ZTF Light Curves}{55}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Discussion}{57}{section.6.6}%
+\contentsline {chapter}{\numberline {7}Conclusions}{58}{chapter.7}%
+\contentsline {chapter}{Bibliography}{60}{chapter*.43}%
+\contentsline {chapter}{\numberline {A}Derivation of the Damped Random Walk Transition Probability}{67}{appendix.A}%
+\contentsline {chapter}{\numberline {B}Neural Stochastic Flow in Depth}{69}{appendix.B}%
+\contentsline {section}{\numberline {B.1}The Bridge Architecture}{69}{section.B.1}%
+\contentsline {section}{\numberline {B.2}The Triplet-Consistency Loss}{70}{section.B.2}%
+\contentsline {subsection}{\numberline {B.2.1}Data Term}{70}{subsection.B.2.1}%
+\contentsline {subsection}{\numberline {B.2.2}Flow-Consistency Term}{70}{subsection.B.2.2}%
+\contentsline {subsubsection}{Forward Direction}{70}{subsubsection*.44}%
+\contentsline {subsubsection}{Reverse Direction}{71}{subsubsection*.45}%
+\contentsline {subsubsection}{Combined Loss}{71}{subsubsection*.46}%

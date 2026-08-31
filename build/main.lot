@@ -1,13 +1,14 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {2.1}{\ignorespaces AGN region size scales and variability timescales}}{20}{table.caption.12}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {3.1}{\ignorespaces AGN region size scales and variability timescales}}{21}{table.caption.12}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Stratification of the experiments}}{40}{table.caption.23}%
-\contentsline {table}{\numberline {5.2}{\ignorespaces Reconstruction performance across seeds on ZTF-matched data}}{50}{table.caption.35}%
-\contentsline {table}{\numberline {5.3}{\ignorespaces Coverage at multiple levels on ZTF-matched data}}{51}{table.caption.36}%
-\contentsline {table}{\numberline {5.4}{\ignorespaces Held-out prediction on real ZTF light curves}}{54}{table.caption.39}%
+\contentsline {table}{\numberline {6.1}{\ignorespaces Stratification of the experiments}}{40}{table.caption.22}%
+\contentsline {table}{\numberline {6.2}{\ignorespaces Reconstruction performance across seeds on ZTF-matched data}}{51}{table.caption.34}%
+\contentsline {table}{\numberline {6.3}{\ignorespaces Coverage at multiple levels on ZTF-matched data}}{51}{table.caption.35}%
+\contentsline {table}{\numberline {6.4}{\ignorespaces Held-out prediction on real ZTF light curves}}{56}{table.caption.41}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

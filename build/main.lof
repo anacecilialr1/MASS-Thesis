@@ -1,42 +1,45 @@
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces AGN spectral energy distribution (SED) from radio frequencies to hard X-ray}}{10}{figure.caption.2}%
-\contentsline {figure}{\numberline {1.2}{\ignorespaces Typical optical spectra of different AGN classes}}{11}{figure.caption.3}%
-\contentsline {figure}{\numberline {1.3}{\ignorespaces NGC 1068 spectropolarimetry revealing the hidden broad line region (BLR)}}{12}{figure.caption.4}%
-\contentsline {figure}{\numberline {1.4}{\ignorespaces Schematic view of the the innermost regions of (non-jetted) AGN}}{13}{figure.caption.5}%
-\contentsline {figure}{\numberline {1.5}{\ignorespaces Eddington ratio distribution of broad-line AGN at $1.0 < z < 2.2$.}}{14}{figure.caption.6}%
-\contentsline {figure}{\numberline {1.6}{\ignorespaces Schematic of the BLR formation via a failed disk wind}}{15}{figure.caption.7}%
-\contentsline {figure}{\numberline {1.7}{\ignorespaces Radio contours of a giant radio galaxy extending to Mpc scales}}{16}{figure.caption.8}%
-\contentsline {figure}{\numberline {1.8}{\ignorespaces SDSS galaxies in the classical BPT diagram.}}{17}{figure.caption.9}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Continuum and reverberation lags as a function of energy and Fourier frequency}}{19}{figure.caption.10}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Schematic of AGN reverberation mapping across different physical scales}}{20}{figure.caption.11}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces X-ray light curves and PSDs for four AGN spanning four decades in black hole mass}}{22}{figure.caption.13}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces ZTF instrument throughput}}{24}{figure.caption.14}%
-\contentsline {figure}{\numberline {2.5}{\ignorespaces LSST instrument throughput}}{24}{figure.caption.15}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces AGN spectral energy distribution (SED) from radio frequencies to hard X-ray}}{12}{figure.caption.2}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Typical optical spectra of different AGN classes}}{13}{figure.caption.3}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces NGC 1068 spectropolarimetry revealing the hidden broad line region (BLR)}}{14}{figure.caption.4}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Schematic view of the the innermost regions of (non-jetted) AGN}}{15}{figure.caption.5}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Eddington ratio distribution of broad-line AGN at $1.0 < z < 2.2$.}}{16}{figure.caption.6}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Schematic of the BLR formation via a failed disk wind}}{17}{figure.caption.7}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Radio contours of a giant radio galaxy extending to Mpc scales}}{18}{figure.caption.8}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces SDSS galaxies in the classical BPT diagram.}}{19}{figure.caption.9}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces The structure function family and the place of the damped random walk}}{27}{figure.caption.16}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces The black hole mass distribution and the induced damping timescale distribution}}{28}{figure.caption.17}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Example simulated light curves}}{30}{figure.caption.18}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Sampling regime of the simulated light curves}}{30}{figure.caption.19}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Continuum and reverberation lags as a function of energy and Fourier frequency}}{21}{figure.caption.10}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Schematic of AGN reverberation mapping across different physical scales}}{22}{figure.caption.11}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces X-ray light curves and PSDs for four AGN spanning four decades in black hole mass}}{23}{figure.caption.13}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Instrument throughput of ZTF and LSST}}{25}{figure.caption.14}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces The change of variables underlying a normalizing flow}}{33}{figure.caption.20}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Strong and weak solutions of an SDE and one-step sampling}}{34}{figure.caption.21}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Monte Carlo bridge reconstructions across a gap}}{37}{figure.caption.22}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces The structure function family and the place of the damped random walk}}{28}{figure.caption.15}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces The black hole mass distribution and the induced damping timescale distribution}}{29}{figure.caption.16}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Example simulated light curves}}{30}{figure.caption.17}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Sampling regime of the simulated light curves}}{31}{figure.caption.18}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Pipeline of the idealized simulation experiments}}{41}{figure.caption.24}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Training and learned transition at fixed timescale}}{42}{figure.caption.25}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Reconstruction of a fixed-timescale light curve}}{43}{figure.caption.26}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Reconstruction error against gap width at fixed timescale}}{44}{figure.caption.27}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces The learned transition at varying timescale}}{45}{figure.caption.28}%
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Reconstruction of a varying-timescale light curve}}{46}{figure.caption.29}%
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Pipeline of the ZTF experiments}}{47}{figure.caption.30}%
-\contentsline {figure}{\numberline {5.8}{\ignorespaces An example real ZTF light curve}}{48}{figure.caption.31}%
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Sampling and noise statistics of the ZTF sample}}{48}{figure.caption.32}%
-\contentsline {figure}{\numberline {5.10}{\ignorespaces An example simulated ZTF-matched light curve}}{49}{figure.caption.33}%
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Sampling regime of the ZTF-matched light curves per band}}{50}{figure.caption.34}%
-\contentsline {figure}{\numberline {5.12}{\ignorespaces Calibration against sampling in the ZTF regime}}{51}{figure.caption.37}%
-\contentsline {figure}{\numberline {5.13}{\ignorespaces The learned transition and reconstruction error under ZTF noise}}{52}{figure.caption.38}%
-\contentsline {figure}{\numberline {5.14}{\ignorespaces Reconstruction of a real ZTF light curve}}{54}{figure.caption.40}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces The change of variables underlying a normalizing flow}}{33}{figure.caption.19}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Strong and weak solutions of an SDE and one-step sampling}}{34}{figure.caption.20}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Monte Carlo bridge reconstructions across a gap}}{37}{figure.caption.21}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Pipeline of the idealized simulation experiments}}{41}{figure.caption.23}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Training and learned transition at fixed timescale}}{42}{figure.caption.24}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Reconstruction of a fixed-timescale light curve}}{43}{figure.caption.25}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Reconstruction error against gap width at fixed timescale}}{44}{figure.caption.26}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces The learned transition at varying timescale}}{45}{figure.caption.27}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Reconstruction of a varying-timescale light curve}}{46}{figure.caption.28}%
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Pipeline of the ZTF experiments}}{47}{figure.caption.29}%
+\contentsline {figure}{\numberline {6.8}{\ignorespaces An example real ZTF light curve}}{48}{figure.caption.30}%
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Sampling and noise statistics of the ZTF sample}}{49}{figure.caption.31}%
+\contentsline {figure}{\numberline {6.10}{\ignorespaces An example simulated ZTF-matched light curve}}{49}{figure.caption.32}%
+\contentsline {figure}{\numberline {6.11}{\ignorespaces Sampling regime of the ZTF-matched light curves per band}}{50}{figure.caption.33}%
+\contentsline {figure}{\numberline {6.12}{\ignorespaces The learned transition and reconstruction error under ZTF noise}}{52}{figure.caption.36}%
+\contentsline {figure}{\numberline {6.13}{\ignorespaces Calibration against sampling in the ZTF regime}}{53}{figure.caption.37}%
+\contentsline {figure}{\numberline {6.14}{\ignorespaces Reconstruction of a ZTF-matched simulated $g$-band light curve}}{53}{figure.caption.38}%
+\contentsline {figure}{\numberline {6.15}{\ignorespaces Reconstruction of a ZTF-matched simulated $r$-band light curve}}{54}{figure.caption.39}%
+\contentsline {figure}{\numberline {6.16}{\ignorespaces Reconstruction of a ZTF-matched simulated $i$-band light curve}}{54}{figure.caption.40}%
+\contentsline {figure}{\numberline {6.17}{\ignorespaces Reconstruction of a real ZTF light curve}}{56}{figure.caption.42}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
