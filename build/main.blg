@@ -1,19 +1,19 @@
 [0] Config.pm:328> INFO - This is Biber 2.21
 [0] Config.pm:331> INFO - Logfile is 'build/main.blg'
-[38] biber-darwin:342> INFO - === Wed Aug 26, 2026, 22:39:47
-[50] Biber.pm:421> INFO - Reading 'build/main.bcf'
-[99] Biber.pm:1002> INFO - Found 107 citekeys in bib section 0
-[105] Biber.pm:4487> INFO - Processing section 0
-[110] Biber.pm:4678> INFO - Looking for bibtex file 'references.bib' for section 0
-[112] bibtex.pm:1713> INFO - LaTeX decoding ...
-[194] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
-[761] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[761] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[761] Biber.pm:4307> INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'en-US'
-[761] Biber.pm:4313> INFO - No sort tailoring available for locale 'en-US'
-[823] bbl.pm:676> INFO - Writing 'build/main.bbl' with encoding 'UTF-8'
-[874] bbl.pm:779> INFO - Output to build/main.bbl
-[875] Biber.pm:132> WARN - ISBN '1476-4687' in entry 'Fabian2009Corona' is invalid - run biber with '--validate_datamodel' for details.
-[875] Biber.pm:132> WARN - BibTeX subsystem: /var/folders/m9/psq8q0n150v71kwq_ytvp1880000gn/T/biber_tmp_d8uY/33e59b5ca9ec342068223d604c3f8d55_51803.utf8, line 348, warning: 34 characters of junk seen at toplevel
-[875] Biber.pm:132> WARN - BibTeX subsystem: /var/folders/m9/psq8q0n150v71kwq_ytvp1880000gn/T/biber_tmp_d8uY/33e59b5ca9ec342068223d604c3f8d55_51803.utf8, line 512, warning: undefined macro "sept"
-[875] Biber.pm:134> INFO - WARNINGS: 3
+[31] biber-darwin:342> INFO - === Mon Aug 31, 2026, 16:00:18
+[38] Biber.pm:421> INFO - Reading 'build/main.bcf'
+[83] Biber.pm:1002> INFO - Found 116 citekeys in bib section 0
+[90] Biber.pm:4487> INFO - Processing section 0
+[95] Biber.pm:4678> INFO - Looking for bibtex file 'references.bib' for section 0
+[99] bibtex.pm:1713> INFO - LaTeX decoding ...
+[325] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
+[1192] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1192] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1192] Biber.pm:4307> INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'en-US'
+[1192] Biber.pm:4313> INFO - No sort tailoring available for locale 'en-US'
+[1259] bbl.pm:676> INFO - Writing 'build/main.bbl' with encoding 'UTF-8'
+[1340] bbl.pm:779> INFO - Output to build/main.bbl
+[1340] Biber.pm:132> WARN - ISBN '1476-4687' in entry 'Fabian2009Corona' is invalid - run biber with '--validate_datamodel' for details.
+[1340] Biber.pm:132> WARN - BibTeX subsystem: /var/folders/m9/psq8q0n150v71kwq_ytvp1880000gn/T/biber_tmp_ywog/33e59b5ca9ec342068223d604c3f8d55_95619.utf8, line 395, warning: 34 characters of junk seen at toplevel
+[1340] Biber.pm:132> WARN - BibTeX subsystem: /var/folders/m9/psq8q0n150v71kwq_ytvp1880000gn/T/biber_tmp_ywog/33e59b5ca9ec342068223d604c3f8d55_95619.utf8, line 572, warning: undefined macro "sept"
+[1340] Biber.pm:134> INFO - WARNINGS: 3
