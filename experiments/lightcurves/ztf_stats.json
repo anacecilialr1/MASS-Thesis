@@ -1,0 +1,50 @@
+{
+  "n_objects": 150,
+  "baseline_yr": 7.279610046543464,
+  "bands": {
+    "g": {
+      "n_epochs_median": 234.0,
+      "n_epochs_range": [
+        170.2,
+        283.0
+      ],
+      "cadence_median_d": 3.936840200003644,
+      "magerr_median": 0.0730520785,
+      "magerr_range": [
+        0.035134443524,
+        0.12763688724
+      ]
+    },
+    "r": {
+      "n_epochs_median": 279.0,
+      "n_epochs_range": [
+        225.84,
+        327.64
+      ],
+      "cadence_median_d": 3.0396991000015987,
+      "magerr_median": 0.0569304526,
+      "magerr_range": [
+        0.029360374100000003,
+        0.09648070188
+      ]
+    },
+    "i": {
+      "n_epochs_median": 73.5,
+      "n_epochs_range": [
+        60.0,
+        111.0
+      ],
+      "cadence_median_d": 6.003703650003445,
+      "magerr_median": 0.0554164946,
+      "magerr_range": [
+        0.027941707436,
+        0.09532965002
+      ]
+    }
+  },
+  "provenance": {
+    "min_epochs": 50,
+    "dedup_day": 0.3,
+    "z_max": 0.5
+  }
+}
